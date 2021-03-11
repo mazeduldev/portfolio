@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Navbar from '../components/navbar'
 
 export default function Home() {
   return (
@@ -8,9 +9,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav>
-        Navigation area
-      </nav>
+      <Navbar></Navbar>
 
       <main>
         Main area
