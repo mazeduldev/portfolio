@@ -28,7 +28,55 @@
     font-size: 20px;
     color: crimson;
     padding: 0 5px;
-    background: #fff;
+    background: white;
     transform: translateX(-50%);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.proPic {
+  width: 45%;
+
+  .rounded {
+    border-radius: 6px;
+  }
+}
+
+.description {
+  width: 55%;
+  margin: auto;
+
+  .descriptionTitle {
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+
+  a {
+    background: crimson;
+    color: white;
+    margin-top: 10px;
+    padding: 10px 30px;
+    border: 2px solid crimson;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: white;
+      color: crimson;
+    }
   }
 }
