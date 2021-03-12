@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Navbar from '../components/navbar'
 import Cover from '../components/cover'
+import About from '../components/about'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
 
       <main>
         <Cover></Cover>
+        <About></About>
         Main area
       </main>
 

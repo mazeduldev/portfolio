@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './navbar.module.scss'
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
     <nav className={classes.navContainer}>
       <ul className={classes.menu}>
