@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../components/navbar'
+import Cover from '../components/cover'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar></Navbar>
 
       <main>
+        <Cover></Cover>
         Main area
       </main>
 
