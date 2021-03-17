@@ -1,8 +1,33 @@
 .cover {
   display: flex;
-  background: url("/images/banner.jpg");
+  background: url("/images/bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.coverContent {
+  color: #fff;
+  text-align: center;
+
+  .text1 {
+    font-size: 2em;
+  }
+
+  .text2 {
+    font-size: 4em;
+    font-weight: 900;
+    margin: 10px 0;
+  }
+
+  .text3 {
+    font-size: 2.5em;
+
+    & span {
+      color: crimson;
+    }
+  }
 }
