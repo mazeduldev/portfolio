@@ -1,0 +1,63 @@
+.title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+
+  // underline
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+  }
+
+  // text between underline
+  &::after {
+    content: "Get in touch";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: white;
+    transform: translateX(-50%);
+  }
+}
+
+.content {
+  display: flex;
+
+  .leftContent {
+    width: 50%;
+  }
+
+  .rightContent {
+    width: 50%;
+  }
+}
+
+.infoContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+
+  & .infoText {
+    margin-left: 10px;
+    color: #111;
+    font-style: normal;
+  }
+}
+
+.icon {
+  color: crimson;
+  font-size: 1.7rem;
+}

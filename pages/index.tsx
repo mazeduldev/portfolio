@@ -4,6 +4,7 @@ import Cover from '../components/cover'
 import About from '../components/about'
 import React from 'react'
 import Footer from '../components/footer'
+import Contact from '../components/contact'
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       <main>
         <Cover></Cover>
         <About></About>
-        Main area
+        <Contact></Contact>
       </main>
 
       <Footer></Footer>
