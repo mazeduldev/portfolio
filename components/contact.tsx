@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import classes from './contact.module.scss'
 import {MdEmail, MdLocationOn, MdPhone} from 'react-icons/md'
+import {ImFacebook2} from 'react-icons/im'
+import {SiGithub, SiInstagram, SiLinkedin, SiTwitter} from 'react-icons/si'
 import Input from './ui/input'
 import Button from './ui/button'
 
@@ -57,6 +59,13 @@ const Contact = () => {
             </div>
             <div className={classes.infoContainer}>
               <MdLocationOn className={classes.icon} /> <span className={classes.infoText}>House# 1359, Avenue# 11<br/>Mirpur DOHS, Dhaka, Bangladesh</span>
+            </div>
+            <div className={classes.socialContainer}>
+              <a href="https://www.linkedin.com/in/mazedul-islam/" target="blank"><SiLinkedin className={classes.socialBtn} /></a>
+              <a href="https://github.com/mazid1" target="blank"><SiGithub className={classes.socialBtn} /></a>
+              <a href="https://www.facebook.com/m.mazedul.islam.m" target="blank"><ImFacebook2 className={classes.socialBtn} /></a>
+              <a href="https://twitter.com/mazid_csedu" target="blank"><SiTwitter className={classes.socialBtn} /></a>
+              <a href="https://www.instagram.com/the_mzd/" target="blank"><SiInstagram className={classes.socialBtn} /></a>
             </div>
           </div>
           <div className={classes.rightContent}>

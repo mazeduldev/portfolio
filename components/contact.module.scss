@@ -65,3 +65,26 @@
 .submitBtn {
   margin-top: 10px;
 }
+
+.socialContainer {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 1.7rem;
+  color: crimson;
+  margin: 10px 0;
+
+  & a {
+    padding: 0 10px;
+  }
+}
+
+.socialBtn {
+  transition: all 0.3s ease;
+  &:hover {
+    color: white;
+    background: crimson;
+    border: 2px solid crimson;
+    border-radius: 6px;
+  }
+}
