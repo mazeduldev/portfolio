@@ -1,8 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from './contact.module.scss'
 import {MdEmail, MdLocationOn, MdPhone} from 'react-icons/md'
+import Input from './ui/input'
+import Button from './ui/button'
 
 const Contact = () => {
+  const [fullName, setFullName] = useState('')
+  const [email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+
+  const changeHandler = (event) => {
+    event.preventDefault()
+    const {name, value} = event.target
+    
+    switch (name) {
+      case 'fullName':
+        setFullName(value)
+        break
+      case 'email':
+        setEmail(value)
+        break;
+      case 'subject':
+        setSubject(value)
+        break
+      case 'message':
+        setMessage(value)
+        break
+    }
+  }
+
+  const submitHandler = (event) => {
+    event.preventDefault()
+    console.log(fullName, email, subject, message);
+    clearForm();
+  }
+
+  const clearForm = () => {
+    setFullName('')
+    setEmail('')
+    setSubject('')
+    setMessage('')
+  }
+
   return (
     <section>
       <div className="container">
@@ -20,7 +60,15 @@ const Contact = () => {
             </div>
           </div>
           <div className={classes.rightContent}>
-            Right
+            <form onSubmit={submitHandler}>
+              <Input value={fullName} onChange={changeHandler} inputtype="input" type="text" name="fullName" placeholder="Name" required></Input>
+              <Input value={email} onChange={changeHandler} inputtype="input" type="email" name="email" placeholder="Email" required></Input>
+              <Input value={subject} onChange={changeHandler} inputtype="input" type="text" name="subject" placeholder="Subject" required></Input>
+              <Input value={message} onChange={changeHandler} inputtype="textarea" name="message" placeholder="Message..." required></Input>
+              <div className={classes.submitBtn}>
+                <Button>Send Message</Button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
