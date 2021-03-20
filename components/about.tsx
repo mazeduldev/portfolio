@@ -1,6 +1,13 @@
 import React from 'react'
 import classes from './about.module.scss'
 import Image from 'next/image'
+import TypingAnimation from './typing-animation'
+
+const myTitles = [
+  'Software Engineer',
+  'Web Developer',
+  'Fullstack Developer'
+]
 
 const About: React.FC = () => {
   return (
@@ -20,7 +27,7 @@ const About: React.FC = () => {
           </div>
           <div className={classes.description}>
             <div className={classes.descriptionTitle}>
-              I am a Software Engineer
+              I'm Mazid and I'm a <TypingAnimation texts={myTitles}></TypingAnimation>
             </div>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, eius consectetur. Temporibus soluta deserunt quaerat blanditiis nihil sapiente, dolorem illum facilis? Repudiandae deleniti nisi consequatur voluptates harum, quibusdam libero soluta, ex amet doloremque tenetur culpa quas, excepturi eum! Consequuntur ipsam nam vel maiores voluptatibus voluptate pariatur aperiam accusantium, beatae, earum sit. Vitae eaque iusto eius quas corporis! Quia accusamus voluptatem, deserunt quod consequuntur doloremque distinctio atque placeat et molestias corrupti officia totam ratione, inventore fugit.</p>
             <a href="#">Download CV</a>
