@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Navbar from '../components/navbar'
 import Cover from '../components/cover'
 import About from '../components/about'
+import React from 'react'
+import Footer from '../components/footer'
 
 export default function Home() {
   return (
@@ -19,9 +21,7 @@ export default function Home() {
         Main area
       </main>
 
-      <footer>
-        Made with &hearts; by Mazid
-      </footer>
+      <Footer></Footer>
     </div>
   )
 }
