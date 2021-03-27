@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 
+:root {
+  --clr-black: #111;
+}
+
 html,
 body {
   padding: 0;
@@ -20,14 +24,76 @@ a {
 
 section {
   padding: 100px 0px;
+}
 
-  & .container {
-    max-width: 1300px;
-    margin: auto;
-    padding: 0px 80px;
-  }
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0px 80px;
+}
+
+.bg-dark {
+  background: var(--clr-black);
+  color: white;
+}
+
+.bg-light {
+  background: white;
+  color: black;
 }
 
 .js-tilt-glare {
   border-radius: 15px;
+}
+
+.title-container {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+
+  .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    color: white;
+
+    // underline
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      width: 180px;
+      height: 3px;
+      background: white;
+      transform: translateX(-50%);
+    }
+  }
+
+  .subtitle {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: var(--clr-black);
+    transform: translateX(-50%);
+  }
+
+  &.light {
+    .title {
+      color: var(--clr-black);
+
+      &::before {
+        background: var(--clr-black);
+      }
+    }
+
+    .subtitle {
+      background: white;
+    }
+  }
 }

@@ -4,9 +4,12 @@ import Card from './ui/card'
 
 const Portfolio = () => {
   return (
-    <section className={classes.bgDark}>
+    <section className="bg-dark">
       <div className="container">
-        <h2 className={classes.title}>Portfolio</h2>
+        <div className="title-container">
+          <h2 className="title">Portfolio</h2>
+          <h3 className="subtitle">My works</h3>
+        </div>
         <div className={classes.content}>
           <Card></Card>
           <Card></Card>

@@ -13,7 +13,10 @@ const About: React.FC = () => {
   return (
     <section>
       <div className='container'>
-        <h2 className={classes.title}>About me</h2>
+        <div className="title-container light">
+          <h2 className="title">About me</h2>
+          <h3 className="subtitle">Who I am</h3>
+        </div>
         <div className={classes.content}>
           <div className={classes.proPic}>
             <Image

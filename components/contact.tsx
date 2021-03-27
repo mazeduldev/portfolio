@@ -48,7 +48,10 @@ const Contact = () => {
   return (
     <section>
       <div className="container">
-        <h2 className={classes.title}>Contact me</h2>
+        <div className="title-container light">
+          <h2 className="title">Contact me</h2>
+          <h3 className="subtitle">Get in touch</h3>
+        </div>
         <div className={classes.content}>
           <div className={classes.leftContent}>
             <address className={classes.infoContainer}>

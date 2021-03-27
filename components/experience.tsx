@@ -2,7 +2,7 @@ import React from 'react'
 
 const Experience = () => {
   return (
-    <section>
+    <section className="bg-dark">
       <div className="container"></div>
     </section>
   )
