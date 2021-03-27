@@ -39,3 +39,33 @@
 .active {
   border-bottom: 3px solid rgb(240, 210, 146);
 }
+
+.scrollUpBtn {
+  position: fixed;
+  right: 35px;
+  bottom: 15px;
+  border-radius: 6px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  background: crimson;
+  color: white;
+  z-index: 9999;
+  border: 2px solid crimson;
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+
+  &.show {
+    pointer-events: auto;
+    opacity: 1;
+    bottom: 35px;
+  }
+
+  &:hover {
+    background: white;
+    color: crimson;
+  }
+}
