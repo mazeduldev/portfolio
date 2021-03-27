@@ -19,8 +19,8 @@ export default function Home() {
 
       <main>
         <Cover></Cover>
-        <About></About>
         <Portfolio></Portfolio>
+        <About></About>
         <Contact></Contact>
       </main>
 
