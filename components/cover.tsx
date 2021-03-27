@@ -8,9 +8,9 @@ const myTitles = [
   'Fullstack Developer'
 ]
 
-const Cover: React.FC = () => {
+const Cover = (props) => {
   return (
-    <section className={classes.cover}>
+    <section id={props.id} className={classes.cover}>
       <div className={`container ${classes.coverContent}`}>
         <div className={classes.text1}>Hello, my name is</div>
         <div className={classes.text2}>Mazedul Islam</div>

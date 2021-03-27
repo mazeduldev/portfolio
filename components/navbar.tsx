@@ -1,15 +1,16 @@
 import React from 'react'
 import classes from './navbar.module.scss'
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Navbar: React.FC = () => {
   return (
     <nav className={classes.navContainer}>
       <ul className={classes.menu}>
-        <li className={classes.menuItem}>Home</li>
-        <li className={classes.menuItem}>Portfolio</li>
-        <li className={classes.menuItem}>Experience</li>
-        <li className={classes.menuItem}>About</li>
-        <li className={classes.menuItem}>Contact</li>
+        <Link to="home" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Home</Link>
+        <Link to="portfolio" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Portfolio</Link>
+        <Link to="experience" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Experience</Link>
+        <Link to="about" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>About</Link>
+        <Link to="contact" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Contact</Link>
       </ul>
     </nav>
   )

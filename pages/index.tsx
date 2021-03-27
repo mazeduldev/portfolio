@@ -18,10 +18,10 @@ export default function Home() {
       <Navbar></Navbar>
 
       <main>
-        <Cover></Cover>
-        <Portfolio></Portfolio>
-        <About></About>
-        <Contact></Contact>
+        <Cover id="home"></Cover>
+        <Portfolio id="portfolio"></Portfolio>
+        <About id="about"></About>
+        <Contact id="contact"></Contact>
       </main>
 
       <Footer></Footer>

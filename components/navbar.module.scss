@@ -23,12 +23,19 @@
 }
 
 .menuItem {
-  color: floralwhite;
+  color: white;
   font-weight: 500;
   font-size: 18px;
+  height: 100%;
+  display: flex;
+  align-items: center;
   transition: color 0.3s ease;
   &:hover {
     color: rgb(240, 210, 146);
     cursor: pointer;
   }
+}
+
+.active {
+  border-bottom: 3px solid rgb(240, 210, 146);
 }

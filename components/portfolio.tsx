@@ -2,9 +2,9 @@ import React from 'react'
 import classes from './portfolio.module.scss'
 import Card from './ui/card'
 
-const Portfolio = () => {
+const Portfolio = (props) => {
   return (
-    <section className="bg-dark">
+    <section id={props.id} className="bg-dark">
       <div className="container">
         <div className="title-container">
           <h2 className="title">Portfolio</h2>

@@ -6,7 +6,7 @@ import {SiGithub, SiInstagram, SiLinkedin, SiTwitter} from 'react-icons/si'
 import Input from './ui/input'
 import Button from './ui/button'
 
-const Contact = () => {
+const Contact = (props) => {
   const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
   const [subject, setSubject] = useState('')
@@ -46,7 +46,7 @@ const Contact = () => {
   }
 
   return (
-    <section>
+    <section className={classes.contactSection} id={props.id}>
       <div className="container">
         <div className="title-container light">
           <h2 className="title">Contact me</h2>
