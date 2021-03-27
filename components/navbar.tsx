@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import classes from './navbar.module.scss'
 import { Link, animateScroll as scroll } from "react-scroll"
 import {FaArrowUp} from "react-icons/fa"
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 const Navbar: React.FC = () => {
   const [show, setShow] = useState("")
@@ -15,15 +16,13 @@ const Navbar: React.FC = () => {
 
   const removeTransparency = () => setTransparent("")
 
-  const handleScrolledToTop = () => {
-    hideScrollButton()
-    makeTransparent()
-  }
+  useScrollPosition(({ prevPos, currPos }) => {
+    if (currPos.y < -150) removeTransparency()
+    else makeTransparent()
 
-  const handleAwayFromTop = () => {
-    showScrollButton()
-    removeTransparency()
-  }
+    if (currPos.y < -500) showScrollButton()
+    else hideScrollButton()
+  }, [transparent, show])
 
   return (
     <>
@@ -32,7 +31,7 @@ const Navbar: React.FC = () => {
       </a>
       <nav className={`${classes.navContainer} ${transparent}`}>
         <ul className={classes.menu}>
-          <Link to="home" activeClass={classes.active} smooth={true} spy={true} offset={-100} onSetActive={handleScrolledToTop} onSetInactive={handleAwayFromTop} className={classes.menuItem}>Home</Link>
+          <Link to="home" smooth={true} spy={true} offset={-100} className={classes.menuItem}>Home</Link>
           <Link to="portfolio" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Portfolio</Link>
           <Link to="experience" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Experience</Link>
           <Link to="about" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>About</Link>
