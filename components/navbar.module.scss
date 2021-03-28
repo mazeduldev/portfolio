@@ -7,6 +7,9 @@
   display: flex;
   justify-content: center;
   transition: all 0.3s ease;
+  background: linear-gradient(to bottom, crimson 50%, transparent 50%);
+  background-position-y: top;
+  background-size: 100% 200%;
 
   .menu {
     li {
@@ -14,7 +17,7 @@
     }
   }
   &.bgTransparent {
-    background: transparent;
+    background-position-y: bottom;
   }
 }
 
