@@ -1,11 +1,27 @@
-import React from "react";
-import { MdSchool, MdStar, MdWork } from "react-icons/md";
-import {VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline-component'
+import React from "react"
+import { MdWork } from "react-icons/md"
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component"
+import Image from 'next/image'
 import classes from "./experience.module.scss"
 
 const Experience = (props) => {
+  const lightCrimson = "#FF8289"
+
+  const contentStyle = {
+    color: "#111",
+    borderTop: `3px solid ${lightCrimson}`,
+  }
+
+  const iconStyle = {
+    background: lightCrimson,
+    color: "#fff"
+  }
+
   return (
-    <section id={props.id} className="bg-light">
+    <section id={props.id} className="bg-dark">
       <div className="container">
         <div className="title-container">
           <h2 className="title">Experience</h2>
@@ -14,111 +30,44 @@ const Experience = (props) => {
 
         <VerticalTimeline>
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
+            className="vertical-timeline-element"
+            contentStyle={contentStyle}
+            contentArrowStyle={{ borderRight: "7px solid #fff" }}
             date="2011 - present"
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+            dateClassName={classes.date}
+            iconStyle={iconStyle}
             icon={<MdWork />}
           >
-            <h3 className="vertical-timeline-element-title">
-              Creative Director
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-            <p>
-              Creative Direction, User Experience, Visual Design, Project
-              Management, Team Leading
-            </p>
+            <div className={classes.contentContainer}>
+              <div className={classes.logoContainer}>
+                <Image
+                  src="/images/impel.png"
+                  alt="Impel"
+                  width={100}
+                  height={55}
+                  layout="responsive"
+                />
+              </div>
+              <div>
+                <h3 className="vertical-timeline-element-title">
+                  Full-Stack Web Developer
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                  Impel IT Solutions
+                </h4>
+                <p>Working as a full-stack software engineer:</p>
+                <ul className={classes.ul}>
+                  <li>Designing and developing REST APIs using Java, Spring-boot, JPA, Hibernate and QueryDSL</li>
+                  <li>Developing multi language supported client application using Typescript and Angular 9</li>
+                  <li>Writing automated tests for Angular application using Jasmine and Karma</li>
+                </ul>
+              </div>
+            </div>
           </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2010 - 2011"
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<MdWork />}
-          >
-            <h3 className="vertical-timeline-element-title">Art Director</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              San Francisco, CA
-            </h4>
-            <p>
-              Creative Direction, User Experience, Visual Design, SEO, Online
-              Marketing
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2008 - 2010"
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<MdWork />}
-          >
-            <h3 className="vertical-timeline-element-title">Web Designer</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Los Angeles, CA
-            </h4>
-            <p>User Experience, Visual Design</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2006 - 2008"
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<MdWork />}
-          >
-            <h3 className="vertical-timeline-element-title">Web Designer</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              San Francisco, CA
-            </h4>
-            <p>User Experience, Visual Design</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="April 2013"
-            iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-            icon={<MdSchool />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              Content Marketing for Web, Mobile and Social Media
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Online Course
-            </h4>
-            <p>Strategy, Social Media</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="November 2012"
-            iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-            icon={<MdSchool />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              Agile Development Scrum Master
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Certification
-            </h4>
-            <p>Creative Direction, User Experience, Visual Design</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="2002 - 2006"
-            iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-            icon={<MdSchool />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              Bachelor of Science in Interactive Digital Media Visual Imaging
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Bachelor Degree
-            </h4>
-            <p>Creative Direction, Visual Design</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
-            icon={<MdStar />}
-          />
         </VerticalTimeline>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Experience;
+export default Experience
