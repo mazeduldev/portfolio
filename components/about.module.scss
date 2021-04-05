@@ -1,47 +1,49 @@
+@import "../styles/variables";
+
 .content {
   display: flex;
   flex-direction: row;
-}
 
-.proPic {
-  width: 45%;
+  .proPic {
+    width: 45%;
 
-  .rounded {
-    border-radius: 6px;
-  }
-}
-
-.description {
-  width: 55%;
-  margin: auto;
-
-  .descriptionTitle {
-    font-weight: 600;
-    font-size: 25px;
-    margin-bottom: 10px;
+    .rounded {
+      border-radius: 6px;
+    }
   }
 
-  p {
-    font-weight: 400;
-    text-align: justify;
-    margin-bottom: 10px;
-  }
+  .description {
+    width: 55%;
+    margin: auto;
 
-  a {
-    background: crimson;
-    color: white;
-    margin-top: 10px;
-    padding: 10px 15px;
-    border: 2px solid crimson;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: 1rem;
-    display: inline-block;
-    transition: all 0.3s ease;
+    .descriptionTitle {
+      font-weight: 600;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
 
-    &:hover {
-      background: white;
-      color: crimson;
+    p {
+      font-weight: 400;
+      text-align: justify;
+      margin-bottom: 10px;
+    }
+
+    a {
+      background: $color-primary;
+      color: $on-color-primary;
+      border: 2px solid $color-primary;
+      margin-top: 10px;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 1rem;
+      display: inline-block;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: $on-color-primary;
+        color: $color-primary;
+      }
     }
   }
 }

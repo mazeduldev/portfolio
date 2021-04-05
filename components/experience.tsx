@@ -21,9 +21,9 @@ const Experience = (props) => {
   }
 
   return (
-    <section id={props.id} className="bg-dark">
+    <section id={props.id} className="bg dark">
       <div className="container">
-        <div className="title-container">
+        <div className="title-container dark">
           <h2 className="title">Experience</h2>
           <h3 className="subtitle">My jobs</h3>
         </div>

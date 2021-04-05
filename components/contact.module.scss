@@ -1,3 +1,5 @@
+@import "../styles/variables";
+
 .contactSection {
   padding-bottom: 200px;
 }
@@ -7,6 +9,39 @@
 
   .leftContent {
     width: 50%;
+
+    .infoContainer {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+
+      & .infoText {
+        margin-left: 10px;
+        font-style: normal;
+      }
+    }
+
+    .socialContainer {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      font-size: 1.7rem;
+      color: $color-primary;
+      margin: 10px 0;
+
+      a {
+        padding: 0 10px;
+        .socialBtn {
+          transition: all 0.3s ease;
+          &:hover {
+            color: $on-color-primary;
+            background: $color-primary;
+            border: 2px solid $color-primary;
+            border-radius: 6px;
+          }
+        }
+      }
+    }
   }
 
   .rightContent {
@@ -14,46 +49,11 @@
   }
 }
 
-.infoContainer {
-  display: flex;
-  align-items: center;
-  padding: 10px 0;
-
-  & .infoText {
-    margin-left: 10px;
-    color: #111;
-    font-style: normal;
-  }
-}
-
 .icon {
-  color: crimson;
+  color: $color-primary;
   font-size: 1.7rem;
 }
 
 .submitBtn {
   margin-top: 10px;
-}
-
-.socialContainer {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  font-size: 1.7rem;
-  color: crimson;
-  margin: 10px 0;
-
-  & a {
-    padding: 0 10px;
-  }
-}
-
-.socialBtn {
-  transition: all 0.3s ease;
-  &:hover {
-    color: white;
-    background: crimson;
-    border: 2px solid crimson;
-    border-radius: 6px;
-  }
 }

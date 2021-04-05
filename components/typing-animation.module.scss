@@ -1,7 +1,9 @@
+@import "../styles/variables";
+
 .inline {
   display: inline;
 }
 
 .crimson {
-  color: crimson;
+  color: $color-primary;
 }

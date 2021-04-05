@@ -1,18 +1,19 @@
+@import "../styles/variables";
+
 .footerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  // max-height: 100px;
   padding: 45px 0;
 
   & a {
-    color: crimson;
+    color: $color-primary;
     display: inline-block;
     margin: auto 0.25rem;
     transition: color 0.3s ease;
 
     &:hover {
-      color: rgb(240, 210, 146);
+      color: $color-highlight;
     }
   }
 }

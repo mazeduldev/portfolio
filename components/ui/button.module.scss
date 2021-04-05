@@ -1,8 +1,10 @@
+@import "../../styles/variables";
+
 .button {
-  font-family: "Poppins", sans-serif;
-  border: 2px solid crimson;
-  background: crimson;
-  color: #fff;
+  font-family: $font-secondary;
+  border: 2px solid $color-primary;
+  background: $color-primary;
+  color: $on-color-primary;
   outline: none;
   font-size: 1rem;
   font-weight: 500;
@@ -12,7 +14,7 @@
   padding: 10px 15px;
 
   &:hover {
-    background: #fff;
-    color: crimson;
+    background: $on-color-primary;
+    color: $color-primary;
   }
 }

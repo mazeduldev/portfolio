@@ -4,9 +4,9 @@ import Card from './ui/card'
 
 const Portfolio = (props) => {
   return (
-    <section id={props.id} className="bg-dark">
+    <section id={props.id} className="bg dark">
       <div className="container">
-        <div className="title-container">
+        <div className="title-container dark">
           <h2 className="title">Portfolio</h2>
           <h3 className="subtitle">My works</h3>
         </div>

@@ -1,5 +1,7 @@
+@import "../styles/variables";
+
 .date {
-  color: darkgray;
+  color: $on-color-dark-secondary;
 }
 
 .contentContainer {
