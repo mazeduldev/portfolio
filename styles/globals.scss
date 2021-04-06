@@ -26,9 +26,8 @@ section {
 }
 
 .container {
-  max-width: 1300px;
+  max-width: map-get($container-max-widths, "sm");
   margin: auto;
-  padding: 0px 80px;
 }
 
 .bg {

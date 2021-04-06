@@ -46,14 +46,28 @@ const Contact = (props) => {
   }
 
   return (
-    <section className={classes.contactSection} id={props.id}>
+    <section className={`${classes.contactSection} bg light`} id={props.id}>
       <div className="container">
         <div className="title-container light">
           <h2 className="title">Contact me</h2>
           <h3 className="subtitle">Get in touch</h3>
         </div>
+        
         <div className={classes.content}>
-          <div className={classes.leftContent}>
+          
+          <div className={classes.formContainer}>
+            <form onSubmit={submitHandler}>
+              <Input value={fullName} onChange={changeHandler} inputtype="input" type="text" name="fullName" placeholder="Name" required></Input>
+              <Input value={email} onChange={changeHandler} inputtype="input" type="email" name="email" placeholder="Email" required></Input>
+              <Input value={subject} onChange={changeHandler} inputtype="input" type="text" name="subject" placeholder="Subject" required></Input>
+              <Input value={message} onChange={changeHandler} inputtype="textarea" name="message" placeholder="Message..." required></Input>
+              <div className={classes.submitBtn}>
+                <Button>Send Message</Button>
+              </div>
+            </form>
+          </div>
+
+          <div className={classes.addressContainer}>
             <address className={classes.infoContainer}>
               <MdEmail className={classes.icon} /> <a className={classes.infoText} href="mailto:mazidmailbox@gmail.com">mazidmailbox@gmail.com</a>
             </address>
@@ -71,18 +85,9 @@ const Contact = (props) => {
               <a href="https://www.instagram.com/the_mzd/" target="blank"><SiInstagram className={classes.socialBtn} /></a>
             </div>
           </div>
-          <div className={classes.rightContent}>
-            <form onSubmit={submitHandler}>
-              <Input value={fullName} onChange={changeHandler} inputtype="input" type="text" name="fullName" placeholder="Name" required></Input>
-              <Input value={email} onChange={changeHandler} inputtype="input" type="email" name="email" placeholder="Email" required></Input>
-              <Input value={subject} onChange={changeHandler} inputtype="input" type="text" name="subject" placeholder="Subject" required></Input>
-              <Input value={message} onChange={changeHandler} inputtype="textarea" name="message" placeholder="Message..." required></Input>
-              <div className={classes.submitBtn}>
-                <Button>Send Message</Button>
-              </div>
-            </form>
-          </div>
+
         </div>
+
       </div>
     </section>
   )
