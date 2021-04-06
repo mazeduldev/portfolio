@@ -56,6 +56,7 @@ const Contact = (props) => {
         <div className={classes.content}>
           
           <div className={classes.formContainer}>
+            <p className={classes.areaLabel}>Drop a mail</p>
             <form onSubmit={submitHandler}>
               <Input value={fullName} onChange={changeHandler} inputtype="input" type="text" name="fullName" placeholder="Name" required></Input>
               <Input value={email} onChange={changeHandler} inputtype="input" type="email" name="email" placeholder="Email" required></Input>
@@ -68,6 +69,7 @@ const Contact = (props) => {
           </div>
 
           <div className={classes.addressContainer}>
+          <p className={classes.areaLabel}>Get in touch</p>
             <address className={classes.infoContainer}>
               <MdEmail className={classes.icon} /> <a className={classes.infoText} href="mailto:mazidmailbox@gmail.com">mazidmailbox@gmail.com</a>
             </address>
@@ -78,11 +80,11 @@ const Contact = (props) => {
               <MdLocationOn className={classes.icon} /> <span className={classes.infoText}>House# 1359, Avenue# 11<br/>Mirpur DOHS, Dhaka, Bangladesh</span>
             </div>
             <div className={classes.socialContainer}>
-              <a href="https://www.linkedin.com/in/mazedul-islam/" target="blank"><SiLinkedin className={classes.socialBtn} /></a>
-              <a href="https://github.com/mazid1" target="blank"><SiGithub className={classes.socialBtn} /></a>
-              <a href="https://www.facebook.com/m.mazedul.islam.m" target="blank"><ImFacebook2 className={classes.socialBtn} /></a>
-              <a href="https://twitter.com/mazid_csedu" target="blank"><SiTwitter className={classes.socialBtn} /></a>
-              <a href="https://www.instagram.com/the_mzd/" target="blank"><SiInstagram className={classes.socialBtn} /></a>
+              <a href="https://www.linkedin.com/in/mazedul-islam/" target="blank"><SiLinkedin /></a>
+              <a href="https://github.com/mazid1" target="blank"><SiGithub /></a>
+              <a href="https://www.facebook.com/m.mazedul.islam.m" target="blank"><ImFacebook2 /></a>
+              <a href="https://twitter.com/mazid_csedu" target="blank"><SiTwitter /></a>
+              <a href="https://www.instagram.com/the_mzd/" target="blank"><SiInstagram /></a>
             </div>
           </div>
 

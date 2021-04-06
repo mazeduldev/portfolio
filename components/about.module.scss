@@ -1,8 +1,10 @@
 @import "../styles/variables";
 
 .content {
+  width: 90vw;
+  margin: auto;
+
   .proPic {
-    width: 80%;
     margin: 0 auto 20px auto;
 
     .rounded {
@@ -11,9 +13,6 @@
   }
 
   .description {
-    width: 80%;
-    margin: auto;
-
     .descriptionTitle {
       font-weight: $font-weight-bold;
       font-size: 25px;
@@ -36,9 +35,8 @@
       border-radius: 6px;
       font-weight: $font-weight-normal;
       font-size: $font-size-base;
-      display: block;
+      display: inline-block;
       transition: all 0.3s ease;
-      float: right;
 
       &:hover {
         background: $on-color-primary;

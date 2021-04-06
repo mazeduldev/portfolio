@@ -1,5 +1,10 @@
 @import "../styles/variables";
 
+.content {
+  width: 90vw;
+  margin: auto;
+}
+
 .date {
   color: $on-color-dark-secondary;
 }

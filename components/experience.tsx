@@ -28,43 +28,45 @@ const Experience = (props) => {
           <h3 className="subtitle">My jobs</h3>
         </div>
 
-        <VerticalTimeline>
-          <VerticalTimelineElement
-            className="vertical-timeline-element"
-            contentStyle={contentStyle}
-            contentArrowStyle={{ borderRight: "7px solid #fff" }}
-            date="2011 - present"
-            dateClassName={classes.date}
-            iconStyle={iconStyle}
-            icon={<MdWork />}
-          >
-            <div className={classes.contentContainer}>
-              <div className={classes.logoContainer}>
-                <Image
-                  src="/images/impel.png"
-                  alt="Impel"
-                  width={100}
-                  height={55}
-                  layout="responsive"
-                />
+        <div className={classes.content}>
+          <VerticalTimeline>
+            <VerticalTimelineElement
+              className="vertical-timeline-element"
+              contentStyle={contentStyle}
+              contentArrowStyle={{ borderRight: "7px solid #fff" }}
+              date="2011 - present"
+              dateClassName={classes.date}
+              iconStyle={iconStyle}
+              icon={<MdWork />}
+            >
+              <div className={classes.contentContainer}>
+                <div className={classes.logoContainer}>
+                  <Image
+                    src="/images/impel.png"
+                    alt="Impel"
+                    width={100}
+                    height={55}
+                    layout="responsive"
+                  />
+                </div>
+                <div>
+                  <h3 className="vertical-timeline-element-title">
+                    Full-Stack Web Developer
+                  </h3>
+                  <h4 className="vertical-timeline-element-subtitle">
+                    Impel IT Solutions
+                  </h4>
+                  <p>Working as a full-stack software engineer:</p>
+                  <ul className={classes.ul}>
+                    <li>Designing and developing REST APIs using Java, Spring-boot, JPA, Hibernate and QueryDSL</li>
+                    <li>Developing multi language supported client application using Typescript and Angular 9</li>
+                    <li>Writing automated tests for Angular application using Jasmine and Karma</li>
+                  </ul>
+                </div>
               </div>
-              <div>
-                <h3 className="vertical-timeline-element-title">
-                  Full-Stack Web Developer
-                </h3>
-                <h4 className="vertical-timeline-element-subtitle">
-                  Impel IT Solutions
-                </h4>
-                <p>Working as a full-stack software engineer:</p>
-                <ul className={classes.ul}>
-                  <li>Designing and developing REST APIs using Java, Spring-boot, JPA, Hibernate and QueryDSL</li>
-                  <li>Developing multi language supported client application using Typescript and Angular 9</li>
-                  <li>Writing automated tests for Angular application using Jasmine and Karma</li>
-                </ul>
-              </div>
-            </div>
-          </VerticalTimelineElement>
-        </VerticalTimeline>
+            </VerticalTimelineElement>
+          </VerticalTimeline>
+        </div>
       </div>
     </section>
   )
