@@ -1,0 +1,29 @@
+@import "../styles/variables";
+
+.drawerContainer {
+  position: fixed;
+  z-index: $z-index-drawer;
+  width: 100%;
+  height: 100%;
+  padding: 0 5%;
+  transition: all 0.3s ease-in-out;
+  left: -100%;
+
+  &.active {
+    left: 0;
+  }
+
+  .crossButton {
+    color: $on-color-dark;
+    font-size: $h2-font-size;
+    height: 64px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-highlight;
+    }
+  }
+}

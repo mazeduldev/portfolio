@@ -3,7 +3,7 @@
 
 .navContainer {
   position: fixed;
-  z-index: 100;
+  z-index: $z-index-nav;
   width: 100%;
   height: 64px;
   background: $color-primary;
@@ -82,7 +82,7 @@
   background: $color-primary;
   color: $on-color-primary;
   border: 2px solid $color-primary;
-  z-index: 9999;
+  z-index: $z-index-scroll;
   cursor: pointer;
   pointer-events: none;
   opacity: 0;

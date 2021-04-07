@@ -73,3 +73,8 @@ $container-max-widths: (
   xl: 1140px,
   xxl: 1320px,
 ) !default;
+
+// z-index
+$z-index-nav: 100;
+$z-index-scroll: 110;
+$z-index-drawer: 120;
