@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import classes from './navbar.module.scss'
 import { Link, animateScroll as scroll } from "react-scroll"
-import {FaArrowUp} from "react-icons/fa"
+import {FaArrowUp, FaBars} from "react-icons/fa"
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 const Navbar: React.FC = () => {
@@ -37,6 +37,9 @@ const Navbar: React.FC = () => {
           <Link to="about" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>About</Link>
           <Link to="contact" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Contact</Link>
         </ul>
+        <div className={classes.bars}>
+          <FaBars className={classes.menuIcon}></FaBars>
+        </div>
       </nav>
     </>
   )
