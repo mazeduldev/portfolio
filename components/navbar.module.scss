@@ -99,3 +99,30 @@
     color: $color-primary;
   }
 }
+
+.drawerMenu {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+
+  .menuItem {
+    color: $on-color-primary;
+    font-family: $font-secondary;
+    font-weight: $font-weight-normal;
+    font-size: $font-size-md;
+    width: 80%;
+    height: 10%;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $color-highlight;
+      cursor: pointer;
+    }
+  }
+}

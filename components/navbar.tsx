@@ -47,7 +47,15 @@ const Navbar: React.FC = () => {
           <FaBars className={classes.menuIcon}></FaBars>
         </div>
       </nav>
-      <Drawer isOpen={isDrawerOpen} toggle={toggleDrawer}></Drawer>
+      <Drawer isOpen={isDrawerOpen} toggle={toggleDrawer}>
+        <div className={classes.drawerMenu}>
+          <Link to="home" smooth={true} spy={true} offset={-100} className={classes.menuItem}>Home</Link>
+          <Link to="portfolio" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Portfolio</Link>
+          <Link to="experience" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Experience</Link>
+          <Link to="about" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>About</Link>
+          <Link to="contact" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Contact</Link>
+        </div>
+      </Drawer>
     </>
   )
 }
