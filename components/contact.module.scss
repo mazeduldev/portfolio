@@ -1,16 +1,31 @@
 @import "../styles/variables";
+@import "../styles/mixins";
 
 .contactSection {
   padding-bottom: 200px;
 }
 
 .content {
-  width: 90vw;
+  width: 90%;
   margin: 0 auto;
 
+  @include respond-to("sm") {
+    width: 100%;
+  }
+
+  @include respond-to("lg") {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
   .addressContainer {
-    margin: auto;
-    margin-top: 5em;
+    margin: 5em auto auto auto;
+
+    @include respond-to("lg") {
+      width: 40%;
+      margin: 0 auto auto auto;
+    }
 
     .infoContainer {
       display: flex;
@@ -40,6 +55,10 @@
   .formContainer {
     width: 100%;
     margin: auto;
+
+    @include respond-to("lg") {
+      width: 50%;
+    }
   }
 }
 
@@ -55,4 +74,5 @@
 .areaLabel {
   font-weight: $font-weight-bold;
   font-size: $font-size-lg;
+  margin-bottom: 20px;
 }

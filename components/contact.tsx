@@ -56,7 +56,7 @@ const Contact = (props) => {
         <div className={classes.content}>
           
           <div className={classes.formContainer}>
-            <p className={classes.areaLabel}>Drop a mail</p>
+            <h4 className={classes.areaLabel}>Drop a mail</h4>
             <form onSubmit={submitHandler}>
               <Input value={fullName} onChange={changeHandler} inputtype="input" type="text" name="fullName" placeholder="Name" required></Input>
               <Input value={email} onChange={changeHandler} inputtype="input" type="email" name="email" placeholder="Email" required></Input>
@@ -69,7 +69,7 @@ const Contact = (props) => {
           </div>
 
           <div className={classes.addressContainer}>
-          <p className={classes.areaLabel}>Get in touch</p>
+            <h4 className={classes.areaLabel}>Get in touch</h4>
             <address className={classes.infoContainer}>
               <MdEmail className={classes.icon} /> <a className={classes.infoText} href="mailto:mazidmailbox@gmail.com">mazidmailbox@gmail.com</a>
             </address>
