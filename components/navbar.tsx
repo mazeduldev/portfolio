@@ -49,11 +49,11 @@ const Navbar: React.FC = () => {
       </nav>
       <Drawer isOpen={isDrawerOpen} toggle={toggleDrawer}>
         <div className={classes.drawerMenu}>
-          <Link to="home" smooth={true} spy={true} offset={-100} className={classes.menuItem}>Home</Link>
-          <Link to="portfolio" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Portfolio</Link>
-          <Link to="experience" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Experience</Link>
-          <Link to="about" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>About</Link>
-          <Link to="contact" activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Contact</Link>
+          <Link to="home" onClick={toggleDrawer} activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Home</Link>
+          <Link to="portfolio" onClick={toggleDrawer} activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Portfolio</Link>
+          <Link to="experience" onClick={toggleDrawer} activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Experience</Link>
+          <Link to="about" onClick={toggleDrawer} activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>About</Link>
+          <Link to="contact" onClick={toggleDrawer} activeClass={classes.active} smooth={true} spy={true} offset={-100} className={classes.menuItem}>Contact</Link>
         </div>
       </Drawer>
     </>

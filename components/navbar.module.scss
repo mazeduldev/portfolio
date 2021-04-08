@@ -108,14 +108,18 @@
   align-items: center;
   height: 80%;
 
+  .active {
+    border: 3px solid $color-highlight;
+    border-radius: 6px;
+  }
+
   .menuItem {
     color: $on-color-primary;
     font-family: $font-secondary;
     font-weight: $font-weight-normal;
-    font-size: $font-size-md;
+    font-size: $h4-font-size;
     width: 80%;
     height: 10%;
-    border: 1px solid gray;
     display: flex;
     align-items: center;
     justify-content: center;
