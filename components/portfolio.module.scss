@@ -1,6 +1,13 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
 .content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  @include respond-to("md") {
+    justify-content: space-between;
+  }
 }
