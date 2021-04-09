@@ -1,5 +1,4 @@
 // colors
-
 $color-primary: crimson;
 $on-color-primary: #fff;
 
@@ -13,7 +12,6 @@ $on-color-light: #111;
 $color-highlight: #f0d292;
 
 // fonts
-
 $font-primary: "Poppins", sans-serif;
 $font-secondary: "Ubuntu", sans-serif;
 
@@ -44,34 +42,33 @@ $line-height-sm: 1.25;
 $line-height-lg: 2;
 
 // breakpoints
-
 $breakpoints: (
   xs: (
     min-width: 0px,
   ),
   sm: (
-    min-width: 576px,
+    min-width: 640px,
   ),
   md: (
     min-width: 768px,
   ),
   lg: (
-    min-width: 992px,
+    min-width: 1024px,
   ),
   xl: (
-    min-width: 1200px,
+    min-width: 1280px,
   ),
   xxl: (
-    min-width: 1400px,
+    min-width: 1536px,
   ),
 ) !default;
 
 $container-max-widths: (
-  sm: 540px,
+  sm: 600px,
   md: 720px,
   lg: 960px,
-  xl: 1140px,
-  xxl: 1320px,
+  xl: 1180px,
+  xxl: 1400px,
 ) !default;
 
 // z-index

@@ -26,20 +26,20 @@ section {
 }
 
 .container {
-  max-width: map-get($container-max-widths, "sm");
+  max-width: calc(100% - 40px);
   margin: auto;
 
   @include respond-to("md") {
-    max-width: map-get($map: $container-max-widths, $key: "md");
+    max-width: map-get($container-max-widths, "md");
   }
   @include respond-to("lg") {
-    max-width: map-get($map: $container-max-widths, $key: "lg");
+    max-width: map-get($container-max-widths, "lg");
   }
   @include respond-to("xl") {
-    max-width: map-get($map: $container-max-widths, $key: "xl");
+    max-width: map-get($container-max-widths, "xl");
   }
   @include respond-to("xxl") {
-    max-width: map-get($map: $container-max-widths, $key: "xxl");
+    max-width: map-get($container-max-widths, "xxl");
   }
 }
 
