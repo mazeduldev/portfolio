@@ -30,10 +30,23 @@
       display: flex;
       align-items: center;
       padding: 10px 0;
+      font-size: $font-size-base;
 
-      & .infoText {
+      .icon {
+        color: $color-primary;
+        display: block;
+
+        @media (max-width: 323px) {
+          display: none;
+        }
+      }
+
+      .infoText {
         margin-left: 10px;
-        font-style: normal;
+        text-decoration: none;
+        @media (max-width: 323px) {
+          margin: 0;
+        }
       }
     }
 
@@ -59,11 +72,6 @@
       width: 50%;
     }
   }
-}
-
-.icon {
-  color: $color-primary;
-  font-size: 1.7rem;
 }
 
 .submitBtn {

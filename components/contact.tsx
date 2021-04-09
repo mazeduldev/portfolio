@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import classes from './contact.module.scss'
-import {MdEmail, MdLocationOn, MdPhone} from 'react-icons/md'
 import {ImFacebook2} from 'react-icons/im'
 import {SiGithub, SiInstagram, SiLinkedin, SiTwitter} from 'react-icons/si'
 import Input from './ui/input'
 import Button from './ui/button'
+import { FaMapMarkerAlt, FaMobileAlt, FaRegEnvelope } from 'react-icons/fa'
 
 const Contact = (props) => {
   const [fullName, setFullName] = useState('')
@@ -71,13 +71,13 @@ const Contact = (props) => {
           <div className={classes.addressContainer}>
             <h4 className={classes.areaLabel}>Get in touch</h4>
             <address className={classes.infoContainer}>
-              <MdEmail className={classes.icon} /> <a className={classes.infoText} href="mailto:mazidmailbox@gmail.com">mazidmailbox@gmail.com</a>
+              <FaRegEnvelope className={classes.icon} /> <a className={classes.infoText} href="mailto:mazidmailbox@gmail.com">mazidmailbox@gmail.com</a>
             </address>
             <div className={classes.infoContainer}>
-              <MdPhone className={classes.icon} /> <a className={classes.infoText} href="tel:+8801521252696">+880 1521-252696</a>
+              <FaMobileAlt className={classes.icon} /> <a className={classes.infoText} href="tel:+8801521252696">+880 1521-252696</a>
             </div>
             <div className={classes.infoContainer}>
-              <MdLocationOn className={classes.icon} /> <span className={classes.infoText}>House# 1359, Avenue# 11<br/>Mirpur DOHS, Dhaka, Bangladesh</span>
+              <FaMapMarkerAlt className={classes.icon} /> <span className={classes.infoText}>House# 1359, Avenue# 11<br/>Mirpur DOHS, Dhaka, Bangladesh</span>
             </div>
             <div className={classes.socialContainer}>
               <a href="https://www.linkedin.com/in/mazedul-islam/" target="blank"><SiLinkedin /></a>
