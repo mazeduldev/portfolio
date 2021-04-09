@@ -22,15 +22,15 @@ const About = (props) => {
             <Image
               src="/images/me.jpg"
               alt="Mazid"
-              width={400}
-              height={400}
-              layout="responsive"
+              width={350}
+              height={350}
+              layout="intrinsic"
               className={classes.rounded}
             />
           </div>
           <div className={classes.description}>
             <div className={classes.descriptionTitle}>
-              I'm Mazid and I'm a<br className={classes.br}></br> <TypingAnimation texts={myTitles}></TypingAnimation>
+              I'm Mazid, a<br className={classes.br}></br> <TypingAnimation texts={myTitles}></TypingAnimation>
             </div>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, eius consectetur. Temporibus soluta deserunt quaerat blanditiis nihil sapiente, dolorem illum facilis? Repudiandae deleniti nisi consequatur voluptates harum, quibusdam libero soluta, ex amet doloremque tenetur culpa quas, excepturi eum! Consequuntur ipsam nam vel maiores voluptatibus voluptate pariatur aperiam accusantium, beatae, earum sit. Vitae eaque iusto eius quas corporis! Quia accusamus voluptatem, deserunt quod consequuntur doloremque distinctio atque placeat et molestias corrupti officia totam ratione, inventore fugit.</p>
             <a href="#">Download CV</a>
