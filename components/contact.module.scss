@@ -52,14 +52,30 @@
 
     .socialContainer {
       display: flex;
+      flex-wrap: wrap;
       justify-content: left;
       align-items: center;
-      font-size: $h3-font-size;
+      font-size: $font-size-lg;
       color: $color-primary;
       margin-top: 2em;
+      transition: all 0.3s ease;
 
       a {
-        padding: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+        padding: 2px;
+        border: 2px solid $color-primary;
+        border-radius: 6px;
+        background: $color-primary;
+        color: $on-color-primary;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: $on-color-primary;
+          color: $color-primary;
+        }
       }
     }
   }
