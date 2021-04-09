@@ -23,8 +23,7 @@
     margin: 5em auto auto auto;
 
     @include respond-to("lg") {
-      width: 40%;
-      margin: 0 auto auto auto;
+      margin: 0 auto;
     }
 
     .infoContainer {
