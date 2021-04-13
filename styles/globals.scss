@@ -52,6 +52,11 @@ section {
     color: $on-color-light;
   }
 
+  &.semi-light {
+    background: rgb(207, 194, 194);
+    color: $on-color-light;
+  }
+
   &.dark {
     background: $color-dark;
     color: $on-color-dark;

@@ -21,15 +21,15 @@ const Experience = (props) => {
   }
 
   return (
-    <section id={props.id} className="bg dark">
+    <section id={props.id} className="bg semi-light">
       <div className="container">
-        <div className="title-container dark">
+        <div className="title-container light">
           <h2 className="title">Experience</h2>
           <h3 className="subtitle">My jobs</h3>
         </div>
 
         <div className={classes.content}>
-          <VerticalTimeline>
+          <VerticalTimeline className={classes.verticalTimeline}>
             <VerticalTimelineElement
               className="vertical-timeline-element"
               contentStyle={contentStyle}
