@@ -11,9 +11,9 @@ const myTitles = [
 
 const About = (props) => {
   return (
-    <section id={props.id}>
+    <section id={props.id} className="bg dark">
       <div className='container'>
-        <div className="title-container light">
+        <div className="title-container dark">
           <h2 className="title">About me</h2>
           <h3 className="subtitle">Who I am</h3>
         </div>
