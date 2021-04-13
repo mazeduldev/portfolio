@@ -1,68 +1,136 @@
 @import "../styles/variables";
 @import "../styles/mixins";
 
-.content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  width: 100%;
+.starDark {
+  background: $color-dark;
+  color: $on-color-dark;
+  position: relative;
 
-  @include respond-to("sm") {
-    width: 90%;
+  .background {
+    background: $color-dark url(/images/background.png) repeat 5% 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    animation: STAR-MOVE 2000s linear infinite;
   }
 
-  @include respond-to("md") {
-    justify-content: space-between;
+  .midground {
+    background: url(/images/midground.png) repeat 20% 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+    animation: STAR-MOVE 1500s linear infinite;
   }
 
-  .cardImage {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    opacity: 80%;
+  .foreground {
+    background: url(/images/foreground.png) repeat 35% 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+
+    animation: STAR-MOVE 1000s linear infinite;
   }
 
-  .cardBody {
-    padding: 10px;
+  .portfolioContainer {
+    max-width: calc(100% - 40px);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
 
-    > .cardTitle {
-      color: $color-primary;
-      font-size: $h5-font-size;
+    @include respond-to("md") {
+      max-width: map-get($container-max-widths, "md");
+    }
+    @include respond-to("lg") {
+      max-width: map-get($container-max-widths, "lg");
+    }
+    @include respond-to("xl") {
+      max-width: map-get($container-max-widths, "xl");
+    }
+    @include respond-to("xxl") {
+      max-width: map-get($container-max-widths, "xxl");
     }
 
-    > .cardDescription {
-      color: $on-color-dark;
-      font-size: $font-size-base;
-      text-align: justify;
-    }
-
-    > .cardTagContainer {
+    .content {
       display: flex;
       flex-wrap: wrap;
-      margin: 20px 0;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      width: 100%;
 
-      > .tag {
-        border: 1px solid $on-color-dark-secondary;
-        background-color: $on-color-dark-secondary;
-        color: $color-dark;
-        font-size: $font-size-sm;
-        border-radius: 12px;
-        padding: 0 5px;
-        margin-right: 10px;
-        white-space: nowrap;
+      @include respond-to("md") {
+        justify-content: space-between;
+      }
+
+      .cardImage {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        opacity: 80%;
+      }
+
+      .cardBody {
+        padding: 10px;
+
+        > .cardTitle {
+          color: $color-primary;
+          font-size: $h5-font-size;
+        }
+
+        > .cardDescription {
+          color: $on-color-dark;
+          font-size: $font-size-base;
+          text-align: justify;
+        }
+
+        > .cardTagContainer {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 20px 0;
+
+          > .tag {
+            border: 1px solid $on-color-dark-secondary;
+            background-color: $on-color-dark-secondary;
+            color: $color-dark;
+            font-size: $font-size-sm;
+            border-radius: 12px;
+            padding: 0 5px;
+            margin-right: 10px;
+            white-space: nowrap;
+          }
+        }
+
+        > .cardButtonContainer {
+          display: flex;
+          margin-bottom: 5px;
+
+          > .cardButton {
+            font-size: $font-size-sm;
+            padding: 5px;
+            margin-right: 10px;
+          }
+        }
       }
     }
+  }
+}
 
-    > .cardButtonContainer {
-      display: flex;
-      margin-bottom: 5px;
-
-      > .cardButton {
-        font-size: $font-size-sm;
-        padding: 5px;
-        margin-right: 10px;
-      }
-    }
+@keyframes STAR-MOVE {
+  0% {
+    left: -1000%;
+  }
+  100% {
+    left: 1000%;
   }
 }

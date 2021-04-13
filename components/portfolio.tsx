@@ -6,8 +6,12 @@ import Image from "next/image";
 
 const Portfolio = (props) => {
   return (
-    <section id={props.id} className="bg dark">
-      <div className="container">
+    <section id={props.id} className={`bg ${classes.starDark}`}>
+      <div className={classes.background}></div>
+      <div className={classes.midground}></div>
+      <div className={classes.foreground}></div>
+
+      <div className={classes.portfolioContainer}>
         <div className="title-container dark">
           <h2 className="title">Portfolio</h2>
           <h3 className="subtitle">My works</h3>
