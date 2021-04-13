@@ -20,11 +20,39 @@
 }
 
 .contentContainer {
-  display: grid;
-  grid-template-columns: 100px auto;
-}
+  display: flex;
+  flex-direction: column;
 
-.logoContainer {
-  margin-right: 15px;
-  padding-top: 2px;
+  .headerContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .logoContainer {
+      min-width: 100px;
+      max-width: 120px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+
+    .titleContainer {
+      .elementTitle {
+        font-size: $h5-font-size;
+      }
+      .elementSubtitle {
+        font-size: $h6-font-size;
+      }
+    }
+  }
+
+  .elementBody {
+    font-size: $font-size-base;
+    p {
+      font-size: inherit;
+    }
+    ul {
+      font-size: inherit;
+      margin-left: 20px;
+    }
+  }
 }

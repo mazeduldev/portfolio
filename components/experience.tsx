@@ -40,22 +40,28 @@ const Experience = (props) => {
               icon={<MdWork />}
             >
               <div className={classes.contentContainer}>
-                <div className={classes.logoContainer}>
-                  <Image
-                    src="/images/impel.png"
-                    alt="Impel"
-                    width={100}
-                    height={55}
-                    layout="responsive"
-                  />
+
+                <div className={classes.headerContainer}>
+                  <div className={classes.logoContainer}>
+                    <Image
+                      src="/images/impel.png"
+                      alt="Impel"
+                      width={100}
+                      height={50}
+                      layout="responsive"
+                    />
+                  </div>
+                  <div className={classes.titleContainer}>
+                    <div className={`vertical-timeline-element-title ${classes.elementTitle}`}>
+                      <strong>Full-Stack Web Developer</strong>
+                    </div>
+                    <div className={`vertical-timeline-element-subtitle ${classes.elementSubtitle}`}>
+                      <strong>Impel IT Solutions</strong>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="vertical-timeline-element-title">
-                    Full-Stack Web Developer
-                  </h3>
-                  <h4 className="vertical-timeline-element-subtitle">
-                    Impel IT Solutions
-                  </h4>
+
+                <div className={classes.elementBody}>
                   <p>Working as a full-stack software engineer:</p>
                   <ul className={classes.ul}>
                     <li>Designing and developing REST APIs using Java, Spring-boot, JPA, Hibernate and QueryDSL</li>
@@ -63,6 +69,7 @@ const Experience = (props) => {
                     <li>Writing automated tests for Angular application using Jasmine and Karma</li>
                   </ul>
                 </div>
+
               </div>
             </VerticalTimelineElement>
           </VerticalTimeline>
