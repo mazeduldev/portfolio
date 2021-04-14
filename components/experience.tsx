@@ -17,11 +17,16 @@ interface Description {
   title: string;
   points: string[];
 }
+interface Duration {
+  start: Date;
+  end: Date;
+}
 interface Experience {
   title: string;
   company: Company;
   description: Description;
   tags: string[];
+  duration: Duration;
 }
 
 const experiences: Experience[] = [
@@ -41,8 +46,26 @@ const experiences: Experience[] = [
       ],
     },
     tags: ["spring-boot", "java", "angular", "mysql", "querydsl"],
+    duration: {
+      start: new Date("01/03/2020"),
+      end: null
+    }
   },
 ];
+
+const getMonth = (date: Date): string => {
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+  return months[date.getMonth()]
+}
+
+const formatDuration = (duration: Duration): string => {
+  const start = `${getMonth(duration.start)} ${duration.start.getFullYear()}`
+  if (!duration.end) {
+    return `${start} - Present`
+  }
+  const end = `${getMonth(duration.end)} ${duration.start.getFullYear()}`
+  return `${start} - ${end}`
+}
 
 const Experience = (props) => {
   const lightCrimson = "#FF8289";
@@ -64,7 +87,7 @@ const Experience = (props) => {
           className="vertical-timeline-element"
           contentStyle={contentStyle}
           contentArrowStyle={{ borderRight: "7px solid #fff" }}
-          date="2011 - present"
+          date={formatDuration(exp.duration)}
           dateClassName={classes.date}
           iconStyle={iconStyle}
           icon={<MdWork />}
