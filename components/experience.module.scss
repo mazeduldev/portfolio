@@ -55,4 +55,10 @@
       margin-left: 20px;
     }
   }
+
+  .tagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
 }

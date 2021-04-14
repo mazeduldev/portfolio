@@ -6,6 +6,7 @@ import {
 } from "react-vertical-timeline-component"
 import Image from 'next/image'
 import classes from "./experience.module.scss"
+import Tag from "./ui/tag"
 
 const Experience = (props) => {
   const lightCrimson = "#FF8289"
@@ -68,6 +69,15 @@ const Experience = (props) => {
                     <li>Developing multi language supported client application using Typescript and Angular 9</li>
                     <li>Writing automated tests for Angular application using Jasmine and Karma</li>
                   </ul>
+                </div>
+
+                <div className={classes.tagContainer}>
+                  <Tag>spring-boot</Tag>
+                  <Tag>java</Tag>
+                  <Tag>angular</Tag>
+                  <Tag>bootstrap</Tag>
+                  <Tag>mysql</Tag>
+                  <Tag>querydsl</Tag>
                 </div>
 
               </div>

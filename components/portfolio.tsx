@@ -3,6 +3,7 @@ import classes from "./portfolio.module.scss";
 import Button from "./ui/button";
 import Card from "./ui/card";
 import Image from "next/image";
+import Tag from "./ui/tag";
 
 const Portfolio = (props) => {
   return (
@@ -33,8 +34,8 @@ const Portfolio = (props) => {
                 library for Angular applications.
               </p>
               <div className={classes.cardTagContainer}>
-                <div className={classes.tag}>angular</div>
-                <div className={classes.tag}>angular-material</div>
+                <Tag>angular</Tag>
+                <Tag>angular-material</Tag>
               </div>
               <div className={classes.cardButtonContainer}>
                 <Button classes={classes.cardButton}>
@@ -72,8 +73,8 @@ const Portfolio = (props) => {
                 library for Angular applications.
               </p>
               <div className={classes.cardTagContainer}>
-                <div className={classes.tag}>angular</div>
-                <div className={classes.tag}>angular-material</div>
+                <Tag>angular</Tag>
+                <Tag>angular-material</Tag>
               </div>
               <div className={classes.cardButtonContainer}>
                 <Button classes={classes.cardButton}>
@@ -111,8 +112,8 @@ const Portfolio = (props) => {
                 library for Angular applications.
               </p>
               <div className={classes.cardTagContainer}>
-                <div className={classes.tag}>angular</div>
-                <div className={classes.tag}>angular-material</div>
+                <Tag>angular</Tag>
+                <Tag>angular-material</Tag>
               </div>
               <div className={classes.cardButtonContainer}>
                 <Button classes={classes.cardButton}>
@@ -150,8 +151,8 @@ const Portfolio = (props) => {
                 library for Angular applications.
               </p>
               <div className={classes.cardTagContainer}>
-                <div className={classes.tag}>angular</div>
-                <div className={classes.tag}>angular-material</div>
+                <Tag>angular</Tag>
+                <Tag>angular-material</Tag>
               </div>
               <div className={classes.cardButtonContainer}>
                 <Button classes={classes.cardButton}>

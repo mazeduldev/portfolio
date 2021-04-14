@@ -98,17 +98,6 @@
           display: flex;
           flex-wrap: wrap;
           margin: 20px 0;
-
-          > .tag {
-            border: 1px solid $on-color-dark-secondary;
-            background-color: $on-color-dark-secondary;
-            color: $color-dark;
-            font-size: $font-size-sm;
-            border-radius: 12px;
-            padding: 0 5px;
-            margin-right: 10px;
-            white-space: nowrap;
-          }
         }
 
         > .cardButtonContainer {
