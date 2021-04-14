@@ -1,12 +1,12 @@
 @import "../../styles//variables";
 
 .tag {
-  border: 1px solid $on-color-dark-secondary;
-  background-color: $on-color-dark-secondary;
+  border: 0;
+  background-color: $color-light-secondary;
   color: $color-dark;
   font-size: $font-size-sm;
   border-radius: 12px;
-  padding: 0 6px;
+  padding: 2px 8px;
   margin: 2px 10px 2px 0;
   white-space: nowrap;
 }
