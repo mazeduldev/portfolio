@@ -12,6 +12,7 @@ interface Company {
   name: string;
   logoPath: string;
   logoAlt: string;
+  website?: string;
 }
 interface Description {
   title: string;
@@ -35,10 +36,11 @@ const experiences: Experience[] = [
       name: "Impel IT Solutions",
       logoPath: "/images/impel.png",
       logoAlt: "Impel",
+      website: "http://www.impelitsolutions.com/"
     },
-    title: "Full-Stack Web Developer",
+    title: "Software Engineer (full-stack)",
     description: {
-      title: "Working as a full-stack software engineer:",
+      title: "Working as a full-stack software engineer",
       points: [
         "Designing and developing REST APIs using Java, Spring-boot, JPA, Hibernate and QueryDSL",
         "Developing multi language supported client application using Typescript and Angular 9",
@@ -47,8 +49,76 @@ const experiences: Experience[] = [
     },
     tags: ["spring-boot", "java", "angular", "mysql", "querydsl"],
     duration: {
-      start: new Date("01/03/2020"),
+      start: new Date("01/mar/2020"),
       end: null
+    }
+  },
+  {
+    company: {
+      name: "Relisource Technologies Ltd.",
+      logoPath: "/images/relisource.jpeg",
+      logoAlt: "Relisource",
+      website: "https://www.relisource.com/"
+    },
+    title: "Web Developer (salesforce)",
+    description: {
+      title: "Worked as a full-stack software developer",
+      points: [
+        "Developed Web application in Salesforce platform using APEX, Visualforce and SOQL",
+        "Refactored and modernized existing Javascript code base of AngularJS application",
+        "Participated in code reviews as a reviewer",
+        "Mentored junior co-workers",
+      ],
+    },
+    tags: ["salesforce", "angularjs", "javascript", "html", "css"],
+    duration: {
+      start: new Date("01/aug/2019"),
+      end: new Date("01/feb/2020")
+    }
+  },
+  {
+    company: {
+      name: "Orbitax Bangladesh Ltd.",
+      logoPath: "/images/orbitax.jpeg",
+      logoAlt: "Orbitax",
+      website: "https://www.orbitax.com/"
+    },
+    title: "Associate Software Engineer",
+    description: {
+      title: "Worked as a full-stack software developer",
+      points: [
+        "Developed robust and highly functional UI for SPA using Angular 6, NgRx and Typescript",
+        "Contributed to development and bug fixing of .NET Core application in microservice based architecture",
+        "Experienced in using GraphQL and REST APIs and JSON",
+        "Accustomed to JIRA based project management, issue tracking and product releases",
+      ],
+    },
+    tags: ["angular", ".net-core", "graphql", "rest-api", "ngrx", "jira"],
+    duration: {
+      start: new Date("01/mar/2018"),
+      end: new Date("01/jul/2019")
+    }
+  },
+  {
+    company: {
+      name: "LII Lab",
+      logoPath: "/images/liilab.jpeg",
+      logoAlt: "LiiLab",
+      website: "https://liilab.com/"
+    },
+    title: "Software Engineer (Android)",
+    description: {
+      title: "Worked as an Android application developer",
+      points: [
+        "Developed multiple image editing applications using Android SDK and open source libraries",
+        "Ensured applications were properly integrated with different Android APIs",
+        "Provided decent UX for different Screen Resolutions and Aspect Ratios",
+      ],
+    },
+    tags: ["android", "java"],
+    duration: {
+      start: new Date("01/aug/2017"),
+      end: new Date("01/feb/2018")
     }
   },
 ];
@@ -63,7 +133,7 @@ const formatDuration = (duration: Duration): string => {
   if (!duration.end) {
     return `${start} - Present`
   }
-  const end = `${getMonth(duration.end)} ${duration.start.getFullYear()}`
+  const end = `${getMonth(duration.end)} ${duration.end.getFullYear()}`
   return `${start} - ${end}`
 }
 
@@ -108,9 +178,10 @@ const Experience = (props) => {
                 <div className={`vertical-timeline-element-title ${classes.elementTitle}`}>
                   <strong>{exp.title}</strong>
                 </div>
-                <div className={`vertical-timeline-element-subtitle ${classes.elementSubtitle}`}>
+                <a className={`vertical-timeline-element-subtitle ${classes.elementSubtitle}`}
+                  href={exp.company.website ? exp.company.website : '#'} target="blank">
                   <strong>{exp.company.name}</strong>
-                </div>
+                </a>
               </div>
             </div>
 

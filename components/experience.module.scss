@@ -41,6 +41,8 @@
       }
       .elementSubtitle {
         font-size: $h6-font-size;
+        display: block;
+        color: $on-color-light-secondary;
       }
     }
   }
