@@ -1,25 +1,119 @@
-import React from "react"
-import { MdWork } from "react-icons/md"
+import React from "react";
+import { MdWork } from "react-icons/md";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
-} from "react-vertical-timeline-component"
-import Image from 'next/image'
-import classes from "./experience.module.scss"
-import Tag from "./ui/tag"
+} from "react-vertical-timeline-component";
+import Image from "next/image";
+import classes from "./experience.module.scss";
+import Tag from "./ui/tag";
+
+interface Company {
+  name: string;
+  logoPath: string;
+  logoAlt: string;
+}
+interface Description {
+  title: string;
+  points: string[];
+}
+interface Experience {
+  title: string;
+  company: Company;
+  description: Description;
+  tags: string[];
+}
+
+const experiences: Experience[] = [
+  {
+    company: {
+      name: "Impel IT Solutions",
+      logoPath: "/images/impel.png",
+      logoAlt: "Impel",
+    },
+    title: "Full-Stack Web Developer",
+    description: {
+      title: "Working as a full-stack software engineer:",
+      points: [
+        "Designing and developing REST APIs using Java, Spring-boot, JPA, Hibernate and QueryDSL",
+        "Developing multi language supported client application using Typescript and Angular 9",
+        "Writing automated tests for Angular application using Jasmine and Karma",
+      ],
+    },
+    tags: ["spring-boot", "java", "angular", "mysql", "querydsl"],
+  },
+];
 
 const Experience = (props) => {
-  const lightCrimson = "#FF8289"
+  const lightCrimson = "#FF8289";
 
   const contentStyle = {
     color: "#111",
     borderTop: `3px solid ${lightCrimson}`,
-  }
+  };
 
   const iconStyle = {
     background: lightCrimson,
-    color: "#fff"
-  }
+    color: "#fff",
+  };
+
+  const timelineElements = experiences.map(
+    (exp: Experience, idx: number) => {
+      return (
+        <VerticalTimelineElement
+          className="vertical-timeline-element"
+          contentStyle={contentStyle}
+          contentArrowStyle={{ borderRight: "7px solid #fff" }}
+          date="2011 - present"
+          dateClassName={classes.date}
+          iconStyle={iconStyle}
+          icon={<MdWork />}
+          key={`element_${idx}`}
+        >
+          <div className={classes.contentContainer}>
+            <div className={classes.headerContainer}>
+              <div className={classes.logoContainer}>
+                <Image
+                  src={exp.company.logoPath}
+                  alt={exp.company.logoAlt}
+                  width={100}
+                  height={50}
+                  layout="responsive"
+                />
+              </div>
+              <div className={classes.titleContainer}>
+                <div className={`vertical-timeline-element-title ${classes.elementTitle}`}>
+                  <strong>{exp.title}</strong>
+                </div>
+                <div className={`vertical-timeline-element-subtitle ${classes.elementSubtitle}`}>
+                  <strong>{exp.company.name}</strong>
+                </div>
+              </div>
+            </div>
+
+            <div className={classes.elementBody}>
+              <p>{exp.description.title}</p>
+              <ul className={classes.ul}>
+                {
+                  exp.description.points.map((point: string, p_idx: number) => (
+                    <li key={`element_${idx}_point_${p_idx}`}>{point}</li>
+                  ))
+                }
+              </ul>
+            </div>
+
+            <div className={classes.tagContainer}>
+              {
+                exp.tags.map((tag: string, t_idx: number) => (
+                  <Tag key={`element_${idx}_tag_${t_idx}`}>{tag}</Tag>
+                ))
+              }
+            </div>
+          </div>
+        </VerticalTimelineElement>
+      );
+    }
+  );
 
   return (
     <section id={props.id} className="bg semi-light">
@@ -31,62 +125,12 @@ const Experience = (props) => {
 
         <div className={classes.content}>
           <VerticalTimeline className={classes.verticalTimeline}>
-            <VerticalTimelineElement
-              className="vertical-timeline-element"
-              contentStyle={contentStyle}
-              contentArrowStyle={{ borderRight: "7px solid #fff" }}
-              date="2011 - present"
-              dateClassName={classes.date}
-              iconStyle={iconStyle}
-              icon={<MdWork />}
-            >
-              <div className={classes.contentContainer}>
-
-                <div className={classes.headerContainer}>
-                  <div className={classes.logoContainer}>
-                    <Image
-                      src="/images/impel.png"
-                      alt="Impel"
-                      width={100}
-                      height={50}
-                      layout="responsive"
-                    />
-                  </div>
-                  <div className={classes.titleContainer}>
-                    <div className={`vertical-timeline-element-title ${classes.elementTitle}`}>
-                      <strong>Full-Stack Web Developer</strong>
-                    </div>
-                    <div className={`vertical-timeline-element-subtitle ${classes.elementSubtitle}`}>
-                      <strong>Impel IT Solutions</strong>
-                    </div>
-                  </div>
-                </div>
-
-                <div className={classes.elementBody}>
-                  <p>Working as a full-stack software engineer:</p>
-                  <ul className={classes.ul}>
-                    <li>Designing and developing REST APIs using Java, Spring-boot, JPA, Hibernate and QueryDSL</li>
-                    <li>Developing multi language supported client application using Typescript and Angular 9</li>
-                    <li>Writing automated tests for Angular application using Jasmine and Karma</li>
-                  </ul>
-                </div>
-
-                <div className={classes.tagContainer}>
-                  <Tag>spring-boot</Tag>
-                  <Tag>java</Tag>
-                  <Tag>angular</Tag>
-                  <Tag>bootstrap</Tag>
-                  <Tag>mysql</Tag>
-                  <Tag>querydsl</Tag>
-                </div>
-
-              </div>
-            </VerticalTimelineElement>
+            {timelineElements}
           </VerticalTimeline>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;
