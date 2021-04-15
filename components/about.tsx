@@ -33,7 +33,7 @@ const About = (props) => {
               I'm Mazid, <br className={classes.br}></br> <TypingAnimation texts={myTitles}></TypingAnimation>
             </div>
             <p>Experienced Software Engineer with a demonstrated history of working in the computer software industry. Skilled in JavaScript, Angular, ReactJS, Spring-boot, NodeJS, Web Development, Android Development, and Software Design Patterns. Strong engineering professional with a Bachelor of Science focused in Computer Science and Engineering from <a href="https://www.cse.du.ac.bd/">University of Dhaka</a>.</p>
-            <a href="#">Download CV</a>
+            <a href="/files/resume.pdf" download="Resume__Mohammad_Mazedul_Islam.pdf">Download CV</a>
           </div>
         </div>
       </div>
