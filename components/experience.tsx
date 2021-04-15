@@ -10,6 +10,98 @@ import Tag from "./ui/tag";
 import { WorkExperience } from "../model/work-experience";
 import TimeUtil from "../services/timeUtil";
 
+const Experience = (props) => {
+  const lightCrimson = "#FF8289";
+
+  const contentStyle = {
+    color: "#111",
+    borderTop: `3px solid ${lightCrimson}`,
+  };
+
+  const iconStyle = {
+    background: lightCrimson,
+    color: "#fff",
+  };
+
+  const timelineElements = experiences.map(
+    (exp: WorkExperience, idx: number) => {
+      return (
+        <VerticalTimelineElement
+          className="vertical-timeline-element"
+          contentStyle={contentStyle}
+          contentArrowStyle={{ borderRight: "7px solid #fff" }}
+          date={TimeUtil.formatDuration(exp.duration)}
+          dateClassName={classes.date}
+          iconStyle={iconStyle}
+          icon={<MdWork />}
+          key={`element_${idx}`}
+        >
+          <div className={classes.contentContainer}>
+            <div className={classes.headerContainer}>
+              <div className={classes.logoContainer}>
+                <Image
+                  src={exp.company.logoPath}
+                  alt={exp.company.logoAlt}
+                  width={100}
+                  height={50}
+                  layout="responsive"
+                />
+              </div>
+              <div className={classes.titleContainer}>
+                <div className={`vertical-timeline-element-title ${classes.elementTitle}`}>
+                  <strong>{exp.title}</strong>
+                </div>
+                <a className={`vertical-timeline-element-subtitle ${classes.elementSubtitle}`}
+                  href={exp.company.website ? exp.company.website : '#'} target="blank">
+                  <strong>{exp.company.name}</strong>
+                </a>
+              </div>
+            </div>
+
+            <div className={classes.elementBody}>
+              <p>{exp.description.title}</p>
+              <ul className={classes.ul}>
+                {
+                  exp.description.points.map((point: string, p_idx: number) => (
+                    <li key={`element_${idx}_point_${p_idx}`}>{point}</li>
+                  ))
+                }
+              </ul>
+            </div>
+
+            <div className={classes.tagContainer}>
+              {
+                exp.tags.map((tag: string, t_idx: number) => (
+                  <Tag key={`element_${idx}_tag_${t_idx}`}>{tag}</Tag>
+                ))
+              }
+            </div>
+          </div>
+        </VerticalTimelineElement>
+      );
+    }
+  );
+
+  return (
+    <section id={props.id} className="bg semi-light">
+      <div className="container">
+        <div className="title-container light">
+          <h2 className="title">Experience</h2>
+          <h3 className="subtitle">My jobs</h3>
+        </div>
+
+        <div className={classes.content}>
+          <VerticalTimeline className={classes.verticalTimeline}>
+            {timelineElements}
+          </VerticalTimeline>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Experience;
+
 const experiences: WorkExperience[] = [
   {
     company: {
@@ -102,95 +194,3 @@ const experiences: WorkExperience[] = [
     }
   },
 ];
-
-const Experience = (props) => {
-  const lightCrimson = "#FF8289";
-
-  const contentStyle = {
-    color: "#111",
-    borderTop: `3px solid ${lightCrimson}`,
-  };
-
-  const iconStyle = {
-    background: lightCrimson,
-    color: "#fff",
-  };
-
-  const timelineElements = experiences.map(
-    (exp: WorkExperience, idx: number) => {
-      return (
-        <VerticalTimelineElement
-          className="vertical-timeline-element"
-          contentStyle={contentStyle}
-          contentArrowStyle={{ borderRight: "7px solid #fff" }}
-          date={TimeUtil.formatDuration(exp.duration)}
-          dateClassName={classes.date}
-          iconStyle={iconStyle}
-          icon={<MdWork />}
-          key={`element_${idx}`}
-        >
-          <div className={classes.contentContainer}>
-            <div className={classes.headerContainer}>
-              <div className={classes.logoContainer}>
-                <Image
-                  src={exp.company.logoPath}
-                  alt={exp.company.logoAlt}
-                  width={100}
-                  height={50}
-                  layout="responsive"
-                />
-              </div>
-              <div className={classes.titleContainer}>
-                <div className={`vertical-timeline-element-title ${classes.elementTitle}`}>
-                  <strong>{exp.title}</strong>
-                </div>
-                <a className={`vertical-timeline-element-subtitle ${classes.elementSubtitle}`}
-                  href={exp.company.website ? exp.company.website : '#'} target="blank">
-                  <strong>{exp.company.name}</strong>
-                </a>
-              </div>
-            </div>
-
-            <div className={classes.elementBody}>
-              <p>{exp.description.title}</p>
-              <ul className={classes.ul}>
-                {
-                  exp.description.points.map((point: string, p_idx: number) => (
-                    <li key={`element_${idx}_point_${p_idx}`}>{point}</li>
-                  ))
-                }
-              </ul>
-            </div>
-
-            <div className={classes.tagContainer}>
-              {
-                exp.tags.map((tag: string, t_idx: number) => (
-                  <Tag key={`element_${idx}_tag_${t_idx}`}>{tag}</Tag>
-                ))
-              }
-            </div>
-          </div>
-        </VerticalTimelineElement>
-      );
-    }
-  );
-
-  return (
-    <section id={props.id} className="bg semi-light">
-      <div className="container">
-        <div className="title-container light">
-          <h2 className="title">Experience</h2>
-          <h3 className="subtitle">My jobs</h3>
-        </div>
-
-        <div className={classes.content}>
-          <VerticalTimeline className={classes.verticalTimeline}>
-            {timelineElements}
-          </VerticalTimeline>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Experience;
