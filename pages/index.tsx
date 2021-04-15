@@ -6,7 +6,7 @@ import React from 'react'
 import Footer from '../components/footer'
 import Contact from '../components/contact'
 import Portfolio from '../components/portfolio'
-import WorkExperience from '../components/experience'
+import Experience from '../components/experience'
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
       <main>
         <Cover id="home"></Cover>
         <Portfolio id="portfolio"></Portfolio>
-        <WorkExperience id="experience"></WorkExperience>
+        <Experience id="experience"></Experience>
         <About id="about"></About>
         <Contact id="contact"></Contact>
       </main>
