@@ -30,9 +30,9 @@ const About = (props) => {
           </div>
           <div className={classes.description}>
             <div className={classes.descriptionTitle}>
-              I'm Mazid, a<br className={classes.br}></br> <TypingAnimation texts={myTitles}></TypingAnimation>
+              I'm Mazid, <br className={classes.br}></br> <TypingAnimation texts={myTitles}></TypingAnimation>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, eius consectetur. Temporibus soluta deserunt quaerat blanditiis nihil sapiente, dolorem illum facilis? Repudiandae deleniti nisi consequatur voluptates harum, quibusdam libero soluta, ex amet doloremque tenetur culpa quas, excepturi eum! Consequuntur ipsam nam vel maiores voluptatibus voluptate pariatur aperiam accusantium, beatae, earum sit. Vitae eaque iusto eius quas corporis! Quia accusamus voluptatem, deserunt quod consequuntur doloremque distinctio atque placeat et molestias corrupti officia totam ratione, inventore fugit.</p>
+            <p>Experienced Software Engineer with a demonstrated history of working in the computer software industry. Skilled in JavaScript, Angular, ReactJS, Spring-boot, NodeJS, Web Development, Android Development, and Software Design Patterns. Strong engineering professional with a Bachelor of Science focused in Computer Science and Engineering from <a href="https://www.cse.du.ac.bd/">University of Dhaka</a>.</p>
             <a href="#">Download CV</a>
           </div>
         </div>

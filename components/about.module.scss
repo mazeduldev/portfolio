@@ -53,9 +53,16 @@
       font-weight: $font-weight-light;
       text-align: justify;
       margin-bottom: 10px;
+      a {
+        color: $color-primary;
+        transition: color 0.3s ease;
+        &:hover {
+          color: $color-highlight;
+        }
+      }
     }
 
-    a {
+    > a {
       font-family: $font-secondary;
       background: $color-primary;
       color: $on-color-primary;
