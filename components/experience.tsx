@@ -7,30 +7,10 @@ import {
 import Image from "next/image";
 import classes from "./experience.module.scss";
 import Tag from "./ui/tag";
+import { WorkExperience } from "../model/experience";
+import TimeUtil from "../services/timeUtil";
 
-interface Company {
-  name: string;
-  logoPath: string;
-  logoAlt: string;
-  website?: string;
-}
-interface Description {
-  title: string;
-  points: string[];
-}
-interface Duration {
-  start: Date;
-  end: Date;
-}
-interface Experience {
-  title: string;
-  company: Company;
-  description: Description;
-  tags: string[];
-  duration: Duration;
-}
-
-const experiences: Experience[] = [
+const experiences: WorkExperience[] = [
   {
     company: {
       name: "Impel IT Solutions",
@@ -123,20 +103,6 @@ const experiences: Experience[] = [
   },
 ];
 
-const getMonth = (date: Date): string => {
-  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-  return months[date.getMonth()]
-}
-
-const formatDuration = (duration: Duration): string => {
-  const start = `${getMonth(duration.start)} ${duration.start.getFullYear()}`
-  if (!duration.end) {
-    return `${start} - Present`
-  }
-  const end = `${getMonth(duration.end)} ${duration.end.getFullYear()}`
-  return `${start} - ${end}`
-}
-
 const Experience = (props) => {
   const lightCrimson = "#FF8289";
 
@@ -151,13 +117,13 @@ const Experience = (props) => {
   };
 
   const timelineElements = experiences.map(
-    (exp: Experience, idx: number) => {
+    (exp: WorkExperience, idx: number) => {
       return (
         <VerticalTimelineElement
           className="vertical-timeline-element"
           contentStyle={contentStyle}
           contentArrowStyle={{ borderRight: "7px solid #fff" }}
-          date={formatDuration(exp.duration)}
+          date={TimeUtil.formatDuration(exp.duration)}
           dateClassName={classes.date}
           iconStyle={iconStyle}
           icon={<MdWork />}
