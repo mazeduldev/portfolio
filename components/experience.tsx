@@ -7,7 +7,7 @@ import {
 import Image from "next/image";
 import classes from "./experience.module.scss";
 import Tag from "./ui/tag";
-import { WorkExperience } from "../model/experience";
+import { WorkExperience } from "../model/work-experience";
 import TimeUtil from "../services/timeUtil";
 
 const experiences: WorkExperience[] = [

@@ -1,4 +1,4 @@
-import { Duration } from "../model/experience"
+import { Duration } from "../model/work-experience"
 
 export default class TimeUtil {
   static months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
