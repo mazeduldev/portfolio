@@ -40,7 +40,7 @@ const Portfolio = (props) => {
                 {project.sourceUrl || project.demoUrl ? (
                   <div className={classes.cardButtonContainer}>
                     {project.sourceUrl ? (
-                      <Button classes={classes.cardButton}>
+                      <Button classNames={classes.cardButton}>
                         <a
                           href={project.sourceUrl}
                           target="blank"
@@ -50,7 +50,7 @@ const Portfolio = (props) => {
                       </Button>
                     ) : null}
                     {project.demoUrl ? (
-                      <Button classes={classes.cardButton}>
+                      <Button classNames={classes.cardButton}>
                         <a
                           href={project.demoUrl}
                           target="blank"
