@@ -8,6 +8,7 @@ const Contact = (props) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const changeHandler = (event) => {
     event.preventDefault()
@@ -28,7 +29,8 @@ const Contact = (props) => {
 
   const submitHandler = async (event) => {
     event.preventDefault();
-    console.log('Sending email...', name, email, message);
+
+    setLoading(true);
 
     const data = { name, email, message };
 
@@ -47,6 +49,8 @@ const Contact = (props) => {
     } else {
       alert('Failed!');
     }
+
+    setLoading(false);
   }
 
   const clearForm = () => {
@@ -70,9 +74,12 @@ const Contact = (props) => {
             <form onSubmit={submitHandler}>
               <Input value={name} onChange={changeHandler} inputtype="input" type="text" name="name" placeholder="Name" required></Input>
               <Input value={email} onChange={changeHandler} inputtype="input" type="email" name="email" placeholder="Email" required></Input>
-              <Input value={message} onChange={changeHandler} inputtype="textarea" name="message" placeholder="Message..." required rows="4" style={{ whiteSpace: "pre-wrap" }}></Input>
+              <Input value={message} onChange={changeHandler} inputtype="textarea" name="message" placeholder="Message..." rows="4" style={{ whiteSpace: "pre-wrap" }} required></Input>
               <div className={classes.submitBtn}>
-                <Button type='submit'>Send Message</Button>
+                <Button type="submit" loading={loading} disabled={loading}>
+                  {!loading && "Send Message"}
+                  {loading && "Sending Message"}
+                </Button>
               </div>
             </form>
           </div>
