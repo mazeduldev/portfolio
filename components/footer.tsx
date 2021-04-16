@@ -4,7 +4,7 @@ import classes from './footer.module.scss'
 const Footer = () => {
   return (
     <section className={classes.footerContainer + " bg dark"}>
-      Made with &hearts; by <a href="mailto:mazidmailbox@gmail.com">Mazid</a>
+      Made with &hearts; by <a href="#">Mazid</a>
     </section>
   )
 }

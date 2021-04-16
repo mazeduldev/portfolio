@@ -98,6 +98,11 @@
     background: $on-color-primary;
     color: $color-primary;
   }
+
+  &:active {
+    background: lighten($color: $color-primary, $amount: 40%);
+    color: $color-primary;
+  }
 }
 
 .drawerMenu {
