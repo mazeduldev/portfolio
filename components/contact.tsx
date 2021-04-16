@@ -70,7 +70,7 @@ const Contact = (props) => {
             <form onSubmit={submitHandler}>
               <Input value={name} onChange={changeHandler} inputtype="input" type="text" name="name" placeholder="Name" required></Input>
               <Input value={email} onChange={changeHandler} inputtype="input" type="email" name="email" placeholder="Email" required></Input>
-              <Input value={message} onChange={changeHandler} inputtype="textarea" name="message" placeholder="Message..." required rows="4"></Input>
+              <Input value={message} onChange={changeHandler} inputtype="textarea" name="message" placeholder="Message..." required rows="4" style={{ whiteSpace: "pre-wrap" }}></Input>
               <div className={classes.submitBtn}>
                 <Button type='submit'>Send Message</Button>
               </div>
