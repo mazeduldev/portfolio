@@ -5,24 +5,20 @@ import Button from './ui/button'
 import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaMobileAlt, FaRegEnvelope, FaTwitter } from 'react-icons/fa'
 
 const Contact = (props) => {
-  const [fullName, setFullName] = useState('')
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
 
   const changeHandler = (event) => {
     event.preventDefault()
-    const {name, value} = event.target
-    
+    const { name, value } = event.target
+
     switch (name) {
-      case 'fullName':
-        setFullName(value)
+      case 'name':
+        setName(value)
         break
       case 'email':
         setEmail(value)
-        break;
-      case 'subject':
-        setSubject(value)
         break
       case 'message':
         setMessage(value)
@@ -30,16 +26,32 @@ const Contact = (props) => {
     }
   }
 
-  const submitHandler = (event) => {
-    event.preventDefault()
-    console.log(fullName, email, subject, message);
-    clearForm();
+  const submitHandler = async (event) => {
+    event.preventDefault();
+    console.log('Sending email...', name, email, message);
+
+    const data = { name, email, message };
+
+    const res: Response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (res.status == 200) {
+      alert('Email sent!');
+      clearForm();
+    } else {
+      alert('Failed!');
+    }
   }
 
   const clearForm = () => {
-    setFullName('')
+    setName('')
     setEmail('')
-    setSubject('')
     setMessage('')
   }
 
@@ -50,18 +62,17 @@ const Contact = (props) => {
           <h2 className="title">Contact me</h2>
           <h3 className="subtitle">Get in touch</h3>
         </div>
-        
+
         <div className={classes.content}>
-          
+
           <div className={classes.formContainer}>
             <h4 className={classes.areaLabel}>Drop a mail</h4>
             <form onSubmit={submitHandler}>
-              <Input value={fullName} onChange={changeHandler} inputtype="input" type="text" name="fullName" placeholder="Name" required></Input>
+              <Input value={name} onChange={changeHandler} inputtype="input" type="text" name="name" placeholder="Name" required></Input>
               <Input value={email} onChange={changeHandler} inputtype="input" type="email" name="email" placeholder="Email" required></Input>
-              <Input value={subject} onChange={changeHandler} inputtype="input" type="text" name="subject" placeholder="Subject" required></Input>
-              <Input value={message} onChange={changeHandler} inputtype="textarea" name="message" placeholder="Message..." required></Input>
+              <Input value={message} onChange={changeHandler} inputtype="textarea" name="message" placeholder="Message..." required rows="4"></Input>
               <div className={classes.submitBtn}>
-                <Button>Send Message</Button>
+                <Button type='submit'>Send Message</Button>
               </div>
             </form>
           </div>
@@ -75,7 +86,7 @@ const Contact = (props) => {
               <FaMobileAlt className={classes.icon} /> <a className={classes.infoText} href="tel:+8801521252696">+880 1521-252696</a>
             </div>
             <div className={classes.infoContainer}>
-              <FaMapMarkerAlt className={classes.icon} /> <span className={classes.infoText}>House# 1359, Avenue# 11<br/>Mirpur DOHS, Dhaka, Bangladesh</span>
+              <FaMapMarkerAlt className={classes.icon} /> <span className={classes.infoText}>House# 1359, Avenue# 11<br />Mirpur DOHS, Dhaka, Bangladesh</span>
             </div>
             <div className={classes.socialContainer}>
               <a href="https://www.linkedin.com/in/mazedul-islam/" target="blank"><FaLinkedinIn /></a>
