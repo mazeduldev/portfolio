@@ -1,4 +1,5 @@
 @import "../styles/variables";
+@import "../styles/mixins";
 
 .cover {
   background: url("/images/bg.jpg");
@@ -18,16 +19,28 @@
 
     .text1 {
       font-size: $h4-font-size;
+
+      @include respond-to("xxl") {
+        font-size: $h3-font-size;
+      }
     }
 
     .text2 {
       font-size: $font-size-xl;
       font-weight: $font-weight-bolder;
       margin: 10px 0;
+
+      @include respond-to("xxl") {
+        font-size: $font-size-xxl;
+      }
     }
 
     .text3 {
       font-size: $h4-font-size;
+
+      @include respond-to("xxl") {
+        font-size: $h3-font-size;
+      }
 
       & span {
         color: $color-primary;
