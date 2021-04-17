@@ -39,7 +39,7 @@ const Experience = (props) => {
           <div className={classes.contentContainer}>
             <div className={classes.headerContainer}>
               <div className={classes.logoContainer}>
-                <a href={exp.company.website} target="blank">
+                <a href={exp.company.website} target="_blank">
                   <Image
                     src={exp.company.logoPath}
                     alt={exp.company.logoAlt}
@@ -55,7 +55,7 @@ const Experience = (props) => {
                   <strong>{exp.title}</strong>
                 </div>
                 <a className={`vertical-timeline-element-subtitle ${classes.elementSubtitle}`}
-                  href={exp.company.website ? exp.company.website : '#'} target="blank">
+                  href={exp.company.website ? exp.company.website : '#'} target="_blank">
                   <strong>{exp.company.name}</strong>
                 </a>
               </div>

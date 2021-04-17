@@ -96,11 +96,11 @@ const Contact = (props) => {
               <FaMapMarkerAlt className={classes.icon} /> <span className={classes.infoText}>House# 1359, Avenue# 11<br />Mirpur DOHS, Dhaka, Bangladesh</span>
             </div>
             <div className={classes.socialContainer}>
-              <a href="https://www.linkedin.com/in/mazedul-islam/" target="blank"><FaLinkedinIn /></a>
-              <a href="https://github.com/mazid1" target="blank"><FaGithub /></a>
-              <a href="https://www.facebook.com/m.mazedul.islam.m" target="blank"><FaFacebookF /></a>
-              <a href="https://twitter.com/mazid_csedu" target="blank"><FaTwitter /></a>
-              <a href="https://www.instagram.com/the_mzd/" target="blank"><FaInstagram /></a>
+              <a href="https://www.linkedin.com/in/mazedul-islam/" target="_blank"><FaLinkedinIn /></a>
+              <a href="https://github.com/mazid1" target="_blank"><FaGithub /></a>
+              <a href="https://www.facebook.com/m.mazedul.islam.m" target="_blank"><FaFacebookF /></a>
+              <a href="https://twitter.com/mazid_csedu" target="_blank"><FaTwitter /></a>
+              <a href="https://www.instagram.com/the_mzd/" target="_blank"><FaInstagram /></a>
             </div>
           </div>
 

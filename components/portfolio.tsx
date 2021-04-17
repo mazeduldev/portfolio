@@ -43,7 +43,7 @@ const Portfolio = (props) => {
                       <Button classNames={classes.cardButton}>
                         <a
                           href={project.sourceUrl}
-                          target="blank"
+                          target="_blank"
                         >
                           Source Code
                       </a>
@@ -53,7 +53,7 @@ const Portfolio = (props) => {
                       <Button classNames={classes.cardButton}>
                         <a
                           href={project.demoUrl}
-                          target="blank"
+                          target="_blank"
                         >
                           Live Demo
                       </a>
