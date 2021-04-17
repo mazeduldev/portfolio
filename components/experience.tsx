@@ -42,9 +42,10 @@ const Experience = (props) => {
                 <Image
                   src={exp.company.logoPath}
                   alt={exp.company.logoAlt}
-                  width={100}
-                  height={50}
+                  width={60}
+                  height={60}
                   layout="responsive"
+                  className={classes.logo}
                 />
               </div>
               <div className={classes.titleContainer}>
