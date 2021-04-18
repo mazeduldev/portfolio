@@ -7,7 +7,7 @@ import Footer from "../components/footer";
 import Contact from "../components/contact";
 import Portfolio from "../components/portfolio";
 import Experience from "../components/experience";
-``;
+
 export default function Home(): JSX.Element {
   return (
     <div>
