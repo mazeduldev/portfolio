@@ -1,26 +1,17 @@
-import React from 'react'
-import classes from './input.module.scss'
+import React from "react";
+import classes from "./input.module.scss";
 
-const Input = (props) => {
-  let inputElement = null;
-
-  switch (props.inputtype) {
-    case ('input'):
-      inputElement = <input className={classes.inputElement} {...props} />
-      break
-    case ('textarea'):
-      inputElement = <textarea className={classes.inputElement} {...props} />
-      break
-    default:
-      inputElement = <input className={classes.inputElement} {...props} />
-  }
-
-  return (
-    <div className={classes.input}>
-      <label className={classes.label}>{props.label}</label>
-      {inputElement}
-    </div>
-  )
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
 }
 
-export default Input
+const Input: React.FC<InputProps> = ({ label, ...rest }: InputProps) => {
+  return (
+    <div className={classes.input}>
+      <label className={classes.label}>{label}</label>
+      <input className={classes.inputElement} {...rest} />;
+    </div>
+  );
+};
+
+export default Input;

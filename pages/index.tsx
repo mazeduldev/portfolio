@@ -1,14 +1,14 @@
-import Head from 'next/head'
-import Navbar from '../components/navbar'
-import Cover from '../components/cover'
-import About from '../components/about'
-import React from 'react'
-import Footer from '../components/footer'
-import Contact from '../components/contact'
-import Portfolio from '../components/portfolio'
-import Experience from '../components/experience'
-
-export default function Home() {
+import Head from "next/head";
+import Navbar from "../components/navbar";
+import Cover from "../components/cover";
+import About from "../components/about";
+import React from "react";
+import Footer from "../components/footer";
+import Contact from "../components/contact";
+import Portfolio from "../components/portfolio";
+import Experience from "../components/experience";
+``;
+export default function Home(): JSX.Element {
   return (
     <div>
       <Head>
@@ -28,5 +28,5 @@ export default function Home() {
 
       <Footer></Footer>
     </div>
-  )
+  );
 }

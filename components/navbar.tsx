@@ -1,47 +1,97 @@
-import React, { useState } from 'react'
-import classes from './navbar.module.scss'
-import { Link, animateScroll as scroll } from "react-scroll"
-import { FaArrowUp, FaBars } from "react-icons/fa"
-import { useScrollPosition } from '@n8tb1t/use-scroll-position'
-import Drawer from './drawer'
+import React, { useState } from "react";
+import classes from "./navbar.module.scss";
+import { Link, animateScroll as scroll } from "react-scroll";
+import { FaArrowUp, FaBars } from "react-icons/fa";
+import { useScrollPosition } from "@n8tb1t/use-scroll-position";
+import Drawer from "./drawer";
 
 const Navbar: React.FC = () => {
-  const [show, setShow] = useState("")
-  const [transparent, setTransparent] = useState(classes.bgTransparent)
+  const [show, setShow] = useState("");
+  const [transparent, setTransparent] = useState(classes.bgTransparent);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  const showScrollButton = () => setShow(classes.show)
+  const showScrollButton = () => setShow(classes.show);
 
-  const hideScrollButton = () => setShow("")
+  const hideScrollButton = () => setShow("");
 
-  const makeTransparent = () => setTransparent(classes.bgTransparent)
+  const makeTransparent = () => setTransparent(classes.bgTransparent);
 
-  const removeTransparency = () => setTransparent("")
+  const removeTransparency = () => setTransparent("");
 
-  useScrollPosition(({ prevPos, currPos }) => {
-    if (currPos.y < -150) removeTransparency()
-    else makeTransparent()
+  useScrollPosition(
+    ({ currPos }) => {
+      if (currPos.y < -150) removeTransparency();
+      else makeTransparent();
 
-    if (currPos.y < -500) showScrollButton()
-    else hideScrollButton()
-  }, [transparent, show])
+      if (currPos.y < -500) showScrollButton();
+      else hideScrollButton();
+    },
+    [transparent, show]
+  );
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
-  }
+  };
 
   return (
     <>
-      <a onClick={scroll.scrollToTop} className={`${classes.scrollUpBtn} ${show}`}>
+      <a
+        onClick={scroll.scrollToTop}
+        className={`${classes.scrollUpBtn} ${show}`}
+      >
         <FaArrowUp />
       </a>
       <nav className={`${classes.navContainer} ${transparent}`}>
         <ul className={classes.menu}>
-          <Link to="home" smooth={true} spy={true} offset={-64} className={classes.menuItem}>Home</Link>
-          <Link to="portfolio" activeClass={classes.active} smooth={true} spy={true} offset={-64} className={classes.menuItem}>Portfolio</Link>
-          <Link to="experience" activeClass={classes.active} smooth={true} spy={true} offset={-64} className={classes.menuItem}>Experience</Link>
-          <Link to="about" activeClass={classes.active} smooth={true} spy={true} offset={-64} className={classes.menuItem}>About</Link>
-          <Link to="contact" activeClass={classes.active} smooth={true} spy={true} offset={-64} className={classes.menuItem}>Contact</Link>
+          <Link
+            to="home"
+            smooth={true}
+            spy={true}
+            offset={-64}
+            className={classes.menuItem}
+          >
+            Home
+          </Link>
+          <Link
+            to="portfolio"
+            activeClass={classes.active}
+            smooth={true}
+            spy={true}
+            offset={-64}
+            className={classes.menuItem}
+          >
+            Portfolio
+          </Link>
+          <Link
+            to="experience"
+            activeClass={classes.active}
+            smooth={true}
+            spy={true}
+            offset={-64}
+            className={classes.menuItem}
+          >
+            Experience
+          </Link>
+          <Link
+            to="about"
+            activeClass={classes.active}
+            smooth={true}
+            spy={true}
+            offset={-64}
+            className={classes.menuItem}
+          >
+            About
+          </Link>
+          <Link
+            to="contact"
+            activeClass={classes.active}
+            smooth={true}
+            spy={true}
+            offset={-64}
+            className={classes.menuItem}
+          >
+            Contact
+          </Link>
         </ul>
         <div className={classes.bars} onClick={toggleDrawer}>
           <FaBars className={classes.menuIcon}></FaBars>
@@ -49,15 +99,65 @@ const Navbar: React.FC = () => {
       </nav>
       <Drawer isOpen={isDrawerOpen} toggle={toggleDrawer}>
         <div className={classes.drawerMenu}>
-          <Link to="home" onClick={toggleDrawer} activeClass={classes.active} smooth={true} spy={true} offset={-64} className={classes.menuItem}>Home</Link>
-          <Link to="portfolio" onClick={toggleDrawer} activeClass={classes.active} smooth={true} spy={true} offset={-64} className={classes.menuItem}>Portfolio</Link>
-          <Link to="experience" onClick={toggleDrawer} activeClass={classes.active} smooth={true} spy={true} offset={-64} className={classes.menuItem}>Experience</Link>
-          <Link to="about" onClick={toggleDrawer} activeClass={classes.active} smooth={true} spy={true} offset={-64} className={classes.menuItem}>About</Link>
-          <Link to="contact" onClick={toggleDrawer} activeClass={classes.active} smooth={true} spy={true} offset={-64} className={classes.menuItem}>Contact</Link>
+          <Link
+            to="home"
+            onClick={toggleDrawer}
+            activeClass={classes.active}
+            smooth={true}
+            spy={true}
+            offset={-64}
+            className={classes.menuItem}
+          >
+            Home
+          </Link>
+          <Link
+            to="portfolio"
+            onClick={toggleDrawer}
+            activeClass={classes.active}
+            smooth={true}
+            spy={true}
+            offset={-64}
+            className={classes.menuItem}
+          >
+            Portfolio
+          </Link>
+          <Link
+            to="experience"
+            onClick={toggleDrawer}
+            activeClass={classes.active}
+            smooth={true}
+            spy={true}
+            offset={-64}
+            className={classes.menuItem}
+          >
+            Experience
+          </Link>
+          <Link
+            to="about"
+            onClick={toggleDrawer}
+            activeClass={classes.active}
+            smooth={true}
+            spy={true}
+            offset={-64}
+            className={classes.menuItem}
+          >
+            About
+          </Link>
+          <Link
+            to="contact"
+            onClick={toggleDrawer}
+            activeClass={classes.active}
+            smooth={true}
+            spy={true}
+            offset={-64}
+            className={classes.menuItem}
+          >
+            Contact
+          </Link>
         </div>
       </Drawer>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

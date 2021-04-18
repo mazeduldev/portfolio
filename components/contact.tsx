@@ -1,31 +1,45 @@
-import React, { useState } from 'react'
-import classes from './contact.module.scss'
-import Input from './ui/input'
-import Button from './ui/button'
-import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaMobileAlt, FaRegEnvelope, FaTwitter } from 'react-icons/fa'
+import React, { useState } from "react";
+import classes from "./contact.module.scss";
+import Input from "./ui/input";
+import Button from "./ui/button";
+import {
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+  FaMapMarkerAlt,
+  FaMobileAlt,
+  FaRegEnvelope,
+  FaTwitter,
+} from "react-icons/fa";
+import Textarea from "./ui/textarea";
 
-const Contact = (props) => {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  const [loading, setLoading] = useState(false)
+interface ContactProps {
+  id: string;
+}
+
+const Contact: React.FC<ContactProps> = ({ id }: ContactProps) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const changeHandler = (event) => {
-    event.preventDefault()
-    const { name, value } = event.target
+    event.preventDefault();
+    const { name, value } = event.target;
 
     switch (name) {
-      case 'name':
-        setName(value)
-        break
-      case 'email':
-        setEmail(value)
-        break
-      case 'message':
-        setMessage(value)
-        break
+      case "name":
+        setName(value);
+        break;
+      case "email":
+        setEmail(value);
+        break;
+      case "message":
+        setMessage(value);
+        break;
     }
-  }
+  };
 
   const submitHandler = async (event) => {
     event.preventDefault();
@@ -34,33 +48,33 @@ const Contact = (props) => {
 
     const data = { name, email, message };
 
-    const res: Response = await fetch('/api/contact', {
-      method: 'POST',
+    const res: Response = await fetch("/api/contact", {
+      method: "POST",
       headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     });
 
     if (res.status == 200) {
-      alert('Email sent!');
+      alert("Email sent!");
       clearForm();
     } else {
-      alert('Failed!');
+      alert("Failed!");
     }
 
     setLoading(false);
-  }
+  };
 
   const clearForm = () => {
-    setName('')
-    setEmail('')
-    setMessage('')
-  }
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
 
   return (
-    <section className={`${classes.contactSection} bg light`} id={props.id}>
+    <section className={`${classes.contactSection} bg light`} id={id}>
       <div className="container">
         <div className="title-container light">
           <h2 className="title">Contact me</h2>
@@ -68,13 +82,34 @@ const Contact = (props) => {
         </div>
 
         <div className={classes.content}>
-
           <div className={classes.formContainer}>
             <h4 className={classes.areaLabel}>Drop a mail</h4>
             <form onSubmit={submitHandler}>
-              <Input value={name} onChange={changeHandler} inputtype="input" type="text" name="name" placeholder="Name" required></Input>
-              <Input value={email} onChange={changeHandler} inputtype="input" type="email" name="email" placeholder="Email" required></Input>
-              <Input value={message} onChange={changeHandler} inputtype="textarea" name="message" placeholder="Message..." rows="4" style={{ whiteSpace: "pre-wrap" }} required></Input>
+              <Input
+                value={name}
+                onChange={changeHandler}
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+              ></Input>
+              <Input
+                value={email}
+                onChange={changeHandler}
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+              ></Input>
+              <Textarea
+                value={message}
+                onChange={changeHandler}
+                name="message"
+                placeholder="Message..."
+                rows={4}
+                style={{ whiteSpace: "pre-wrap" }}
+                required
+              ></Textarea>
               <div className={classes.submitBtn}>
                 <Button type="submit" loading={loading} disabled={loading}>
                   {!loading && "Send Message"}
@@ -87,28 +122,70 @@ const Contact = (props) => {
           <div className={classes.addressContainer}>
             <h4 className={classes.areaLabel}>Get in touch</h4>
             <address className={classes.infoContainer}>
-              <FaRegEnvelope className={classes.icon} /> <a className={classes.infoText} href="mailto:mazidmailbox@gmail.com">mazidmailbox@gmail.com</a>
+              <FaRegEnvelope className={classes.icon} />{" "}
+              <a
+                className={classes.infoText}
+                href="mailto:mazidmailbox@gmail.com"
+              >
+                mazidmailbox@gmail.com
+              </a>
             </address>
             <div className={classes.infoContainer}>
-              <FaMobileAlt className={classes.icon} /> <a className={classes.infoText} href="tel:+8801521252696">+880 1521-252696</a>
+              <FaMobileAlt className={classes.icon} />{" "}
+              <a className={classes.infoText} href="tel:+8801521252696">
+                +880 1521-252696
+              </a>
             </div>
             <div className={classes.infoContainer}>
-              <FaMapMarkerAlt className={classes.icon} /> <span className={classes.infoText}>House# 1359, Avenue# 11<br />Mirpur DOHS, Dhaka, Bangladesh</span>
+              <FaMapMarkerAlt className={classes.icon} />{" "}
+              <span className={classes.infoText}>
+                House# 1359, Avenue# 11
+                <br />
+                Mirpur DOHS, Dhaka, Bangladesh
+              </span>
             </div>
             <div className={classes.socialContainer}>
-              <a href="https://www.linkedin.com/in/mazedul-islam/" target="_blank"><FaLinkedinIn /></a>
-              <a href="https://github.com/mazid1" target="_blank"><FaGithub /></a>
-              <a href="https://www.facebook.com/m.mazedul.islam.m" target="_blank"><FaFacebookF /></a>
-              <a href="https://twitter.com/mazid_csedu" target="_blank"><FaTwitter /></a>
-              <a href="https://www.instagram.com/the_mzd/" target="_blank"><FaInstagram /></a>
+              <a
+                href="https://www.linkedin.com/in/mazedul-islam/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedinIn />
+              </a>
+              <a
+                href="https://github.com/mazid1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://www.facebook.com/m.mazedul.islam.m"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://twitter.com/mazid_csedu"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="https://www.instagram.com/the_mzd/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaInstagram />
+              </a>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

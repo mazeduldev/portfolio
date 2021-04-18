@@ -1,20 +1,22 @@
-import React, { useEffect, useRef } from 'react'
-import VanillaTilt from 'vanilla-tilt'
+import React, { useEffect, useRef } from "react";
+import VanillaTilt, { TiltOptions } from "vanilla-tilt";
 
-const Tilt = (props) => {
-  const {options, ...rest} = props
-  const tilt = useRef(null)
-
-  useEffect(() => {
-    VanillaTilt.init(tilt.current, options)
-  }, [options])
-
-  return (
-    <div ref={tilt} {...rest} />
-  )
+interface TiltProps {
+  options: TiltOptions;
+  className?: string;
 }
 
-export default Tilt
+const Tilt: React.FC<TiltProps> = ({ options, ...rest }: TiltProps) => {
+  const tilt = useRef(null);
+
+  useEffect(() => {
+    VanillaTilt.init(tilt.current, options);
+  }, [options]);
+
+  return <div ref={tilt} {...rest} />;
+};
+
+export default Tilt;
 
 /**
 {

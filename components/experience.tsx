@@ -10,7 +10,11 @@ import Tag from "./ui/tag";
 import { WorkExperience } from "../model/work-experience";
 import TimeUtil from "../services/timeUtil";
 
-const Experience = (props) => {
+interface ExperienceProps {
+  id: string;
+}
+
+const Experience: React.FC<ExperienceProps> = ({ id }: ExperienceProps) => {
   const lightCrimson = "#FF8289";
 
   const contentStyle = {
@@ -39,7 +43,7 @@ const Experience = (props) => {
           <div className={classes.contentContainer}>
             <div className={classes.headerContainer}>
               <div className={classes.logoContainer}>
-                <a href={exp.company.website} target="_blank">
+                <a href={exp.company.website} target="_blank" rel="noreferrer">
                   <Image
                     src={exp.company.logoPath}
                     alt={exp.company.logoAlt}
@@ -51,11 +55,17 @@ const Experience = (props) => {
                 </a>
               </div>
               <div className={classes.titleContainer}>
-                <div className={`vertical-timeline-element-title ${classes.elementTitle}`}>
+                <div
+                  className={`vertical-timeline-element-title ${classes.elementTitle}`}
+                >
                   <strong>{exp.title}</strong>
                 </div>
-                <a className={`vertical-timeline-element-subtitle ${classes.elementSubtitle}`}
-                  href={exp.company.website ? exp.company.website : '#'} target="_blank">
+                <a
+                  className={`vertical-timeline-element-subtitle ${classes.elementSubtitle}`}
+                  href={exp.company.website ? exp.company.website : "#"}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <strong>{exp.company.name}</strong>
                 </a>
               </div>
@@ -64,20 +74,16 @@ const Experience = (props) => {
             <div className={classes.elementBody}>
               <p>{exp.description.title}</p>
               <ul className={classes.ul}>
-                {
-                  exp.description.points.map((point: string, p_idx: number) => (
-                    <li key={`element_${idx}_point_${p_idx}`}>{point}</li>
-                  ))
-                }
+                {exp.description.points.map((point: string, p_idx: number) => (
+                  <li key={`element_${idx}_point_${p_idx}`}>{point}</li>
+                ))}
               </ul>
             </div>
 
             <div className={classes.tagContainer}>
-              {
-                exp.tags.map((tag: string, t_idx: number) => (
-                  <Tag key={`element_${idx}_tag_${t_idx}`}>{tag}</Tag>
-                ))
-              }
+              {exp.tags.map((tag: string, t_idx: number) => (
+                <Tag key={`element_${idx}_tag_${t_idx}`}>{tag}</Tag>
+              ))}
             </div>
           </div>
         </VerticalTimelineElement>
@@ -86,7 +92,7 @@ const Experience = (props) => {
   );
 
   return (
-    <section id={props.id} className="bg semi-light">
+    <section id={id} className="bg semi-light">
       <div className="container">
         <div className="title-container light">
           <h2 className="title">Experience</h2>
@@ -111,7 +117,7 @@ const experiences: WorkExperience[] = [
       name: "Impel IT Solutions",
       logoPath: "/images/impel.png",
       logoAlt: "Impel",
-      website: "http://www.impelitsolutions.com/"
+      website: "http://www.impelitsolutions.com/",
     },
     title: "Software Engineer (full-stack)",
     description: {
@@ -125,15 +131,15 @@ const experiences: WorkExperience[] = [
     tags: ["spring-boot", "java", "angular", "mysql", "querydsl"],
     duration: {
       start: new Date("01/mar/2020"),
-      end: null
-    }
+      end: null,
+    },
   },
   {
     company: {
       name: "Relisource Technologies Ltd.",
       logoPath: "/images/relisource.jpeg",
       logoAlt: "Relisource",
-      website: "https://www.relisource.com/"
+      website: "https://www.relisource.com/",
     },
     title: "Web Developer (salesforce)",
     description: {
@@ -148,15 +154,15 @@ const experiences: WorkExperience[] = [
     tags: ["salesforce", "angularjs", "javascript", "html", "css"],
     duration: {
       start: new Date("01/aug/2019"),
-      end: new Date("01/feb/2020")
-    }
+      end: new Date("01/feb/2020"),
+    },
   },
   {
     company: {
       name: "Orbitax Bangladesh Ltd.",
       logoPath: "/images/orbitax.jpeg",
       logoAlt: "Orbitax",
-      website: "https://www.orbitax.com/"
+      website: "https://www.orbitax.com/",
     },
     title: "Associate Software Engineer",
     description: {
@@ -171,15 +177,15 @@ const experiences: WorkExperience[] = [
     tags: ["angular", ".net-core", "graphql", "rest-api", "ngrx", "jira"],
     duration: {
       start: new Date("01/mar/2018"),
-      end: new Date("01/jul/2019")
-    }
+      end: new Date("01/jul/2019"),
+    },
   },
   {
     company: {
       name: "LII Lab",
       logoPath: "/images/liilab.jpeg",
       logoAlt: "LiiLab",
-      website: "https://liilab.com/"
+      website: "https://liilab.com/",
     },
     title: "Software Engineer (Android)",
     description: {
@@ -193,7 +199,7 @@ const experiences: WorkExperience[] = [
     tags: ["android", "java"],
     duration: {
       start: new Date("01/aug/2017"),
-      end: new Date("01/feb/2018")
-    }
+      end: new Date("01/feb/2018"),
+    },
   },
 ];

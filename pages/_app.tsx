@@ -1,9 +1,9 @@
-import { AppProps } from 'next/app'
-import '../styles/globals.scss'
-import 'react-typist/dist/Typist.css'
+import { AppProps } from "next/app";
+import "../styles/globals.scss";
+import "react-typist/dist/Typist.css";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;

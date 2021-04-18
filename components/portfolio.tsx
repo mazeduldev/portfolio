@@ -6,9 +6,13 @@ import Image from "next/image";
 import Tag from "./ui/tag";
 import { Project } from "../model/project";
 
-const Portfolio = (props) => {
+interface PortfolioProps {
+  id: string;
+}
+
+const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
   return (
-    <section id={props.id} className={`bg ${classes.starDark}`}>
+    <section id={id} className={`bg ${classes.starDark}`}>
       <div className={classes.background}></div>
       <div className={classes.midground}></div>
       <div className={classes.foreground}></div>
@@ -44,9 +48,10 @@ const Portfolio = (props) => {
                         <a
                           href={project.sourceUrl}
                           target="_blank"
+                          rel="noreferrer"
                         >
                           Source Code
-                      </a>
+                        </a>
                       </Button>
                     ) : null}
                     {project.demoUrl ? (
@@ -54,9 +59,10 @@ const Portfolio = (props) => {
                         <a
                           href={project.demoUrl}
                           target="_blank"
+                          rel="noreferrer"
                         >
                           Live Demo
-                      </a>
+                        </a>
                       </Button>
                     ) : null}
                   </div>

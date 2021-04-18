@@ -3,16 +3,21 @@ import { TiltOptions } from "vanilla-tilt";
 import classes from "./card.module.scss";
 import Tilt from "./tilt";
 
+interface CardProps {
+  children?: React.ReactNode;
+  tiltOptions?: TiltOptions;
+}
+
 const defaultTiltOptions: TiltOptions = {
   glare: true,
   "max-glare": 0.2,
 };
 
-const Card: React.FC<{ tiltOptions?: TiltOptions }> = ({
-  tiltOptions = defaultTiltOptions,
+const Card: React.FC<CardProps> = ({
   children,
+  tiltOptions = defaultTiltOptions,
   ...restProps
-}) => {
+}: CardProps) => {
   return (
     <Tilt className={classes.card} options={tiltOptions} {...restProps}>
       {children}

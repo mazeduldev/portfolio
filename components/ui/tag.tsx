@@ -1,12 +1,21 @@
-import React from 'react';
-import classes from './tag.module.scss';
+import React from "react";
+import classes from "./tag.module.scss";
 
-const Tag = (props) => {
-  return (
-    <div className={`${classes.tag} ${props.classes}`} {...props}>
-      <span>{props.children}</span>
-    </div>
-  )
+interface TagProps {
+  children?: React.ReactNode;
+  classNames?: string;
 }
 
-export default Tag
+const Tag: React.FC<TagProps> = ({
+  children,
+  classNames,
+  ...rest
+}: TagProps) => {
+  return (
+    <div className={`${classes.tag} ${classNames}`} {...rest}>
+      <span>{children}</span>
+    </div>
+  );
+};
+
+export default Tag;

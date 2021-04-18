@@ -1,14 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "./drawer.module.scss";
 import { FaTimes } from "react-icons/fa";
 
-const Drawer = (props) => {
+interface DrawerProps {
+  isOpen: boolean;
+  toggle: () => void;
+  children: React.ReactNode;
+}
+
+const Drawer: React.FC<DrawerProps> = ({
+  isOpen,
+  toggle,
+  children,
+}: DrawerProps) => {
   return (
-    <aside className={`${classes.drawerContainer} bg dark ${props.isOpen ? classes.active: ''}`}>
-      <div className={classes.crossButton} onClick={props.toggle}>
+    <aside
+      className={`${classes.drawerContainer} bg dark ${
+        isOpen ? classes.active : ""
+      }`}
+    >
+      <div className={classes.crossButton} onClick={toggle}>
         <FaTimes></FaTimes>
       </div>
-      {props.children}
+      {children}
     </aside>
   );
 };

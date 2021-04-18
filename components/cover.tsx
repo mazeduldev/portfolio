@@ -6,14 +6,18 @@ import TypingAnimation from "./typing-animation";
 
 const myTitles = ["Software Engineer", "Web Developer", "Fullstack Developer"];
 
-const Cover = (props) => {
+interface CoverProps {
+  id: string;
+}
+
+const Cover: React.FC<CoverProps> = ({ id }: CoverProps) => {
   return (
-    <section id={props.id} className={classes.cover}>
+    <section id={id} className={classes.cover}>
       <div className={`container ${classes.coverContent}`}>
         <div className={classes.text1}>Hello, my name is</div>
         <div className={classes.text2}>Mazedul Islam</div>
         <div className={classes.text3}>
-          And I'm a<TypingAnimation texts={myTitles}></TypingAnimation>
+          And I&apos;m a<TypingAnimation texts={myTitles}></TypingAnimation>
         </div>
         <Link
           to="portfolio"
