@@ -14,7 +14,7 @@
     // as cover will have dark image background
     color: $on-color-dark;
     text-align: center;
-    margin-top: 27vh;
+    margin-top: 25vh;
     padding: 0 2vw;
 
     .text1 {
@@ -46,5 +46,37 @@
         color: $color-primary;
       }
     }
+  }
+}
+
+.arrow {
+  display: inline-block;
+  font-size: $h3-font-size;
+  margin-top: 4em;
+  transition: color 0.3s ease;
+  animation: bounce 2s ease infinite;
+
+  &:hover {
+    color: $color-highlight;
+    cursor: pointer;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  25%,
+  55%,
+  75%,
+  100% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(-20px);
+  }
+  65% {
+    transform: translateY(-10px);
+  }
+  85% {
+    transform: translateY(-5px);
   }
 }
