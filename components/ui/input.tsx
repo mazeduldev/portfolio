@@ -9,7 +9,7 @@ const Input: React.FC<InputProps> = ({ label, ...rest }: InputProps) => {
   return (
     <div className={classes.input}>
       <label className={classes.label}>{label}</label>
-      <input className={classes.inputElement} {...rest} />;
+      <input className={classes.inputElement} {...rest} />
     </div>
   );
 };
