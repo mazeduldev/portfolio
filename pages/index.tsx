@@ -12,7 +12,7 @@ export default function Home(): JSX.Element {
   return (
     <div>
       <Head>
-        <title>Mazid</title>
+        <title>Mazedul Islam</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
