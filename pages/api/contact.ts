@@ -4,10 +4,10 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-export default (req: NextApiRequest, res: NextApiResponse) => {
-  const senderEmail = process.env.sender_email;
-  const senderPassword = process.env.sender_password;
-  const receiverEmail = process.env.receiver_email;
+export default (req: NextApiRequest, res: NextApiResponse): void => {
+  const senderEmail = process.env.SENDER_EMAIL;
+  const senderPassword = process.env.SENDER_PASSWORD;
+  const receiverEmail = process.env.RECEIVER_EMAIL;
 
   const transporter = nodemailer.createTransport({
     port: 465,
