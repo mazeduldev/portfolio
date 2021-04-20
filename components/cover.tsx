@@ -17,7 +17,7 @@ const Cover: React.FC<CoverProps> = ({ id }: CoverProps) => {
         <div className={classes.text1}>Hello, my name is</div>
         <div className={classes.text2}>Mazedul Islam</div>
         <div className={classes.text3}>
-          And I&apos;m a<TypingAnimation texts={myTitles}></TypingAnimation>
+          I&apos;m a<TypingAnimation texts={myTitles}></TypingAnimation>
         </div>
         <Link
           to="portfolio"
