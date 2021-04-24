@@ -12,12 +12,18 @@
     @include respond-to("lg") {
       width: 95%;
     }
+
+    .iconStyle {
+      background: $color-primary;
+      color: $on-color-primary;
+    }
+    
+    .date {
+      color: $on-color-light;
+    }
   }
 }
 
-.date {
-  color: $on-color-light;
-}
 
 .contentContainer {
   display: flex;

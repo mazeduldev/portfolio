@@ -45,10 +45,6 @@
       @include respond-to("xxl") {
         font-size: $h3-font-size;
       }
-
-      & span {
-        color: $color-primary;
-      }
     }
   }
 }

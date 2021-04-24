@@ -19,7 +19,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
     return (
       <div className={classes.inline} key={idx}>
         <span> {item}</span>
-        <Typist.Backspace count={item.length} delay={1000}></Typist.Backspace>
+        <Typist.Backspace count={item.length} delay={2000}></Typist.Backspace>
       </div>
     );
   });
@@ -28,7 +28,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
     <>
       {doType ? (
         <Typist
-          className={`${classes.inline} ${classes.crimson}`}
+          className={`${classes.inline} ${classes.animatedText}`}
           onTypingDone={() => setDoType(false)}
         >
           {typistContents}

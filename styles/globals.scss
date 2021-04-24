@@ -54,7 +54,7 @@ section {
   }
 
   &.semi-light {
-    background: rgb(207, 194, 194);
+    background: $color-light-secondary;
     color: $on-color-light;
   }
 
@@ -136,6 +136,7 @@ section {
     }
 
     .subtitle {
+      color: $color-primary-light;
       &::before {
         background: $on-color-dark;
       }

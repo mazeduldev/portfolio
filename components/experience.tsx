@@ -15,16 +15,9 @@ interface ExperienceProps {
 }
 
 const Experience: React.FC<ExperienceProps> = ({ id }: ExperienceProps) => {
-  const lightCrimson = "#FF8289";
-
   const contentStyle = {
     color: "#111",
-    borderTop: `3px solid ${lightCrimson}`,
-  };
-
-  const iconStyle = {
-    background: lightCrimson,
-    color: "#fff",
+    borderTop: "3px solid #1763A6",
   };
 
   const timelineElements = experiences.map(
@@ -36,7 +29,7 @@ const Experience: React.FC<ExperienceProps> = ({ id }: ExperienceProps) => {
           contentArrowStyle={{ borderRight: "7px solid #fff" }}
           date={TimeUtil.formatDuration(exp.duration)}
           dateClassName={classes.date}
-          iconStyle={iconStyle}
+          iconClassName={classes.iconStyle}
           icon={<MdWork />}
           key={`element_${idx}`}
         >

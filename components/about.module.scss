@@ -54,7 +54,7 @@
       text-align: justify;
       margin-bottom: 10px;
       a {
-        color: $color-primary;
+        color: $color-primary-light;
         transition: color 0.3s ease;
         &:hover {
           color: $color-highlight;
@@ -78,6 +78,7 @@
       &:hover {
         background: $on-color-primary;
         color: $color-primary;
+        border-color: $color-primary;
       }
 
       &:active {
