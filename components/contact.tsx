@@ -74,7 +74,7 @@ const Contact: React.FC<ContactProps> = ({ id }: ContactProps) => {
   };
 
   return (
-    <section className={`${classes.contactSection} bg light`} id={id}>
+    <section className={`${classes.contactSection} bg semi-light`} id={id}>
       <div className="container">
         <div className="title-container light">
           <h2 className="title">Contact me</h2>
