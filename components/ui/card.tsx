@@ -11,6 +11,7 @@ interface CardProps {
 const defaultTiltOptions: TiltOptions = {
   glare: true,
   "max-glare": 0.2,
+  gyroscope: false,
 };
 
 const Card: React.FC<CardProps> = ({

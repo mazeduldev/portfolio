@@ -10,7 +10,6 @@
   .techLogo {
     font-size: $font-size-xl;
     position: absolute;
-    top: 100%;
     display: none;
 
     @include respond-to("sm") {
