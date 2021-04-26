@@ -5,6 +5,17 @@ import Card from "./ui/card";
 import Image from "next/image";
 import Tag from "./ui/tag";
 import { Project } from "../model/project";
+import {
+  FaAngular,
+  FaCss3Alt,
+  FaHtml5,
+  FaJava,
+  FaJs,
+  FaNodeJs,
+  FaReact,
+  FaSass,
+} from "react-icons/fa";
+import { SiMongodb, SiMysql, SiSpring, SiTypescript } from "react-icons/si";
 
 interface PortfolioProps {
   id: string;
@@ -13,9 +24,7 @@ interface PortfolioProps {
 const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
   return (
     <section id={id} className={`bg ${classes.starDark}`}>
-      <div className={classes.background}></div>
-      <div className={classes.midground}></div>
-      <div className={classes.foreground}></div>
+      {techLogos}
 
       <div className={classes.portfolioContainer}>
         <div className="title-container dark">
@@ -89,4 +98,67 @@ const projects: Project[] = [
     imageAlt: "Timeline",
     tags: ["angular", "angular-material"],
   },
+];
+
+const techLogos = [
+  <FaAngular
+    key={"logo_1"}
+    style={{ color: "#D6002F" }}
+    className={classes.techLogo}
+  />,
+  <FaReact
+    key={"logo_2"}
+    style={{ color: "#61DAFB" }}
+    className={classes.techLogo}
+  />,
+  <FaNodeJs
+    key={"logo_3"}
+    style={{ color: "#5E9A59" }}
+    className={classes.techLogo}
+  />,
+  <SiMongodb
+    key={"logo_4"}
+    style={{ color: "#4CA449" }}
+    className={classes.techLogo}
+  />,
+  <FaCss3Alt
+    key={"logo_5"}
+    style={{ color: "#2862E9" }}
+    className={classes.techLogo}
+  />,
+  <FaHtml5
+    key={"logo_6"}
+    style={{ color: "#E96228" }}
+    className={classes.techLogo}
+  />,
+  <FaSass
+    key={"logo_7"}
+    style={{ color: "#C76494" }}
+    className={classes.techLogo}
+  />,
+  <FaJs
+    key={"logo_8"}
+    style={{ color: "#F7DF1E" }}
+    className={classes.techLogo}
+  />,
+  <SiTypescript
+    key={"logo_9"}
+    style={{ color: "#2F74C0" }}
+    className={classes.techLogo}
+  />,
+  <SiSpring
+    key={"logo_10"}
+    style={{ color: "#5FB832" }}
+    className={classes.techLogo}
+  />,
+  <FaJava
+    key={"logo_11"}
+    style={{ color: "#5382A1" }}
+    className={classes.techLogo}
+  />,
+  <SiMysql
+    key={"logo_12"}
+    style={{ color: "#DF8B00" }}
+    className={classes.techLogo}
+  />,
 ];

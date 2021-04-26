@@ -5,41 +5,61 @@
   background: $color-dark;
   color: $on-color-dark;
   position: relative;
+  overflow-y: hidden;
 
-  .background {
-    background: $color-dark url(/images/background.png) repeat 5% 5%;
+  .techLogo {
+    font-size: $font-size-xl;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
+    top: 100%;
+    display: none;
 
-    animation: STAR-MOVE 2000s linear infinite;
-  }
+    @include respond-to("sm") {
+      display: block;
+    }
 
-  .midground {
-    background: url(/images/midground.png) repeat 20% 20%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-
-    animation: STAR-MOVE 1500s linear infinite;
-  }
-
-  .foreground {
-    background: url(/images/foreground.png) repeat 35% 35%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 3;
-
-    animation: STAR-MOVE 1000s linear infinite;
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        $multiplier: $i - 1;
+        $left-pos: percentage($multiplier * 8.3) / 100;
+        left: $left-pos + 1;
+      }
+    }
+    &:nth-child(1) {
+      animation: LOGO-MOVE 15s linear infinite;
+    }
+    &:nth-child(2) {
+      animation: LOGO-MOVE 36s linear infinite;
+    }
+    &:nth-child(3) {
+      animation: LOGO-MOVE 12s linear infinite;
+    }
+    &:nth-child(4) {
+      animation: LOGO-MOVE 32s linear infinite;
+    }
+    &:nth-child(5) {
+      animation: LOGO-MOVE 21s linear infinite;
+    }
+    &:nth-child(6) {
+      animation: LOGO-MOVE 42s linear infinite;
+    }
+    &:nth-child(7) {
+      animation: LOGO-MOVE 19s linear infinite;
+    }
+    &:nth-child(8) {
+      animation: LOGO-MOVE 37s linear infinite;
+    }
+    &:nth-child(9) {
+      animation: LOGO-MOVE 23s linear infinite;
+    }
+    &:nth-child(10) {
+      animation: LOGO-MOVE 43s linear infinite;
+    }
+    &:nth-child(11) {
+      animation: LOGO-MOVE 18s linear infinite;
+    }
+    &:nth-child(12) {
+      animation: LOGO-MOVE 39s linear infinite;
+    }
   }
 
   .portfolioContainer {
@@ -115,11 +135,19 @@
   }
 }
 
-@keyframes STAR-MOVE {
+@keyframes LOGO-MOVE {
   0% {
-    left: -1000%;
+    top: 105%;
+    opacity: 100%;
+  }
+  70% {
+    opacity: 100%;
+  }
+  75% {
+    opacity: 0;
   }
   100% {
-    left: 1000%;
+    top: -5%;
+    opacity: 0;
   }
 }
