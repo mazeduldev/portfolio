@@ -167,14 +167,14 @@ const Contact: React.FC<ContactProps> = ({ id }: ContactProps) => {
                 <FaFacebookF />
               </a>
               <a
-                href="https://twitter.com/mazid_csedu"
+                href="https://twitter.com/mazedul__islam"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FaTwitter />
               </a>
               <a
-                href="https://www.instagram.com/the_mzd/"
+                href="https://www.instagram.com/mazedul__islam/"
                 target="_blank"
                 rel="noreferrer"
               >
