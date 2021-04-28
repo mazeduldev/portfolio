@@ -89,7 +89,7 @@ export default Portfolio;
 
 const projects: Project[] = [
   {
-    title: "Vertical Timeline",
+    title: "ngx-mzd-timeline",
     description:
       "Angular material theme supported minimalist's vertical timeline library for Angular applications.",
     sourceUrl: "https://github.com/mazid1/ngx-mzd-timeline",
