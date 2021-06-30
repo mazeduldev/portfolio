@@ -125,9 +125,9 @@ const Contact: React.FC<ContactProps> = ({ id }: ContactProps) => {
               <FaRegEnvelope className={classes.icon} />{" "}
               <a
                 className={classes.infoText}
-                href="mailto:mazedul@mazedulislam.com"
+                href="mailto:mazidmailbox@gmail.com"
               >
-                mazedul@mazedulislam.com
+                mazidmailbox@gmail.com
               </a>
             </address>
             <div className={classes.infoContainer}>
