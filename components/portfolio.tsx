@@ -103,7 +103,7 @@ const projects: Project[] = [
       "Angular material theme supported minimalist's vertical timeline library for Angular applications.",
     sourceUrl: "https://github.com/mazid1/ngx-mzd-timeline",
     demoUrl: "https://mazid1.github.io/ngx-mzd-timeline/",
-    imageUrl: "/images/timeline_collage.png",
+    imageUrl: "/images/timeline_collage.webp",
     imageAlt: "Timeline",
     tags: ["angular", "angular-material"],
   },

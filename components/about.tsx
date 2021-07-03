@@ -20,7 +20,7 @@ const About: React.FC<AboutProps> = ({ id }: AboutProps) => {
         <div className={classes.content}>
           <div className={classes.proPic}>
             <Image
-              src="/images/me.jpg"
+              src="/images/me.webp"
               alt="Mazid"
               width={350}
               height={350}
