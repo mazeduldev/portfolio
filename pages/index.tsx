@@ -7,10 +7,11 @@ import Footer from "../components/footer";
 import Contact from "../components/contact";
 import Portfolio from "../components/portfolio";
 import Experience from "../components/experience";
+import { ToastProvider } from "react-toast-notifications";
 
 export default function Home(): JSX.Element {
   return (
-    <>
+    <ToastProvider>
       <Head>
         <title>Mazedul Islam</title>
         <link rel="icon" href="/favicon.ico" />
@@ -27,6 +28,6 @@ export default function Home(): JSX.Element {
       </main>
 
       <Footer></Footer>
-    </>
+    </ToastProvider>
   );
 }

@@ -13,6 +13,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import Textarea from "./ui/textarea";
+import { useToasts } from "react-toast-notifications";
 
 interface ContactProps {
   id: string;
@@ -23,6 +24,7 @@ const Contact: React.FC<ContactProps> = ({ id }: ContactProps) => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const { addToast } = useToasts();
 
   const changeHandler = (event) => {
     event.preventDefault();
@@ -48,23 +50,39 @@ const Contact: React.FC<ContactProps> = ({ id }: ContactProps) => {
 
     const data = { name, email, message };
 
-    const res: Response = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    try {
+      const res: Response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    if (res.status == 200) {
-      alert("Email sent!");
-      clearForm();
-    } else {
-      alert("Failed!");
+      const jsonData = await res.json();
+
+      if (res.status == 200) {
+        addToast(jsonData.message, {
+          appearance: "success",
+          autoDismiss: true,
+        });
+        clearForm();
+      } else {
+        addToast(jsonData.error || "Something went wrong!", {
+          appearance: "error",
+          autoDismiss: true,
+        });
+      }
+    } catch (err) {
+      addToast("Something went wrong!", {
+        appearance: "error",
+        autoDismiss: true,
+      });
+      console.error("Error occurred during sending email.", err);
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   const clearForm = () => {
