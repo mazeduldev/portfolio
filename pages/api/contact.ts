@@ -22,7 +22,7 @@ export default (req: NextApiRequest, res: NextApiResponse): void => {
   const mailData = {
     from: senderEmail,
     to: receiverEmail,
-    subject: `[Portfolio] message from ${req.body.name}`,
+    subject: `[Portfolio] ${req.body.name}`,
     text: req.body.message + " | Sent from: " + req.body.email,
     html: `
       <div>${req.body.message.replace(/\n/g, "<br>")}</div>
