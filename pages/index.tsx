@@ -10,7 +10,7 @@ import Experience from "../components/experience";
 
 export default function Home(): JSX.Element {
   return (
-    <div>
+    <>
       <Head>
         <title>Mazedul Islam</title>
         <link rel="icon" href="/favicon.ico" />
@@ -27,6 +27,6 @@ export default function Home(): JSX.Element {
       </main>
 
       <Footer></Footer>
-    </div>
+    </>
   );
 }
