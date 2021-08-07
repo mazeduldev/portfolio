@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  mongodb:
+    image: "mongo:latest"
+    ports:
+      - "27017:27017"
+    env_file:
+      - .env.local
+    restart: "no"
+
+  mongo-seed:
+    build: ./mongo-seed
+    depends_on:
+      - mongodb
