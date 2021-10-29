@@ -33,6 +33,23 @@ const Navbar: React.FC = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
 
+  const linkTitles = ["home", "portfolio", "experience", "about", "contact"];
+  const navLinks = linkTitles.map((title) => {
+    return (
+      <li className={classes.menuItem} key={title}>
+        <Link
+          to={title}
+          smooth={true}
+          spy={true}
+          offset={-64}
+          activeClass={title !== "home" ? classes.active : ""}
+        >
+          {`${title[0].toUpperCase()}${title.substring(1)}`}
+        </Link>
+      </li>
+    );
+  });
+
   return (
     <>
       <a
@@ -42,57 +59,7 @@ const Navbar: React.FC = () => {
         <FaArrowUp />
       </a>
       <nav className={`${classes.navContainer} ${transparent}`}>
-        <ul className={classes.menu}>
-          <Link
-            to="home"
-            smooth={true}
-            spy={true}
-            offset={-64}
-            className={classes.menuItem}
-          >
-            Home
-          </Link>
-          <Link
-            to="portfolio"
-            activeClass={classes.active}
-            smooth={true}
-            spy={true}
-            offset={-64}
-            className={classes.menuItem}
-          >
-            Portfolio
-          </Link>
-          <Link
-            to="experience"
-            activeClass={classes.active}
-            smooth={true}
-            spy={true}
-            offset={-64}
-            className={classes.menuItem}
-          >
-            Experience
-          </Link>
-          <Link
-            to="about"
-            activeClass={classes.active}
-            smooth={true}
-            spy={true}
-            offset={-64}
-            className={classes.menuItem}
-          >
-            About
-          </Link>
-          <Link
-            to="contact"
-            activeClass={classes.active}
-            smooth={true}
-            spy={true}
-            offset={-64}
-            className={classes.menuItem}
-          >
-            Contact
-          </Link>
-        </ul>
+        <ul className={classes.menu}>{navLinks}</ul>
         <div className={classes.bars} onClick={toggleDrawer}>
           <FaBars className={classes.menuIcon}></FaBars>
         </div>
