@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-export default (req: NextApiRequest, res: NextApiResponse): void => {
+const sendMail = (req: NextApiRequest, res: NextApiResponse): void => {
   const senderEmail = process.env.SENDER_EMAIL;
   const senderPassword = process.env.SENDER_PASSWORD;
   const receiverEmail = process.env.RECEIVER_EMAIL;
@@ -40,3 +40,5 @@ export default (req: NextApiRequest, res: NextApiResponse): void => {
     }
   });
 };
+
+export default sendMail;
