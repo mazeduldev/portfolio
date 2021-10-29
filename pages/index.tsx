@@ -14,7 +14,12 @@ export default function Home(): JSX.Element {
     <ToastProvider>
       <Head>
         <title>Mazedul Islam</title>
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="I'm Mazedul Islam. Full-stack software engineer experienced in JavaScript,
+              Angular, ReactJS, Spring-boot, NodeJS, Web Development, CI/CD pipeline, Docker, Kubernetes etc."
+        />
       </Head>
 
       <Navbar></Navbar>

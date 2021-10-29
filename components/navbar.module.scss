@@ -35,6 +35,11 @@
         color: $color-highlight;
         cursor: pointer;
       }
+      a {
+        display: flex;
+        height: 100%;
+        align-items: center;
+      }
     }
 
     @include respond-to("sm") {
