@@ -116,12 +116,19 @@ const experiences: WorkExperience[] = [
     description: {
       title: "Working as a full-stack software engineer",
       points: [
-        "Designing and developing REST APIs using Java, Spring-boot, JPA, Hibernate and QueryDSL",
-        "Developing multi language supported client application using Typescript and Angular 9",
-        "Writing automated tests for Angular application using Jasmine and Karma",
+        "Developing features for our client's office management web application using Java, Spring-boot, JPA, Hibernate, MySQL and Angular",
+        "Implemented web service using Flask framework of Python for parsing csv or xlsx files submitted by our end users",
+        "Proactively introduced CI/CD pipeline to team members and implemented automated deployment system for our Maven application using GitLab CI/CD Pipeline",
       ],
     },
-    tags: ["spring-boot", "java", "angular", "mysql", "querydsl"],
+    tags: [
+      "spring-boot",
+      "java",
+      "angular",
+      "mysql",
+      "querydsl",
+      "ci/cd pipeline",
+    ],
     duration: {
       start: new Date("01/mar/2020"),
       end: null,
@@ -185,8 +192,7 @@ const experiences: WorkExperience[] = [
       title: "Worked as an Android application developer",
       points: [
         "Developed multiple image editing applications using Android SDK and open source libraries",
-        "Ensured applications were properly integrated with different Android APIs",
-        "Provided decent UX for different Screen Resolutions and Aspect Ratios",
+        "Implemented automatic similar color removal feature using Flood Fill algorithm",
       ],
     },
     tags: ["android", "java"],
