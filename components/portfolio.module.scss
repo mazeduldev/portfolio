@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "../styles/variables";
 @import "../styles/mixins";
 
@@ -19,7 +20,7 @@
     @for $i from 1 through 12 {
       &:nth-child(#{$i}) {
         $multiplier: $i - 1;
-        $left-pos: percentage($multiplier * 8.3) / 100;
+        $left-pos: math.div(percentage($multiplier * 8.3), 100);
         left: $left-pos + 1;
       }
     }

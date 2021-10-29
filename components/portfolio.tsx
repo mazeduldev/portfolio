@@ -43,7 +43,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
                 className={classes.cardImage}
               />
               <div className={classes.cardBody}>
-                <h5 className={classes.cardTitle}>{project.title}</h5>
+                <h4 className={classes.cardTitle}>{project.title}</h4>
                 <p className={classes.cardDescription}>{project.description}</p>
                 <div className={classes.cardTagContainer}>
                   {project.tags.map((tag: string, tag_idx: number) => (
