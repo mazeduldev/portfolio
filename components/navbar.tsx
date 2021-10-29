@@ -34,6 +34,7 @@ const Navbar: React.FC = () => {
   };
 
   const linkTitles = ["home", "portfolio", "experience", "about", "contact"];
+
   const navLinks = linkTitles.map((title) => {
     return (
       <li className={classes.menuItem} key={title}>
@@ -47,6 +48,23 @@ const Navbar: React.FC = () => {
           {`${title[0].toUpperCase()}${title.substring(1)}`}
         </Link>
       </li>
+    );
+  });
+
+  const drawerNavLinks = linkTitles.map((title) => {
+    return (
+      <Link
+        to={title}
+        key={title}
+        onClick={toggleDrawer}
+        activeClass={classes.active}
+        smooth={true}
+        spy={true}
+        offset={-64}
+        className={classes.menuItem}
+      >
+        {`${title[0].toUpperCase()}${title.substring(1)}`}
+      </Link>
     );
   });
 
@@ -65,63 +83,7 @@ const Navbar: React.FC = () => {
         </div>
       </nav>
       <Drawer isOpen={isDrawerOpen} toggle={toggleDrawer}>
-        <div className={classes.drawerMenu}>
-          <Link
-            to="home"
-            onClick={toggleDrawer}
-            activeClass={classes.active}
-            smooth={true}
-            spy={true}
-            offset={-64}
-            className={classes.menuItem}
-          >
-            Home
-          </Link>
-          <Link
-            to="portfolio"
-            onClick={toggleDrawer}
-            activeClass={classes.active}
-            smooth={true}
-            spy={true}
-            offset={-64}
-            className={classes.menuItem}
-          >
-            Portfolio
-          </Link>
-          <Link
-            to="experience"
-            onClick={toggleDrawer}
-            activeClass={classes.active}
-            smooth={true}
-            spy={true}
-            offset={-64}
-            className={classes.menuItem}
-          >
-            Experience
-          </Link>
-          <Link
-            to="about"
-            onClick={toggleDrawer}
-            activeClass={classes.active}
-            smooth={true}
-            spy={true}
-            offset={-64}
-            className={classes.menuItem}
-          >
-            About
-          </Link>
-          <Link
-            to="contact"
-            onClick={toggleDrawer}
-            activeClass={classes.active}
-            smooth={true}
-            spy={true}
-            offset={-64}
-            className={classes.menuItem}
-          >
-            Contact
-          </Link>
-        </div>
+        <div className={classes.drawerMenu}>{drawerNavLinks}</div>
       </Drawer>
     </>
   );
