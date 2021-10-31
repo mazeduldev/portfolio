@@ -8,31 +8,32 @@ import Contact from "../components/contact";
 import Portfolio from "../components/portfolio";
 import Experience from "../components/experience";
 import { ToastProvider } from "react-toast-notifications";
+import { NextSeo } from "next-seo";
 
 export default function Home(): JSX.Element {
   return (
-    <ToastProvider>
-      <Head>
-        <title>Mazedul Islam</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="I'm Mazedul Islam. Full-stack software engineer experienced in JavaScript,
-              Angular, ReactJS, Spring-boot, NodeJS, Web Development, CI/CD pipeline, Docker, Kubernetes etc."
-        />
-      </Head>
+    <>
+      <NextSeo
+        description="I'm Mazedul Islam. Fullstack software engineer experienced in JavaScript, Angular, ReactJS,
+        Spring-boot, NodeJS, Python, Java, Web Development, CI/CD pipeline, Docker, Kubernetes, Microservices etc."
+        canonical="https://mazedulislam.com"
+        additionalMetaTags={[
+          { name: "viewport", content: "width=device-width, initial-scale=1" },
+        ]}
+      />
+      <ToastProvider>
+        <Navbar></Navbar>
 
-      <Navbar></Navbar>
+        <main>
+          <Cover id="home"></Cover>
+          <Portfolio id="portfolio"></Portfolio>
+          <Experience id="experience"></Experience>
+          <About id="about"></About>
+          <Contact id="contact"></Contact>
+        </main>
 
-      <main>
-        <Cover id="home"></Cover>
-        <Portfolio id="portfolio"></Portfolio>
-        <Experience id="experience"></Experience>
-        <About id="about"></About>
-        <Contact id="contact"></Contact>
-      </main>
-
-      <Footer></Footer>
-    </ToastProvider>
+        <Footer></Footer>
+      </ToastProvider>
+    </>
   );
 }
