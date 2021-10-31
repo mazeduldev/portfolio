@@ -108,7 +108,7 @@ const experiences: WorkExperience[] = [
   {
     company: {
       name: "Impel IT Solutions",
-      logoPath: "/images/impel.png",
+      logoPath: "/images/impel.webp",
       logoAlt: "Impel",
       website: "http://www.impelitsolutions.com/",
     },
@@ -126,8 +126,8 @@ const experiences: WorkExperience[] = [
       "java",
       "angular",
       "mysql",
-      "querydsl",
       "ci/cd pipeline",
+      "docker",
     ],
     duration: {
       start: new Date("01/mar/2020"),
@@ -137,7 +137,7 @@ const experiences: WorkExperience[] = [
   {
     company: {
       name: "Relisource Technologies Ltd.",
-      logoPath: "/images/relisource.jpeg",
+      logoPath: "/images/relisource.webp",
       logoAlt: "Relisource",
       website: "https://www.relisource.com/",
     },
@@ -160,7 +160,7 @@ const experiences: WorkExperience[] = [
   {
     company: {
       name: "Orbitax Bangladesh Ltd.",
-      logoPath: "/images/orbitax.jpeg",
+      logoPath: "/images/orbitax.webp",
       logoAlt: "Orbitax",
       website: "https://www.orbitax.com/",
     },
@@ -183,7 +183,7 @@ const experiences: WorkExperience[] = [
   {
     company: {
       name: "LII Lab",
-      logoPath: "/images/liilab.jpeg",
+      logoPath: "/images/liilab.webp",
       logoAlt: "LiiLab",
       website: "https://liilab.com/",
     },
