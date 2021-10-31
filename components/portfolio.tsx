@@ -89,15 +89,6 @@ export default Portfolio;
 
 const projects: Project[] = [
   {
-    title: "Portfolio",
-    description:
-      "Personal portfolio website developed using reactjs and nextjs.",
-    demoUrl: "#",
-    imageUrl: "/images/portfolio_cover.webp",
-    imageAlt: "Portfolio",
-    tags: ["reactjs", "nextjs", "vercel"],
-  },
-  {
     title: "ngx-mzd-timeline",
     description:
       "Angular material theme supported minimalist's vertical timeline library for Angular applications.",
@@ -106,6 +97,15 @@ const projects: Project[] = [
     imageUrl: "/images/timeline_collage.webp",
     imageAlt: "Timeline",
     tags: ["angular", "angular-material"],
+  },
+  {
+    title: "Portfolio",
+    description:
+      "Personal portfolio website developed using reactjs and nextjs.",
+    demoUrl: "#",
+    imageUrl: "/images/portfolio_cover.webp",
+    imageAlt: "Portfolio",
+    tags: ["reactjs", "nextjs", "vercel"],
   },
 ];
 
