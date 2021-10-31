@@ -34,10 +34,11 @@ const About: React.FC<AboutProps> = ({ id }: AboutProps) => {
               <TypingAnimation texts={myTitles}></TypingAnimation>
             </div>
             <p>
-              Experienced Software Engineer with a demonstrated history of
-              working in the computer software industry. Skilled in JavaScript,
-              Angular, ReactJS, Spring-boot, NodeJS, Web Development, Android
-              Development, and Software Design Patterns. Strong engineering
+              Fullstack Software Engineer with a demonstrated history of working
+              in the computer software industry. Skilled in JavaScript,
+              Typescript, Angular, ReactJS, NodeJS, Express, Java, Spring-boot,
+              Python, FastAPI, CI/CD pipeline, Docker, Kubernetes, Microservice,
+              MySQL, MongoDB etc. for Web Development. Strong engineering
               professional with a Bachelor of Science focused in Computer
               Science and Engineering from{" "}
               <a href="https://www.cse.du.ac.bd/">University of Dhaka</a>.

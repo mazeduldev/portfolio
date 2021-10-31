@@ -5,10 +5,9 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Ubuntu:wght@400;500;700&amp;display=optional"
           />
         </Head>
         <body>
