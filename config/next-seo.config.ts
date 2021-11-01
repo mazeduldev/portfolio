@@ -8,10 +8,10 @@ const seoConfig: NextSeoProps = {
     site_name: "Mazedul Islam",
     images: [
       {
-        url: "https://mazedulislam.com/images/og_image.jpeg",
+        url: "https://mazedulislam.com/images/og_image.png",
         width: 1200,
         height: 627,
-        type: "image/jpeg",
+        type: "image/png",
       },
     ],
   },
