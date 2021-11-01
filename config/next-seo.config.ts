@@ -4,7 +4,7 @@ const seoConfig: NextSeoProps = {
   openGraph: {
     type: "website",
     locale: "en_us",
-    url: "https://mazedulislam.com",
+    url: "https://mazedulislam.com/",
     site_name: "Mazedul Islam",
     images: [
       {
