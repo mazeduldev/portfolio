@@ -1,6 +1,6 @@
+import Link from "next/link";
 import React from "react";
 import { FaArrowDown } from "react-icons/fa";
-import { Link } from "react-scroll";
 import classes from "./cover.module.scss";
 import TypingAnimation from "./typing-animation";
 
@@ -19,13 +19,10 @@ const Cover: React.FC<CoverProps> = ({ id }: CoverProps) => {
         <div className={classes.text3}>
           I&apos;m a<TypingAnimation texts={myTitles}></TypingAnimation>
         </div>
-        <Link
-          to="portfolio"
-          smooth={true}
-          offset={-64}
-          className={classes.arrow}
-        >
-          <FaArrowDown></FaArrowDown>
+        <Link href={{ pathname: "/", hash: "#portfolio" }} passHref>
+          <a>
+            <FaArrowDown className={classes.arrow}></FaArrowDown>
+          </a>
         </Link>
       </div>
     </section>

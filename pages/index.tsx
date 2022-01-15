@@ -19,19 +19,14 @@ export default function Home(): JSX.Element {
           { name: "viewport", content: "width=device-width, initial-scale=1" },
         ]}
       />
-      <ToastProvider>
-        <Navbar></Navbar>
 
-        <main>
-          <Cover id="home"></Cover>
-          <Portfolio id="portfolio"></Portfolio>
-          <Experience id="experience"></Experience>
-          <About id="about"></About>
-          <Contact id="contact"></Contact>
-        </main>
-
-        <Footer></Footer>
-      </ToastProvider>
+      <main>
+        <Cover id="home"></Cover>
+        <Portfolio id="portfolio"></Portfolio>
+        <Experience id="experience"></Experience>
+        <About id="about"></About>
+        <Contact id="contact"></Contact>
+      </main>
     </>
   );
 }
