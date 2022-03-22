@@ -50,32 +50,42 @@ const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
                     <Tag key={`card_${idx}_tag_${tag_idx}`}>{tag}</Tag>
                   ))}
                 </div>
-                {project.sourceUrl || project.demoUrl ? (
+                {(project.sourceUrl ||
+                  project.demoUrl ||
+                  project.articleUrl) && (
                   <div className={classes.cardButtonContainer}>
-                    {project.sourceUrl ? (
-                      <Button classNames={classes.cardButton}>
-                        <a
-                          href={project.sourceUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          Source Code
-                        </a>
-                      </Button>
-                    ) : null}
-                    {project.demoUrl ? (
-                      <Button classNames={classes.cardButton}>
-                        <a
-                          href={project.demoUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          Live Demo
-                        </a>
-                      </Button>
-                    ) : null}
+                    {project.sourceUrl && (
+                      <a
+                        className={classes.cardButton}
+                        href={project.sourceUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Source Code
+                      </a>
+                    )}
+                    {project.demoUrl && (
+                      <a
+                        className={classes.cardButton}
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Live Demo
+                      </a>
+                    )}
+                    {project.articleUrl && (
+                      <a
+                        className={classes.cardButton}
+                        href={project.articleUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Read More
+                      </a>
+                    )}
                   </div>
-                ) : null}
+                )}
               </div>
             </Card>
           ))}
@@ -97,6 +107,19 @@ const projects: Project[] = [
     imageUrl: "/images/timeline_collage.webp",
     imageAlt: "Timeline",
     tags: ["angular", "angular-material"],
+    type: "project",
+  },
+  {
+    title: "bs-spacing",
+    description:
+      "An article on how to generate bootstrap like spacing classes using Sass.",
+    sourceUrl: "https://github.com/mazid1/bs-spacing",
+    articleUrl:
+      "https://dev.to/mazid1/generate-bootstrap-like-spacing-classes-using-sass-49g8",
+    imageUrl: "/images/bs_spacing.webp",
+    imageAlt: "Timeline",
+    tags: ["sass", "scss", "css"],
+    type: "article",
   },
   {
     title: "Portfolio",
@@ -106,6 +129,7 @@ const projects: Project[] = [
     imageUrl: "/images/portfolio_cover.webp",
     imageAlt: "Portfolio",
     tags: ["reactjs", "nextjs", "vercel"],
+    type: "project",
   },
 ];
 
