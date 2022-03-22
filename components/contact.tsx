@@ -11,7 +11,9 @@ import {
   FaMobileAlt,
   FaRegEnvelope,
   FaTwitter,
+  FaDev,
 } from "react-icons/fa";
+import { SiDevdotto } from "react-icons/si";
 import Textarea from "./ui/textarea";
 import { useToasts } from "react-toast-notifications";
 
@@ -177,12 +179,8 @@ const Contact: React.FC<ContactProps> = ({ id }: ContactProps) => {
               >
                 <FaGithub />
               </a>
-              <a
-                href="https://www.facebook.com/m.mazedul.islam.m"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaFacebookF />
+              <a href="https://dev.to/mazid1" target="_blank" rel="noreferrer">
+                <FaDev />
               </a>
               <a
                 href="https://twitter.com/mazedul__islam"
@@ -190,6 +188,13 @@ const Contact: React.FC<ContactProps> = ({ id }: ContactProps) => {
                 rel="noreferrer"
               >
                 <FaTwitter />
+              </a>
+              <a
+                href="https://www.facebook.com/m.mazedul.islam.m"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaFacebookF />
               </a>
               <a
                 href="https://www.instagram.com/mazedul__islam/"
