@@ -4,7 +4,20 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+const isSingleWord = (message: string): boolean => {
+  const trimmedMessage = message.trim();
+  return (
+    trimmedMessage.split(" ").length <= 1 &&
+    trimmedMessage.split("\n").length <= 1
+  );
+};
+
 const sendMail = (req: NextApiRequest, res: NextApiResponse): void => {
+  if (isSingleWord(req.body.message)) {
+    res.status(200).json({ message: "Thanks for the message!" });
+    return;
+  }
+
   const senderEmail = process.env.SENDER_EMAIL;
   const senderPassword = process.env.SENDER_PASSWORD;
   const receiverEmail = process.env.RECEIVER_EMAIL;
