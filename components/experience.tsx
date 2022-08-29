@@ -107,6 +107,27 @@ export default Experience;
 const experiences: WorkExperience[] = [
   {
     company: {
+      name: "Vantage Labs LLC",
+      logoPath: "/images/vantage.webp",
+      logoAlt: "Vantage",
+      website: "https://www.vantage.com/",
+    },
+    title: "Software Engineer (full-stack)",
+    description: {
+      title:
+        "Working as a full-stack software engieer, experienced in Spring-boot ans ReactJS",
+      points: [
+        "Implementing admin console for an e-commerce website using ReactJS, Material UI, Spring-boot, Jhipster, Keycloak, Postgres etc.",
+      ],
+    },
+    tags: ["spring-boot", "java", "reactjs", "typescript", "postgres"],
+    duration: {
+      start: new Date("21/may/2022"),
+      end: null,
+    },
+  },
+  {
+    company: {
       name: "Impel IT Solutions",
       logoPath: "/images/impel.webp",
       logoAlt: "Impel",
@@ -131,7 +152,7 @@ const experiences: WorkExperience[] = [
     ],
     duration: {
       start: new Date("01/mar/2020"),
-      end: null,
+      end: new Date("20/may/2022"),
     },
   },
   {

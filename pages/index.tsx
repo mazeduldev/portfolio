@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Navbar from "../components/navbar";
 import Cover from "../components/cover";
 import About from "../components/about";
@@ -14,7 +13,7 @@ export default function Home(): JSX.Element {
   return (
     <>
       <NextSeo
-        description="Mazedul Islam. Fullstack software engineer experienced in JavaScript, Typescript, Angular, ReactJS, NodeJS, Express, Java, Spring-boot, Python, FastAPI, CI/CD pipeline, Docker, Kubernetes, Microservice, MySQL, MongoDB etc. for Web Development."
+        description="Mazedul Islam. Fullstack software engineer experienced in JavaScript, Typescript, Angular, ReactJS, NodeJS, Express, Java, Spring-boot, Python, FastAPI, CI/CD pipeline, Docker, Kubernetes, Microservice, MySQL, MongoDB, Postgres etc. for Web Development."
         additionalMetaTags={[
           { name: "viewport", content: "width=device-width, initial-scale=1" },
         ]}
