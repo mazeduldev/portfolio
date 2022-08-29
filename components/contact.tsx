@@ -158,11 +158,7 @@ const Contact: React.FC<ContactProps> = ({ id }: ContactProps) => {
             </div>
             <div className={classes.infoContainer}>
               <FaMapMarkerAlt className={classes.icon} />{" "}
-              <span className={classes.infoText}>
-                House# 1359, Avenue# 11
-                <br />
-                Mirpur DOHS, Dhaka, Bangladesh
-              </span>
+              <span className={classes.infoText}>Dhaka, Bangladesh</span>
             </div>
             <div className={classes.socialContainer}>
               <a
