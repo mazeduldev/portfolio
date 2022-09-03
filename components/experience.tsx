@@ -115,12 +115,13 @@ const experiences: WorkExperience[] = [
     title: "Software Engineer (full-stack)",
     description: {
       title:
-        "Working as a full-stack software engieer, experienced in Spring-boot ans ReactJS",
+        "Remotely working as a full-stack engineer with a multicultural international team",
       points: [
-        "Implementing admin console for an e-commerce website using ReactJS, Material UI, Spring-boot, Jhipster, Keycloak, Postgres etc.",
+        "Implementing admin dashboard for e-commerce websites using ReactJS, Redux, Material UI, Spring-boot, Jhipster, Keycloak, Postgres, etc.",
+        "Working with an Agile team, following Scrum practices, and maintaining Kanban board in Jira.",
       ],
     },
-    tags: ["spring-boot", "java", "reactjs", "typescript", "postgres"],
+    tags: ["spring-boot", "java", "reactjs", "redux", "typescript", "postgres"],
     duration: {
       start: new Date("21/may/2022"),
       end: null,
@@ -135,9 +136,9 @@ const experiences: WorkExperience[] = [
     },
     title: "Software Engineer (full-stack)",
     description: {
-      title: "Working as a full-stack software engineer",
+      title: "Remotely worked as a full-stack software engineer for Atmetis.nl",
       points: [
-        "Developing features for our client's office management web application using Java, Spring-boot, JPA, Hibernate, MySQL and Angular",
+        "Developed Risk Management & Valuation, Enterprise Application for our client using Java, Spring-boot, JPA, Hibernate, MySQL and Angular",
         "Implemented web service using Flask framework of Python for parsing csv or xlsx files submitted by our end users",
         "Proactively introduced CI/CD pipeline to team members and implemented automated deployment system for our Maven application using GitLab CI/CD Pipeline",
       ],
