@@ -1,6 +1,6 @@
 export interface Company {
   name: string;
-  logoPath: string;
+  logoPath: string | StaticImageData;
   logoAlt: string;
   website?: string;
 }

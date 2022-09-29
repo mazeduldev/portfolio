@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./about.module.scss";
 import Image from "next/image";
 import TypingAnimation from "./typing-animation";
+import myImage from "../public/images/me.webp";
 
 const myTitles = ["Software Engineer", "Web Developer", "Fullstack Developer"];
 
@@ -20,8 +21,9 @@ const About: React.FC<AboutProps> = ({ id }: AboutProps) => {
         <div className={classes.content}>
           <div className={classes.proPic}>
             <Image
-              src="/images/me.webp"
+              src={myImage}
               alt="Mazid"
+              placeholder="blur"
               width={350}
               height={350}
               layout="intrinsic"

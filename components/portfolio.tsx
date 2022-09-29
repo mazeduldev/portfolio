@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./portfolio.module.scss";
-import Button from "./ui/button";
 import Card from "./ui/card";
 import Image from "next/image";
 import Tag from "./ui/tag";
@@ -16,6 +15,9 @@ import {
   FaSass,
 } from "react-icons/fa";
 import { SiMongodb, SiMysql, SiSpring, SiTypescript } from "react-icons/si";
+import timelineImage from "../public/images/timeline_collage.webp";
+import bsSpacingImage from "../public/images/bs_spacing.webp";
+import portfolioImage from "../public/images/portfolio_cover.webp";
 
 interface PortfolioProps {
   id: string;
@@ -37,6 +39,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
               <Image
                 src={project.imageUrl}
                 alt={project.imageAlt}
+                placeholder="blur"
                 width={300}
                 height={200}
                 layout="intrinsic"
@@ -104,7 +107,7 @@ const projects: Project[] = [
       "Angular material theme supported minimalist's vertical timeline library for Angular applications.",
     sourceUrl: "https://github.com/mazid1/ngx-mzd-timeline",
     demoUrl: "https://mazid1.github.io/ngx-mzd-timeline/",
-    imageUrl: "/images/timeline_collage.webp",
+    imageUrl: timelineImage,
     imageAlt: "Timeline",
     tags: ["angular", "angular-material"],
     type: "project",
@@ -116,7 +119,7 @@ const projects: Project[] = [
     sourceUrl: "https://github.com/mazid1/bs-spacing",
     articleUrl:
       "https://dev.to/mazid1/generate-bootstrap-like-spacing-classes-using-sass-49g8",
-    imageUrl: "/images/bs_spacing.webp",
+    imageUrl: bsSpacingImage,
     imageAlt: "Timeline",
     tags: ["sass", "scss", "css"],
     type: "article",
@@ -126,7 +129,7 @@ const projects: Project[] = [
     description:
       "Personal portfolio website developed using reactjs and nextjs.",
     demoUrl: "#",
-    imageUrl: "/images/portfolio_cover.webp",
+    imageUrl: portfolioImage,
     imageAlt: "Portfolio",
     tags: ["reactjs", "nextjs", "vercel"],
     type: "project",

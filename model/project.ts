@@ -5,7 +5,7 @@ export interface Project {
   sourceUrl?: string;
   demoUrl?: string;
   articleUrl?: string;
-  imageUrl: string;
+  imageUrl: string | StaticImageData;
   imageAlt: string;
   type: string;
 }

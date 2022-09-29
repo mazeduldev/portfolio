@@ -9,6 +9,11 @@ import classes from "./experience.module.scss";
 import Tag from "./ui/tag";
 import { WorkExperience } from "../model/work-experience";
 import TimeUtil from "../services/timeUtil";
+import vantageLogo from "../public/images/vantage.webp";
+import impelLogo from "../public/images/impel.webp";
+import relisourceLogo from "../public/images/relisource.webp";
+import orbitaxLogo from "../public/images/orbitax.webp";
+import liilabLogo from "../public/images/liilab.webp";
 
 interface ExperienceProps {
   id: string;
@@ -40,6 +45,7 @@ const Experience: React.FC<ExperienceProps> = ({ id }: ExperienceProps) => {
                   <Image
                     src={exp.company.logoPath}
                     alt={exp.company.logoAlt}
+                    placeholder="blur"
                     width={60}
                     height={60}
                     layout="responsive"
@@ -108,7 +114,7 @@ const experiences: WorkExperience[] = [
   {
     company: {
       name: "Vantage Labs LLC",
-      logoPath: "/images/vantage.webp",
+      logoPath: vantageLogo,
       logoAlt: "Vantage",
       website: "https://www.vantage.com/",
     },
@@ -130,7 +136,7 @@ const experiences: WorkExperience[] = [
   {
     company: {
       name: "Impel IT Solutions",
-      logoPath: "/images/impel.webp",
+      logoPath: impelLogo,
       logoAlt: "Impel",
       website: "http://www.impelitsolutions.com/",
     },
@@ -159,7 +165,7 @@ const experiences: WorkExperience[] = [
   {
     company: {
       name: "Relisource Technologies Ltd.",
-      logoPath: "/images/relisource.webp",
+      logoPath: relisourceLogo,
       logoAlt: "Relisource",
       website: "https://www.relisource.com/",
     },
@@ -182,7 +188,7 @@ const experiences: WorkExperience[] = [
   {
     company: {
       name: "Orbitax Bangladesh Ltd.",
-      logoPath: "/images/orbitax.webp",
+      logoPath: orbitaxLogo,
       logoAlt: "Orbitax",
       website: "https://www.orbitax.com/",
     },
@@ -205,7 +211,7 @@ const experiences: WorkExperience[] = [
   {
     company: {
       name: "LII Lab",
-      logoPath: "/images/liilab.webp",
+      logoPath: liilabLogo,
       logoAlt: "LiiLab",
       website: "https://liilab.com/",
     },
