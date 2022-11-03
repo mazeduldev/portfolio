@@ -1,13 +1,13 @@
-import Navbar from "../components/navbar";
-import Cover from "../components/cover";
-import About from "../components/about";
-import React from "react";
-import Footer from "../components/footer";
-import Contact from "../components/contact";
-import Portfolio from "../components/portfolio";
-import Experience from "../components/experience";
-import { ToastProvider } from "react-toast-notifications";
 import { NextSeo } from "next-seo";
+import React from "react";
+import { ToastProvider } from "react-toast-notifications";
+import About from "../components/about";
+import Contact from "../components/contact";
+import Cover from "../components/cover";
+import Experience from "../components/experience";
+import Footer from "../components/footer";
+import Navbar from "../components/navbar";
+import Portfolio from "../components/portfolio";
 
 export default function Home(): JSX.Element {
   return (

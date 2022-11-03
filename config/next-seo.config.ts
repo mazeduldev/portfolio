@@ -5,7 +5,10 @@ const seoConfig: NextSeoProps = {
     type: "website",
     locale: "en_us",
     url: "https://mazedulislam.com/",
-    site_name: "Mazedul Islam",
+    title: "Mazedul Islam",
+    siteName: "Mazedul Islam",
+    description:
+      "Mazedul Islam. Fullstack software engineer experienced in JavaScript, Typescript, Angular, ReactJS, NodeJS, Express, Java, Spring-boot, Python, FastAPI, CI/CD pipeline, Docker, Kubernetes, Microservice, MySQL, MongoDB, Postgres etc. for Web Development.",
     images: [
       {
         url: "https://mazedulislam.com/images/og_image.png",
