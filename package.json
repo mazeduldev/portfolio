@@ -12,7 +12,7 @@
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "dotenv": "^10.0.0",
     "next": "^12.0.1",
-    "next-seo": "^4.28.1",
+    "next-seo": "^5.13.0",
     "nodemailer": "^6.5.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
