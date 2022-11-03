@@ -13,7 +13,7 @@ export default function Home(): JSX.Element {
   return (
     <>
       <NextSeo
-        description="Mazedul Islam. Fullstack software engineer experienced in JavaScript, Typescript, Angular, ReactJS, NodeJS, Express, Java, Spring-boot, Python, FastAPI, CI/CD pipeline, Docker, Kubernetes, Microservice, MySQL, MongoDB, Postgres etc. for Web Development."
+        description="Fullstack software engineer experienced in JavaScript, Typescript, ReactJS, Next.js, Angular, NodeJS, Express, Java, Spring-boot, Python, FastAPI, CI/CD pipeline, Docker, Kubernetes, Microservice, MySQL, MongoDB, Postgres etc. for Web Development."
         additionalMetaTags={[
           { name: "viewport", content: "width=device-width, initial-scale=1" },
         ]}
