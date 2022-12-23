@@ -1,19 +1,20 @@
+import Image from "next/image";
 import React from "react";
 import { MdWork } from "react-icons/md";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import Image from "next/image";
+import { WorkExperience } from "../model/work-experience";
+import briklLogo from "../public/images/brikl.webp";
+import impelLogo from "../public/images/impel.webp";
+import liilabLogo from "../public/images/liilab.webp";
+import orbitaxLogo from "../public/images/orbitax.webp";
+import relisourceLogo from "../public/images/relisource.webp";
+import vantageLogo from "../public/images/vantage.webp";
+import TimeUtil from "../services/timeUtil";
 import classes from "./experience.module.scss";
 import Tag from "./ui/tag";
-import { WorkExperience } from "../model/work-experience";
-import TimeUtil from "../services/timeUtil";
-import vantageLogo from "../public/images/vantage.webp";
-import impelLogo from "../public/images/impel.webp";
-import relisourceLogo from "../public/images/relisource.webp";
-import orbitaxLogo from "../public/images/orbitax.webp";
-import liilabLogo from "../public/images/liilab.webp";
 
 interface ExperienceProps {
   id: string;
@@ -113,6 +114,25 @@ export default Experience;
 const experiences: WorkExperience[] = [
   {
     company: {
+      name: "Brikl",
+      logoPath: briklLogo,
+      logoAlt: "Brikl",
+      website: "https://www.brikl.com/",
+    },
+    title: "Senior Software Engineer (Frontend)",
+    description: {
+      title:
+        "Building tools for e-commerce storefront using React, Next, Gatsby, Apollo GraphQL etc.",
+      points: [],
+    },
+    tags: ["reactjs", "nextjs", "gatsby", "graphql", "typescript", "netlify"],
+    duration: {
+      start: new Date("1/dec/2022"),
+      end: null,
+    },
+  },
+  {
+    company: {
       name: "Vantage Labs LLC",
       logoPath: vantageLogo,
       logoAlt: "Vantage",
@@ -130,7 +150,7 @@ const experiences: WorkExperience[] = [
     tags: ["spring-boot", "java", "reactjs", "redux", "typescript", "postgres"],
     duration: {
       start: new Date("21/may/2022"),
-      end: null,
+      end: new Date("30/nov/2022"),
     },
   },
   {
