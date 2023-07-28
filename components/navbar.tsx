@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import classes from "./navbar.module.scss";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { FaArrowUp, FaBars } from "react-icons/fa";
+import { FiArrowUpRight } from "react-icons/fi";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import Drawer from "./drawer";
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const [show, setShow] = useState("");
   const [transparent, setTransparent] = useState(classes.bgTransparent);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -50,6 +51,14 @@ const Navbar: React.FC = () => {
       </li>
     );
   });
+  navLinks.push(
+    <li className={classes.menuItem} key="blog">
+      <a href="https://blog.mazedulislam.com" target="_blank">
+        <span>Blog</span>
+        <FiArrowUpRight style={{ marginLeft: "2px" }} />
+      </a>
+    </li>
+  );
 
   const drawerNavLinks = linkTitles.map((title) => {
     return (
@@ -67,6 +76,14 @@ const Navbar: React.FC = () => {
       </Link>
     );
   });
+  drawerNavLinks.push(
+    <li className={classes.menuItem} key="blog">
+      <a href="https://blog.mazedulislam.com" target="_blank">
+        <span>Blog</span>
+        <FiArrowUpRight style={{ marginLeft: "2px" }} />
+      </a>
+    </li>
+  );
 
   return (
     <>

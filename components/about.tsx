@@ -26,9 +26,11 @@ const About: React.FC<AboutProps> = ({ id }: AboutProps) => {
               placeholder="blur"
               width={350}
               height={350}
-              layout="intrinsic"
               className={classes.rounded}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
           <div className={classes.description}>
             <div className={classes.descriptionTitle}>
