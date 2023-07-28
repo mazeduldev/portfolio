@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface Company {
   name: string;
   logoPath: string | StaticImageData;
