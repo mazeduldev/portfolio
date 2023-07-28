@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import { PropsWithChildren, useEffect, useRef } from "react";
 import VanillaTilt, { TiltOptions } from "vanilla-tilt";
 
-interface TiltProps {
+type TiltProps = PropsWithChildren<{
   options: TiltOptions;
   className?: string;
-}
+}>;
 
-const Tilt: React.FC<TiltProps> = ({ options, ...rest }: TiltProps) => {
+const Tilt = ({ options, ...rest }: TiltProps) => {
   const tilt = useRef(null);
 
   useEffect(() => {
