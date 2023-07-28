@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./portfolio.module.scss";
 import Card from "./ui/card";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Tag from "./ui/tag";
 import { Project } from "../model/project";
 import {

@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./about.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import TypingAnimation from "./typing-animation";
 import myImage from "../public/images/me.webp";
 
