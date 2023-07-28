@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./about.module.scss";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import TypingAnimation from "./typing-animation";
 import myImage from "../public/images/me.webp";
 
@@ -26,9 +26,11 @@ const About: React.FC<AboutProps> = ({ id }: AboutProps) => {
               placeholder="blur"
               width={350}
               height={350}
-              layout="intrinsic"
               className={classes.rounded}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
           <div className={classes.description}>
             <div className={classes.descriptionTitle}>

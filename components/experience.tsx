@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import React from "react";
 import { MdWork } from "react-icons/md";
 import {
@@ -49,9 +49,12 @@ const Experience: React.FC<ExperienceProps> = ({ id }: ExperienceProps) => {
                     placeholder="blur"
                     width={60}
                     height={60}
-                    layout="responsive"
                     className={classes.logo}
-                  />
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto"
+                    }} />
                 </a>
               </div>
               <div className={classes.titleContainer}>

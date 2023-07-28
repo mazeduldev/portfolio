@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./portfolio.module.scss";
 import Card from "./ui/card";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Tag from "./ui/tag";
 import { Project } from "../model/project";
 import {
@@ -42,9 +42,11 @@ const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
                 placeholder="blur"
                 width={300}
                 height={200}
-                layout="intrinsic"
                 className={classes.cardImage}
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
               <div className={classes.cardBody}>
                 <h4 className={classes.cardTitle}>{project.title}</h4>
                 <p className={classes.cardDescription}>{project.description}</p>
