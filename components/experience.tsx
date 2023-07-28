@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import { MdWork } from "react-icons/md";
 import {
   VerticalTimeline,
@@ -53,8 +52,9 @@ const Experience: React.FC<ExperienceProps> = ({ id }: ExperienceProps) => {
                     sizes="100vw"
                     style={{
                       width: "100%",
-                      height: "auto"
-                    }} />
+                      height: "auto",
+                    }}
+                  />
                 </a>
               </div>
               <div className={classes.titleContainer}>
@@ -125,8 +125,12 @@ const experiences: WorkExperience[] = [
     title: "Senior Software Engineer (Frontend)",
     description: {
       title:
-        "Building tools for e-commerce storefront using React, Next, Gatsby, Apollo GraphQL etc.",
-      points: [],
+        "Helping Brikl to implement it's e-commerce platform for setting up a shop under 15 minutes.",
+      points: [
+        "Implemented many features in the Brikl dashboard to improve merchants' productivity including but not limited to bulk product upload from csv files, override suppliers' product SKU in microstore.",
+        "Practiced many agile ceremonies like scrum, sprint planning, sprint poker, sprint review, retrospective etc. to improve overall team performance.",
+        "Actively participated in code review process and provided suggestions for improving code quality. Also learned from others codes and suggestions.",
+      ],
     },
     tags: ["reactjs", "nextjs", "gatsby", "graphql", "typescript", "netlify"],
     duration: {
