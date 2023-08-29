@@ -15,6 +15,7 @@ import {
   FaSass,
 } from "react-icons/fa";
 import { SiMongodb, SiMysql, SiSpring, SiTypescript } from "react-icons/si";
+import mediaLibImage from "../public/images/medialib.webp";
 import timelineImage from "../public/images/timeline_collage.webp";
 import bsSpacingImage from "../public/images/bs_spacing.webp";
 import portfolioImage from "../public/images/portfolio_cover.webp";
@@ -45,8 +46,9 @@ const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
                 className={classes.cardImage}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
-                }} />
+                  height: "auto",
+                }}
+              />
               <div className={classes.cardBody}>
                 <h4 className={classes.cardTitle}>{project.title}</h4>
                 <p className={classes.cardDescription}>{project.description}</p>
@@ -104,6 +106,17 @@ export default Portfolio;
 
 const projects: Project[] = [
   {
+    title: "MediaLib",
+    description:
+      "Display popular movies, TV shows and Animes using TMDB and Anilist API connected with GraphQL.",
+    sourceUrl: "https://github.com/mazid1/media-lib",
+    demoUrl: "https://media-lib-mzd.vercel.app/",
+    imageUrl: mediaLibImage,
+    imageAlt: "MediaLib",
+    tags: ["nextjs", "graphql", "prisma"],
+    type: "project",
+  },
+  {
     title: "ngx-mzd-timeline",
     description:
       "Angular material theme supported minimalist's vertical timeline library for Angular applications.",
@@ -112,6 +125,16 @@ const projects: Project[] = [
     imageUrl: timelineImage,
     imageAlt: "Timeline",
     tags: ["angular", "angular-material"],
+    type: "project",
+  },
+  {
+    title: "Portfolio",
+    description:
+      "Personal portfolio website developed using reactjs and nextjs.",
+    demoUrl: "#",
+    imageUrl: portfolioImage,
+    imageAlt: "Portfolio",
+    tags: ["reactjs", "nextjs", "vercel"],
     type: "project",
   },
   {
@@ -125,16 +148,6 @@ const projects: Project[] = [
     imageAlt: "Timeline",
     tags: ["sass", "scss", "css"],
     type: "article",
-  },
-  {
-    title: "Portfolio",
-    description:
-      "Personal portfolio website developed using reactjs and nextjs.",
-    demoUrl: "#",
-    imageUrl: portfolioImage,
-    imageAlt: "Portfolio",
-    tags: ["reactjs", "nextjs", "vercel"],
-    type: "project",
   },
 ];
 
