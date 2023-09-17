@@ -5,6 +5,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { WorkExperience } from "../model/work-experience";
+import oozouLogo from "../public/images/oozou.webp";
 import briklLogo from "../public/images/brikl.webp";
 import impelLogo from "../public/images/impel.webp";
 import liilabLogo from "../public/images/liilab.webp";
@@ -117,6 +118,24 @@ export default Experience;
 const experiences: WorkExperience[] = [
   {
     company: {
+      name: "OOZOU",
+      logoPath: oozouLogo,
+      logoAlt: "OOZOU",
+      website: "https://oozou.com/",
+    },
+    title: "Full-stack Web Developer (JS/TS)",
+    description: {
+      title: "Working as a fullstack Javascript/Typescript developer",
+      points: [],
+    },
+    tags: ["reactjs", "nextjs", "express", "koa", "postgres"],
+    duration: {
+      start: new Date("4/September/2023"),
+      end: null,
+    },
+  },
+  {
+    company: {
       name: "Brikl",
       logoPath: briklLogo,
       logoAlt: "Brikl",
@@ -125,7 +144,7 @@ const experiences: WorkExperience[] = [
     title: "Senior Software Engineer (Frontend)",
     description: {
       title:
-        "Helping Brikl to implement it's e-commerce platform for setting up a shop under 15 minutes.",
+        "Helped Brikl to implement it's e-commerce platform for setting up a shop under 15 minutes.",
       points: [
         "Implemented many features in the Brikl dashboard to improve merchants' productivity including but not limited to bulk product upload from csv files, override suppliers' product SKU in microstore.",
         "Practiced many agile ceremonies like scrum, sprint planning, sprint poker, sprint review, retrospective etc. to improve overall team performance.",
@@ -135,7 +154,7 @@ const experiences: WorkExperience[] = [
     tags: ["reactjs", "nextjs", "gatsby", "graphql", "typescript", "netlify"],
     duration: {
       start: new Date("1/dec/2022"),
-      end: null,
+      end: new Date("31/july/2023"),
     },
   },
   {
