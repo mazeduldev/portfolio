@@ -105,17 +105,17 @@ const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
 export default Portfolio;
 
 const projects: Project[] = [
-  {
-    title: "MediaLib",
-    description:
-      "Display popular movies, TV shows and Animes using TMDB and Anilist API connected with GraphQL.",
-    sourceUrl: "https://github.com/mazid1/media-lib",
-    demoUrl: "https://media-lib-mzd.vercel.app/",
-    imageUrl: mediaLibImage,
-    imageAlt: "MediaLib",
-    tags: ["nextjs", "graphql", "prisma"],
-    type: "project",
-  },
+  // {
+  //   title: "MediaLib",
+  //   description:
+  //     "Display popular movies, TV shows and Animes using TMDB and Anilist API connected with GraphQL.",
+  //   sourceUrl: "https://github.com/mazid1/media-lib",
+  //   demoUrl: "https://media-lib-mzd.vercel.app/",
+  //   imageUrl: mediaLibImage,
+  //   imageAlt: "MediaLib",
+  //   tags: ["nextjs", "graphql", "prisma"],
+  //   type: "project",
+  // },
   {
     title: "ngx-mzd-timeline",
     description:
