@@ -125,10 +125,13 @@ const experiences: WorkExperience[] = [
     },
     title: "Full-stack Web Developer (JS/TS)",
     description: {
-      title: "Working as a fullstack Javascript/Typescript developer",
-      points: [],
+      title: "Working as a fullstack Javascript/Typescript developer.",
+      points: [
+        "Engineered and implemented a highly scalable Event-Driven architecture for a VoIP calling system, integrating Twilio and leveraging technologies such as Azure Event Hubs, Azure Storage account and the Azure JavaScript SDK.",
+        "Enhanced the developer experience of the SlimWiki project by modernizing all packages to their latest versions and implementing a strongly typed coding approach.",
+      ],
     },
-    tags: ["reactjs", "nextjs", "express", "koa", "postgres"],
+    tags: ["nodejs", "mongodb", "azure", "reactjs", "nextjs", "express", "koa"],
     duration: {
       start: new Date("4/September/2023"),
       end: null,
