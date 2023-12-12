@@ -29,8 +29,9 @@ const About: React.FC<AboutProps> = ({ id }: AboutProps) => {
               className={classes.rounded}
               style={{
                 maxWidth: "100%",
-                height: "auto"
-              }} />
+                height: "auto",
+              }}
+            />
           </div>
           <div className={classes.description}>
             <div className={classes.descriptionTitle}>
@@ -48,7 +49,7 @@ const About: React.FC<AboutProps> = ({ id }: AboutProps) => {
               <a href="https://www.cse.du.ac.bd/">University of Dhaka</a>.
             </p>
             <a
-              href="/files/resume.pdf"
+              href="/files/Mohammad_Mazedul_Islam.pdf"
               download="Resume__Mohammad_Mazedul_Islam.pdf"
             >
               Download CV
