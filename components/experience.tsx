@@ -128,10 +128,20 @@ const experiences: WorkExperience[] = [
       title: "Working as a fullstack Javascript/Typescript developer.",
       points: [
         "Engineered and implemented a highly scalable Event-Driven architecture for a VoIP calling system, integrating Twilio, Firebase Cloud Messaging (FCM), Apple Push Notification (APN), and leveraging technologies such as Azure Event Hubs, Azure Storage Account, Azure Functions, Azure Queue Storage and the Azure JavaScript SDK.",
+        "Strengthened SlimWiki's security measures by implementing a JWT token invalidation system, enabling users to invalidate tokens as needed, thereby enhancing user control over account security. Addressed security vulnerabilities by implementing solutions such as ensuring that password reset links sent to older email addresses become invalid upon users updating their email addresses, thereby bolstering the platform's overall security posture.",
         "Enhanced the developer experience of the SlimWiki project by modernizing all packages to their latest versions and implementing a strongly typed coding approach.",
       ],
     },
-    tags: ["nodejs", "mongodb", "azure", "reactjs", "nextjs", "express", "koa"],
+    tags: [
+      "nodejs",
+      "mongodb",
+      "dynamodb",
+      "azure",
+      "reactjs",
+      "nextjs",
+      "express",
+      "koa",
+    ],
     duration: {
       start: new Date("4/September/2023"),
       end: null,
