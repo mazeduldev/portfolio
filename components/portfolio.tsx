@@ -59,6 +59,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
                 </div>
                 {(project.sourceUrl ||
                   project.demoUrl ||
+                  project.liveUrl ||
                   project.articleUrl) && (
                   <div className={classes.cardButtonContainer}>
                     {project.sourceUrl && (
@@ -69,6 +70,16 @@ const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
                         rel="noreferrer"
                       >
                         Source Code
+                      </a>
+                    )}
+                    {project.liveUrl && (
+                      <a
+                        className={classes.cardButton}
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Live Demo
                       </a>
                     )}
                     {project.demoUrl && (
@@ -125,28 +136,25 @@ const projects: Project[] = [
     imageUrl: crTrackerImage,
     imageAlt: "Change Reports Tracker",
     tags: ["angular", "angular-material", "ngrx"],
-    type: "project",
   },
   {
     title: "ngx-mzd-timeline",
     description:
       "Angular material theme supported minimalist's vertical timeline library for Angular applications.",
     sourceUrl: "https://github.com/mazid1/ngx-mzd-timeline",
-    demoUrl: "https://mazid1.github.io/ngx-mzd-timeline/",
+    liveUrl: "https://mazid1.github.io/ngx-mzd-timeline/",
     imageUrl: timelineImage,
     imageAlt: "Timeline",
     tags: ["angular", "angular-material"],
-    type: "project",
   },
   {
     title: "Portfolio",
     description:
       "Personal portfolio website developed using reactjs and nextjs.",
-    demoUrl: "#",
+    liveUrl: "#",
     imageUrl: portfolioImage,
     imageAlt: "Portfolio",
     tags: ["reactjs", "nextjs", "vercel"],
-    type: "project",
   },
   {
     title: "bs-spacing",
@@ -158,7 +166,6 @@ const projects: Project[] = [
     imageUrl: bsSpacingImage,
     imageAlt: "Timeline",
     tags: ["sass", "scss", "css"],
-    type: "article",
   },
 ];
 
