@@ -6,6 +6,7 @@ import Tag from "./ui/tag";
 import { Project } from "../model/project";
 import {
   FaAngular,
+  FaAws,
   FaCss3Alt,
   FaHtml5,
   FaJava,
@@ -219,33 +220,38 @@ const techLogos = [
     style={{ color: "#E96228" }}
     className={classes.techLogo}
   />,
-  <FaSass
+  <FaAws
     key={"logo_7"}
+    style={{ color: "#DF8B00" }}
+    className={classes.techLogo}
+  />,
+  <FaSass
+    key={"logo_8"}
     style={{ color: "#C76494" }}
     className={classes.techLogo}
   />,
   <FaJs
-    key={"logo_8"}
+    key={"logo_9"}
     style={{ color: "#F7DF1E" }}
     className={classes.techLogo}
   />,
   <SiTypescript
-    key={"logo_9"}
+    key={"logo_10"}
     style={{ color: "#2F74C0" }}
     className={classes.techLogo}
   />,
   <SiSpring
-    key={"logo_10"}
+    key={"logo_11"}
     style={{ color: "#5FB832" }}
     className={classes.techLogo}
   />,
   <FaJava
-    key={"logo_11"}
+    key={"logo_12"}
     style={{ color: "#5382A1" }}
     className={classes.techLogo}
   />,
   <SiMysql
-    key={"logo_12"}
+    key={"logo_13"}
     style={{ color: "#DF8B00" }}
     className={classes.techLogo}
   />,
