@@ -19,6 +19,7 @@ import crTrackerImage from "../public/images/cr_tracker.webp";
 import timelineImage from "../public/images/timeline_collage.webp";
 import bsSpacingImage from "../public/images/bs_spacing.webp";
 import portfolioImage from "../public/images/portfolio_cover.webp";
+import slimwikiImage from "../public/images/slimwiki.svg";
 
 interface PortfolioProps {
   id: string;
@@ -40,7 +41,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
               <Image
                 src={project.imageUrl}
                 alt={project.imageAlt}
-                placeholder="blur"
+                placeholder={project.imagePlaceholder ?? "blur"}
                 width={300}
                 height={200}
                 className={classes.cardImage}
@@ -79,7 +80,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        Live Demo
+                        Live URL
                       </a>
                     )}
                     {project.demoUrl && (
@@ -89,7 +90,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        Demo
+                        Demo URL
                       </a>
                     )}
                     {project.articleUrl && (
@@ -127,6 +128,15 @@ const projects: Project[] = [
   //   tags: ["nextjs", "graphql", "prisma"],
   //   type: "project",
   // },
+  {
+    title: "OOZOU | SlimWiki",
+    description: "Easy-to-use Wikis for Teams & Individuals",
+    liveUrl: "https://beta.slimwiki.com",
+    imageUrl: slimwikiImage,
+    imagePlaceholder: "empty",
+    imageAlt: "SlimWiki",
+    tags: ["reactjs", "nextjs", "nodejs", "postgres", "dynamodb", "aws"],
+  },
   {
     title: "Orbitax | Change Reports Tracker",
     description:

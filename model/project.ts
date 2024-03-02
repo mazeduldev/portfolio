@@ -1,3 +1,4 @@
+import { PlaceholderValue } from "next/dist/shared/lib/get-img-props";
 import { StaticImageData } from "next/image";
 
 export interface Project {
@@ -9,5 +10,6 @@ export interface Project {
   liveUrl?: string;
   articleUrl?: string;
   imageUrl: string | StaticImageData;
+  imagePlaceholder?: PlaceholderValue;
   imageAlt: string;
 }
