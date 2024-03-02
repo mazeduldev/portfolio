@@ -6,8 +6,8 @@ export interface Project {
   tags: string[];
   sourceUrl?: string;
   demoUrl?: string;
+  liveUrl?: string;
   articleUrl?: string;
   imageUrl: string | StaticImageData;
   imageAlt: string;
-  type: string;
 }
