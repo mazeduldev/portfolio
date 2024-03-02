@@ -20,6 +20,7 @@ import timelineImage from "../public/images/timeline_collage.webp";
 import bsSpacingImage from "../public/images/bs_spacing.webp";
 import portfolioImage from "../public/images/portfolio_cover.webp";
 import slimwikiImage from "../public/images/slimwiki.svg";
+import briklStorefrontImage from "../public/images/brikl_storefront.webp";
 
 interface PortfolioProps {
   id: string;
@@ -136,6 +137,14 @@ const projects: Project[] = [
     imagePlaceholder: "empty",
     imageAlt: "SlimWiki",
     tags: ["reactjs", "nextjs", "nodejs", "postgres", "dynamodb", "aws"],
+  },
+  {
+    title: "Brikl | Storefront",
+    description: "Create your own storefront under 15 minutes.",
+    liveUrl: "https://brikl.com",
+    imageUrl: briklStorefrontImage,
+    imageAlt: "Brikl-Storefront",
+    tags: ["reactjs", "nextjs", "jotai", "netlify"],
   },
   {
     title: "Orbitax | Change Reports Tracker",
