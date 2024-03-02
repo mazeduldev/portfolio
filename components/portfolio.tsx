@@ -15,7 +15,7 @@ import {
   FaSass,
 } from "react-icons/fa";
 import { SiMongodb, SiMysql, SiSpring, SiTypescript } from "react-icons/si";
-import mediaLibImage from "../public/images/medialib.webp";
+import crTrackerImage from "../public/images/cr_tracker.webp";
 import timelineImage from "../public/images/timeline_collage.webp";
 import bsSpacingImage from "../public/images/bs_spacing.webp";
 import portfolioImage from "../public/images/portfolio_cover.webp";
@@ -78,7 +78,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        Live Demo
+                        Demo
                       </a>
                     )}
                     {project.articleUrl && (
@@ -116,6 +116,17 @@ const projects: Project[] = [
   //   tags: ["nextjs", "graphql", "prisma"],
   //   type: "project",
   // },
+  {
+    title: "Orbitax | Change Reports Tracker",
+    description:
+      "Track worldwide tax law changes daily across 50 different tax topics.",
+    demoUrl: "https://youtu.be/yc73lMz5zJk?si=923YBlqf2fMKbWi-",
+    articleUrl: "https://orbitax.com/solutions/change-reports-tracker",
+    imageUrl: crTrackerImage,
+    imageAlt: "Change Reports Tracker",
+    tags: ["angular", "angular-material", "ngrx"],
+    type: "project",
+  },
   {
     title: "ngx-mzd-timeline",
     description:
