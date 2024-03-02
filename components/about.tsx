@@ -39,14 +39,33 @@ const About: React.FC<AboutProps> = ({ id }: AboutProps) => {
               <TypingAnimation texts={myTitles}></TypingAnimation>
             </div>
             <p>
-              Fullstack Software Engineer with a demonstrated history of working
-              in the computer software industry. Skilled in JavaScript,
-              Typescript, Angular, ReactJS, NodeJS, Express, Java, Spring-boot,
-              Python, FastAPI, CI/CD pipeline, Docker, Kubernetes, Microservice,
-              MySQL, MongoDB etc. for Web Development. Strong engineering
-              professional with a Bachelor of Science focused in Computer
-              Science and Engineering from{" "}
+              Dynamic and results-oriented Software Engineer with a diverse
+              background spanning backend and frontend development, specializing
+              in JavaScript technologies.
+            </p>
+            <p>
+              Proven expertise in architecting and implementing scalable
+              solutions, such as an Event-Driven architecture for VoIP calling
+              systems and security enhancements for web applications.
+            </p>
+            <p>
+              Adept at leveraging a wide array of technologies, including React,
+              Next.js, Angular, Node.js, Express.js, Spring-boot, and cloud
+              services like AWS, Azure, and GCP.
+            </p>
+            <p>
+              Experienced in Agile methodologies and fostering team growth
+              through active participation in code reviews and continuous skill
+              enhancement.
+            </p>
+            <p>
+              Holds a Bachelor of Science in Computer Science and Engineering
+              from the{" "}
               <a href="https://www.cse.du.ac.bd/">University of Dhaka</a>.
+            </p>
+            <p>
+              Passionate about innovation and delivering high-quality software
+              solutions that drive business value.
             </p>
             <a
               href="/files/Mohammad_Mazedul_Islam.pdf"
