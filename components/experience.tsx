@@ -143,7 +143,7 @@ const experiences: WorkExperience[] = [
       "koa",
     ],
     duration: {
-      start: new Date("4/September/2023"),
+      start: new Date("9/4/2023"),
       end: null,
     },
   },
@@ -166,8 +166,8 @@ const experiences: WorkExperience[] = [
     },
     tags: ["reactjs", "nextjs", "gatsby", "graphql", "typescript", "netlify"],
     duration: {
-      start: new Date("1/dec/2022"),
-      end: new Date("31/july/2023"),
+      start: new Date("12/1/2022"),
+      end: new Date("7/31/2023"),
     },
   },
   {
@@ -188,8 +188,8 @@ const experiences: WorkExperience[] = [
     },
     tags: ["spring-boot", "java", "reactjs", "redux", "typescript", "postgres"],
     duration: {
-      start: new Date("21/may/2022"),
-      end: new Date("30/nov/2022"),
+      start: new Date("5/21/2022"),
+      end: new Date("11/30/2022"),
     },
   },
   {
@@ -217,8 +217,8 @@ const experiences: WorkExperience[] = [
       "docker",
     ],
     duration: {
-      start: new Date("01/mar/2020"),
-      end: new Date("20/may/2022"),
+      start: new Date("3/1/2020"),
+      end: new Date("5/20/2022"),
     },
   },
   {
@@ -240,8 +240,8 @@ const experiences: WorkExperience[] = [
     },
     tags: ["salesforce", "angularjs", "javascript", "html", "css"],
     duration: {
-      start: new Date("01/aug/2019"),
-      end: new Date("01/feb/2020"),
+      start: new Date("8/1/2019"),
+      end: new Date("2/1/2020"),
     },
   },
   {
@@ -263,8 +263,8 @@ const experiences: WorkExperience[] = [
     },
     tags: ["angular", ".net-core", "graphql", "rest-api", "ngrx", "jira"],
     duration: {
-      start: new Date("01/mar/2018"),
-      end: new Date("01/jul/2019"),
+      start: new Date("3/1/2018"),
+      end: new Date("7/1/2019"),
     },
   },
   {
@@ -284,8 +284,8 @@ const experiences: WorkExperience[] = [
     },
     tags: ["android", "java"],
     duration: {
-      start: new Date("01/aug/2017"),
-      end: new Date("01/feb/2018"),
+      start: new Date("8/1/2017"),
+      end: new Date("2/1/2018"),
     },
   },
 ];
