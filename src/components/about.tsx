@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./about.module.scss";
 import Image from "next/image";
 import TypingAnimation from "./typing-animation";
-import myImage from "../public/images/me.webp";
+import myImage from "../../public/images/me.webp";
 
 const myTitles = ["Software Engineer", "Web Developer", "Fullstack Developer"];
 

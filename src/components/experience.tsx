@@ -5,13 +5,13 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { WorkExperience } from "../model/work-experience";
-import oozouLogo from "../public/images/oozou.webp";
-import briklLogo from "../public/images/brikl.webp";
-import impelLogo from "../public/images/impel.webp";
-import liilabLogo from "../public/images/liilab.webp";
-import orbitaxLogo from "../public/images/orbitax.webp";
-import relisourceLogo from "../public/images/relisource.webp";
-import vantageLogo from "../public/images/vantage.webp";
+import oozouLogo from "../../public/images/oozou.webp";
+import briklLogo from "../../public/images/brikl.webp";
+import impelLogo from "../../public/images/impel.webp";
+import liilabLogo from "../../public/images/liilab.webp";
+import orbitaxLogo from "../../public/images/orbitax.webp";
+import relisourceLogo from "../../public/images/relisource.webp";
+import vantageLogo from "../../public/images/vantage.webp";
 import TimeUtil from "../services/timeUtil";
 import classes from "./experience.module.scss";
 import Tag from "./ui/tag";

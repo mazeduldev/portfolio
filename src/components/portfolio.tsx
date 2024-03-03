@@ -16,12 +16,12 @@ import {
   FaSass,
 } from "react-icons/fa";
 import { SiMongodb, SiMysql, SiSpring, SiTypescript } from "react-icons/si";
-import crTrackerImage from "../public/images/cr_tracker.webp";
-import timelineImage from "../public/images/timeline_collage.webp";
-import bsSpacingImage from "../public/images/bs_spacing.webp";
-import portfolioImage from "../public/images/portfolio_cover.webp";
-import slimwikiImage from "../public/images/slimwiki.svg";
-import briklStorefrontImage from "../public/images/brikl_storefront.webp";
+import crTrackerImage from "../../public/images/cr_tracker.webp";
+import timelineImage from "../../public/images/timeline_collage.webp";
+import bsSpacingImage from "../../public/images/bs_spacing.webp";
+import portfolioImage from "../../public/images/portfolio_cover.webp";
+import slimwikiImage from "../../public/images/slimwiki.svg";
+import briklStorefrontImage from "../../public/images/brikl_storefront.webp";
 
 interface PortfolioProps {
   id: string;
