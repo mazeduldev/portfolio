@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { MdWork } from "react-icons/md";
 import {
@@ -14,7 +15,7 @@ import relisourceLogo from "../../public/images/relisource.webp";
 import vantageLogo from "../../public/images/vantage.webp";
 import TimeUtil from "../services/timeUtil";
 import classes from "./experience.module.scss";
-import Tag from "./ui/tag";
+import Tag from "./ui/Tag";
 
 interface ExperienceProps {
   id: string;

@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import classes from "./navbar.module.scss";
 import { Link, animateScroll as scroll } from "react-scroll";

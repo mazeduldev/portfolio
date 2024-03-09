@@ -14,7 +14,7 @@ export interface Description {
 
 export interface Duration {
   start: Date;
-  end: Date;
+  end: Date | null;
 }
 
 export interface WorkExperience {

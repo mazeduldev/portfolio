@@ -1,5 +1,5 @@
-@import "../styles/variables";
-@import "../styles/mixins";
+@import "@/styles/variables";
+@import "@/styles/mixins";
 
 .content {
   width: 100%;
@@ -17,13 +17,12 @@
       background: $color-primary;
       color: $on-color-primary;
     }
-    
+
     .date {
       color: $on-color-light;
     }
   }
 }
-
 
 .contentContainer {
   display: flex;

@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 import { TiltOptions } from "vanilla-tilt";
-import classes from "./card.module.scss";
-import Tilt from "./tilt";
+import classes from "./index.module.scss";
+import Tilt from "./Tilt";
 
 type CardProps = PropsWithChildren<{
   tiltOptions?: TiltOptions;

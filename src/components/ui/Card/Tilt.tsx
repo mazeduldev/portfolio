@@ -1,3 +1,5 @@
+"use client";
+
 import { PropsWithChildren, useEffect, useRef } from "react";
 import VanillaTilt, { TiltOptions } from "vanilla-tilt";
 
@@ -10,6 +12,9 @@ const Tilt = ({ options, ...rest }: TiltProps) => {
   const tilt = useRef(null);
 
   useEffect(() => {
+    if (tilt.current === null) {
+      return;
+    }
     VanillaTilt.init(tilt.current, options);
   }, [options]);
 
