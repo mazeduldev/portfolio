@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./portfolio.module.scss";
-import Card from "./ui/card";
+import Card from "./ui/Card";
+import Tag from "./ui/Tag";
 import Image from "next/image";
-import Tag from "./ui/tag";
 import { Project } from "../model/project";
 import {
   FaAngular,

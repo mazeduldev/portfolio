@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./input.module.scss";
+import classes from "./index.module.scss";
 
 interface InputProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string;
