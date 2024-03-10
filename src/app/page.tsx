@@ -1,9 +1,10 @@
 import React from "react";
-import About from "../components/about";
+import About from "@/components/about";
+import Cover from "@/components/cover";
+import Experience from "@/components/experience";
+import Portfolio from "@/components/portfolio";
+import Footer from "@/components/footer";
 import Contact from "./Contact";
-import Cover from "../components/cover";
-import Experience from "../components/experience";
-import Portfolio from "../components/portfolio";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function HomePage() {
       <Experience id="experience" />
       <About id="about" />
       <Contact id="contact" />
+      <Footer />
     </main>
   );
 }
