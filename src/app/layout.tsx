@@ -3,6 +3,7 @@ import { Poppins, Ubuntu } from "next/font/google";
 import cn from "classnames";
 import { Toaster } from "react-hot-toast";
 import Navbar from "@/components/navbar";
+import "../styles/globals.scss";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
