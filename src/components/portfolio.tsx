@@ -47,10 +47,6 @@ const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
                 width={300}
                 height={200}
                 className={classes.cardImage}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
               />
               <div className={classes.cardBody}>
                 <h4 className={classes.cardTitle}>{project.title}</h4>
