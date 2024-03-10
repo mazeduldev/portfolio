@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { ChangeEventHandler, SyntheticEvent, useState } from "react";
 import classes from "./contactForm.module.scss";
 import { toast } from "react-hot-toast";
 import { Button, Input, Textarea } from "@/components/ui";
@@ -10,7 +10,9 @@ function ContactForm() {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const changeHandler = (event) => {
+  const changeHandler: ChangeEventHandler<
+    HTMLInputElement | HTMLTextAreaElement
+  > = (event) => {
     event.preventDefault();
     const { name, value } = event.target;
 
@@ -27,7 +29,7 @@ function ContactForm() {
     }
   };
 
-  const submitHandler = async (event) => {
+  const submitHandler = async (event: SyntheticEvent) => {
     event.preventDefault();
 
     setLoading(true);
