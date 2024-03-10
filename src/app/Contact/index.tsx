@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { toast } from "react-hot-toast";
+import React from "react";
 import {
   FaFacebookF,
   FaGithub,
@@ -12,9 +11,6 @@ import {
   FaDev,
 } from "react-icons/fa";
 import classes from "./index.module.scss";
-import Input from "../../components/ui/Input";
-import Button from "../../components/ui/Button";
-import Textarea from "../../components/ui/Textarea";
 import ContactForm from "./ContactForm";
 
 interface ContactProps {
@@ -94,7 +90,6 @@ const Contact: React.FC<ContactProps> = ({ id }: ContactProps) => {
                 <FaInstagram />
               </a>
             </div>
-            C
           </div>
         </div>
       </div>
