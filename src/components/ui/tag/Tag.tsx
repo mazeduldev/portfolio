@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./index.module.scss";
+import classes from "./Tag.module.scss";
 
 interface TagProps {
   children?: React.ReactNode;

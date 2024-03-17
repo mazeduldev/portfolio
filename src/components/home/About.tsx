@@ -1,7 +1,7 @@
 import React from "react";
-import classes from "./about.module.scss";
+import classes from "./About.module.scss";
 import Image from "next/image";
-import myImage from "../../public/images/me.webp";
+import myImage from "@/public/images/me.webp";
 import TypeMyTitle from "./TypeMyTitle";
 
 interface AboutProps {

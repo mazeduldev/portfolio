@@ -1,6 +1,6 @@
 import React from "react";
 import { FaSpinner } from "react-icons/fa";
-import classes from "./index.module.scss";
+import classes from "./Button.module.scss";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   classNames?: string;

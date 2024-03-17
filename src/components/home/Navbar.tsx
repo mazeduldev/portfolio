@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
-import classes from "./navbar.module.scss";
+import classes from "./Navbar.module.scss";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { FaArrowUp, FaBars } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
-import Drawer from "./drawer";
+import Drawer from "../ui/drawer/Drawer";
 
 const Navbar = () => {
   const [show, setShow] = useState("");
