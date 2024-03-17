@@ -1,10 +1,10 @@
 import React from "react";
+import { Metadata } from "next";
 import Cover from "@/components/home/Cover";
 import Experience from "@/components/home/Experience";
 import Portfolio from "@/components/home/Portfolio";
 import Footer from "@/components/home/Footer";
-import Contact from "../components/home/contact/Contact";
-import { Metadata } from "next";
+import Contact from "@/components/home/contact/Contact";
 import About from "@/components/home/About";
 
 export const metadata: Metadata = {
