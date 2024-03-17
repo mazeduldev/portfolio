@@ -1,9 +1,9 @@
 import React from "react";
-import classes from "./portfolio.module.scss";
-import Card from "./ui/Card";
-import Tag from "./ui/Tag";
+import classes from "./Portfolio.module.scss";
+import Card from "../ui/card/Card";
+import Tag from "../ui/tag/Tag";
 import Image from "next/image";
-import { Project } from "../model/project";
+import { Project } from "../../model/project";
 import {
   FaAngular,
   FaAws,
@@ -16,12 +16,12 @@ import {
   FaSass,
 } from "react-icons/fa";
 import { SiMongodb, SiMysql, SiSpring, SiTypescript } from "react-icons/si";
-import crTrackerImage from "../../public/images/cr_tracker.webp";
-import timelineImage from "../../public/images/timeline_collage.webp";
-import bsSpacingImage from "../../public/images/bs_spacing.webp";
-import portfolioImage from "../../public/images/portfolio_cover.webp";
-import slimwikiImage from "../../public/images/slimwiki.svg";
-import briklStorefrontImage from "../../public/images/brikl_storefront.webp";
+import crTrackerImage from "@/public/images/cr_tracker.webp";
+import timelineImage from "@/public/images/timeline_collage.webp";
+import bsSpacingImage from "@/public/images/bs_spacing.webp";
+import portfolioImage from "@/public/images/portfolio_cover.webp";
+import slimwikiImage from "@/public/images/slimwiki.svg";
+import briklStorefrontImage from "@/public/images/brikl_storefront.webp";
 
 interface PortfolioProps {
   id: string;

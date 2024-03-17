@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./drawer.module.scss";
+import classes from "./Drawer.module.scss";
 import { FaTimes } from "react-icons/fa";
 
 interface DrawerProps {

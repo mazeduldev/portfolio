@@ -2,7 +2,7 @@
 import React from "react";
 import { FaArrowDown } from "react-icons/fa";
 import { Link } from "react-scroll";
-import classes from "./cover.module.scss";
+import classes from "./Cover.module.scss";
 import TypeMyTitle from "./TypeMyTitle";
 
 interface CoverProps {
