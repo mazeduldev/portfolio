@@ -20,8 +20,8 @@ const Cover: React.FC<CoverProps> = ({ id }: CoverProps) => {
         </div>
         <Link
           to="portfolio"
-          smooth={true}
           offset={-64}
+          duration={200}
           className={classes.arrow}
         >
           <FaArrowDown></FaArrowDown>
