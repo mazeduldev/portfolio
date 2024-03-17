@@ -1,6 +1,6 @@
 "use client";
 import React, { ChangeEventHandler, SyntheticEvent, useState } from "react";
-import classes from "./contactForm.module.scss";
+import classes from "./ContactForm.module.scss";
 import { toast } from "react-hot-toast";
 import { Button, Input, Textarea } from "@/components/ui";
 

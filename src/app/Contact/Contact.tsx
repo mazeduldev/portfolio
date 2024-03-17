@@ -10,7 +10,7 @@ import {
   FaTwitter,
   FaDev,
 } from "react-icons/fa";
-import classes from "./index.module.scss";
+import classes from "./Contact.module.scss";
 import ContactForm from "./ContactForm";
 
 interface ContactProps {
