@@ -1,10 +1,8 @@
 import React from "react";
 import classes from "./about.module.scss";
 import Image from "next/image";
-import TypingAnimation from "./typing-animation";
 import myImage from "../../public/images/me.webp";
-
-const myTitles = ["Software Engineer", "Web Developer", "Fullstack Developer"];
+import TypeMyTitle from "./TypeMyTitle";
 
 interface AboutProps {
   id: string;
@@ -35,8 +33,7 @@ const About: React.FC<AboutProps> = ({ id }: AboutProps) => {
           </div>
           <div className={classes.description}>
             <div className={classes.descriptionTitle}>
-              I&apos;m Mazedul, <br className={classes.br}></br>{" "}
-              <TypingAnimation texts={myTitles}></TypingAnimation>
+              I&apos;m Mazedul, <br className={classes.br}></br> <TypeMyTitle />
             </div>
             <p>
               Dynamic and results-oriented Software Engineer with a diverse
