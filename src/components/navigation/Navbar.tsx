@@ -42,9 +42,9 @@ const Navbar = () => {
       <li className={classes.menuItem} key={title}>
         <Link
           to={title}
-          smooth={true}
           spy={true}
           offset={-64}
+          duration={200}
           activeClass={title !== "home" ? classes.active : ""}
         >
           {`${title[0].toUpperCase()}${title.substring(1)}`}
@@ -68,9 +68,9 @@ const Navbar = () => {
         key={title}
         onClick={toggleDrawer}
         activeClass={classes.active}
-        smooth={true}
         spy={true}
         offset={-64}
+        duration={200}
         className={classes.menuItem}
       >
         {`${title[0].toUpperCase()}${title.substring(1)}`}
