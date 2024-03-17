@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import { Poppins, Ubuntu } from "next/font/google";
-import cn from "classnames";
 import { Toaster } from "react-hot-toast";
-import Navbar from "@/components/home/Navbar";
-import "../styles/globals.scss";
+import cn from "classnames";
+import Navbar from "@/components/navigation/Navbar";
+import "@/styles/globals.scss";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
