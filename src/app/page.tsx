@@ -4,7 +4,7 @@ import Cover from "@/components/cover";
 import Experience from "@/components/experience";
 import Portfolio from "@/components/portfolio";
 import Footer from "@/components/footer";
-import Contact from "./Contact";
+import Contact from "./contact/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

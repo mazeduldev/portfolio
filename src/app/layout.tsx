@@ -9,11 +9,13 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-primary",
 });
 const ubuntu = Ubuntu({
   weight: ["400", "500", "700"],
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-secondary",
 });
 
 export const metadata: Metadata = {
@@ -31,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={cn(poppins.className, ubuntu.className)}>
+    <html lang="en" className={cn(poppins.variable, ubuntu.variable)}>
+      <body>
         <Navbar />
         {children}
         <Toaster position="top-right" reverseOrder={false} />
