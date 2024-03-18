@@ -79,7 +79,7 @@ function ContactForm() {
           name="name"
           placeholder="Name"
           required
-        ></Input>
+        />
         <Input
           value={email}
           onChange={changeHandler}
@@ -87,7 +87,7 @@ function ContactForm() {
           name="email"
           placeholder="Email"
           required
-        ></Input>
+        />
         <Textarea
           value={message}
           onChange={changeHandler}
@@ -96,7 +96,7 @@ function ContactForm() {
           rows={4}
           style={{ whiteSpace: "pre-wrap" }}
           required
-        ></Textarea>
+        />
         <div className={classes.submitBtn}>
           <Button type="submit" loading={loading} disabled={loading}>
             {!loading && "Send Message"}
