@@ -13,7 +13,7 @@ const defaultTiltOptions: TiltOptions = {
   gyroscope: false,
 };
 
-const Card = (props: CardProps) => {
+const Card: React.FC<CardProps> = (props) => {
   const { children, tiltOptions = defaultTiltOptions, ...restProps } = props;
   return (
     <Tilt className={classes.card} options={tiltOptions} {...restProps}>
