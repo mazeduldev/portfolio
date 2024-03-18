@@ -89,7 +89,7 @@ const Navbar = () => {
   return (
     <>
       <a
-        onClick={scroll.scrollToTop}
+        onClick={() => scroll.scrollToTop({ duration: 200 })}
         className={`${classes.scrollUpBtn} ${show}`}
       >
         <FaArrowUp />
