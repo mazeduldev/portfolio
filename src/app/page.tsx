@@ -1,7 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import Cover from "@/components/home/Cover";
-import Experience from "@/components/home/Experience";
+import Experience from "@/components/home/experience/Experience";
 import Portfolio from "@/components/home/Portfolio";
 import Footer from "@/components/home/Footer";
 import Contact from "@/components/home/contact/Contact";

@@ -1,11 +1,6 @@
 "use client";
-import Image from "next/image";
-import { MdWork } from "react-icons/md";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import { WorkExperience } from "../../model/work-experience";
+import { VerticalTimeline } from "react-vertical-timeline-component";
+import { WorkExperience } from "../../../model/work-experience";
 import oozouLogo from "@/public/images/oozou.webp";
 import briklLogo from "@/public/images/brikl.webp";
 import impelLogo from "@/public/images/impel.webp";
@@ -13,89 +8,14 @@ import liilabLogo from "@/public/images/liilab.webp";
 import orbitaxLogo from "@/public/images/orbitax.webp";
 import relisourceLogo from "@/public/images/relisource.webp";
 import vantageLogo from "@/public/images/vantage.webp";
-import TimeUtil from "../../utils/timeUtil";
 import classes from "./Experience.module.scss";
-import Tag from "../ui/tag/Tag";
+import ExperienceElement from "./ExperienceElement";
 
 interface ExperienceProps {
   id: string;
 }
 
 const Experience: React.FC<ExperienceProps> = ({ id }: ExperienceProps) => {
-  const contentStyle = {
-    color: "#111",
-    borderTop: "3px solid #1763A6",
-  };
-
-  const timelineElements = experiences.map(
-    (exp: WorkExperience, idx: number) => {
-      return (
-        <VerticalTimelineElement
-          className="vertical-timeline-element"
-          contentStyle={contentStyle}
-          contentArrowStyle={{ borderRight: "7px solid #fff" }}
-          date={TimeUtil.formatDuration(exp.duration)}
-          dateClassName={classes.date}
-          iconClassName={classes.iconStyle}
-          icon={<MdWork />}
-          key={`element_${idx}`}
-        >
-          <div className={classes.contentContainer}>
-            <div className={classes.headerContainer}>
-              <div className={classes.logoContainer}>
-                <a href={exp.company.website} target="_blank" rel="noreferrer">
-                  <Image
-                    src={exp.company.logoPath}
-                    alt={exp.company.logoAlt}
-                    placeholder="blur"
-                    width={60}
-                    height={60}
-                    className={classes.logo}
-                    sizes="100vw"
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                    }}
-                  />
-                </a>
-              </div>
-              <div className={classes.titleContainer}>
-                <div
-                  className={`vertical-timeline-element-title ${classes.elementTitle}`}
-                >
-                  <strong>{exp.title}</strong>
-                </div>
-                <a
-                  className={`vertical-timeline-element-subtitle ${classes.elementSubtitle}`}
-                  href={exp.company.website ? exp.company.website : "#"}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <strong>{exp.company.name}</strong>
-                </a>
-              </div>
-            </div>
-
-            <div className={classes.elementBody}>
-              <p>{exp.description.title}</p>
-              <ul className={classes.ul}>
-                {exp.description.points.map((point: string, p_idx: number) => (
-                  <li key={`element_${idx}_point_${p_idx}`}>{point}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className={classes.tagContainer}>
-              {exp.tags.map((tag: string, t_idx: number) => (
-                <Tag key={`element_${idx}_tag_${t_idx}`}>{tag}</Tag>
-              ))}
-            </div>
-          </div>
-        </VerticalTimelineElement>
-      );
-    }
-  );
-
   return (
     <section id={id} className="bg semi-light">
       <div className="container">
@@ -105,8 +25,10 @@ const Experience: React.FC<ExperienceProps> = ({ id }: ExperienceProps) => {
         </div>
 
         <div className={classes.content}>
-          <VerticalTimeline className={classes.verticalTimeline}>
-            {timelineElements}
+          <VerticalTimeline className={classes.verticalTimeline} lineColor="">
+            {experiences.map((exp: WorkExperience, idx: number) => (
+              <ExperienceElement exp={exp} key={idx} />
+            ))}
           </VerticalTimeline>
         </div>
       </div>

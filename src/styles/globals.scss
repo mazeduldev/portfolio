@@ -11,6 +11,10 @@ body {
   scroll-behavior: smooth;
 }
 
+html {
+  --line-color: #fff; // vertical timeline line color
+}
+
 * {
   margin: 0;
   padding: 0;
