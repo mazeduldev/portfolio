@@ -8,4 +8,14 @@
   @include respond-to("lg") {
     width: 50%;
   }
+
+  .areaLabel {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-lg;
+    margin-bottom: 20px;
+  }
+
+  .submitBtn {
+    margin-top: 10px;
+  }
 }
