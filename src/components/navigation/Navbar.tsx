@@ -1,10 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import classes from "./Navbar.module.scss";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { FaArrowUp, FaBars } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
-import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import Drawer from "../ui/drawer/Drawer";
 
 const Navbar = () => {
@@ -20,16 +19,23 @@ const Navbar = () => {
 
   const removeTransparency = () => setTransparent("");
 
-  useScrollPosition(
-    ({ currPos }) => {
-      if (currPos.y < -150) removeTransparency();
-      else makeTransparent();
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY < 150) makeTransparent();
+      else removeTransparency();
 
-      if (currPos.y < -500) showScrollButton();
-      else hideScrollButton();
-    },
-    [transparent, show]
-  );
+      if (window.scrollY < 500) hideScrollButton();
+      else showScrollButton();
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
