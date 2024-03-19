@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Portfolio.module.scss";
-import Card from "../ui/card-comp/Card";
+import Card from "../ui/card/Card";
 import Tag from "../ui/tag/Tag";
 import Image from "next/image";
 import { Project } from "../../model/project";
