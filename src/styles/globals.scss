@@ -1,0 +1,152 @@
+@import "react-vertical-timeline-component/style.min.css";
+@import "./variables";
+@import "./mixins";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-primary;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html {
+  --line-color: #fff; // vertical timeline line color
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a {
+  color: unset;
+}
+
+section {
+  padding: 100px 0px;
+}
+
+.container {
+  max-width: calc(100% - 40px);
+  margin: auto;
+
+  @include respond-to("md") {
+    max-width: map-get($container-max-widths, "md");
+  }
+  @include respond-to("lg") {
+    max-width: map-get($container-max-widths, "lg");
+  }
+  @include respond-to("xl") {
+    max-width: map-get($container-max-widths, "xl");
+  }
+  @include respond-to("xxl") {
+    max-width: map-get($container-max-widths, "xxl");
+  }
+}
+
+.bg {
+  background: $color-light;
+  color: $on-color-light;
+
+  &.light {
+    background: $color-light;
+    color: $on-color-light;
+  }
+
+  &.semi-light {
+    background: $color-light-secondary;
+    color: $on-color-light;
+  }
+
+  &.dark {
+    background: $color-dark;
+    color: $on-color-dark;
+  }
+}
+
+.js-tilt-glare {
+  border-radius: 15px;
+}
+
+.title-container {
+  position: relative;
+  font-family: $font-secondary;
+  text-align: center;
+
+  .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: $on-color-light;
+  }
+
+  .subtitle {
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    color: $color-primary;
+    padding: 0 5px;
+    background: transparent;
+    display: inline-block;
+    margin-bottom: 80px;
+
+    // underline
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 9px;
+      left: 0;
+      width: 45px;
+      height: 3px;
+      background: $on-color-light;
+      transform: translateX(-100%);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 9px;
+      right: 0;
+      width: 45px;
+      height: 3px;
+      background: $on-color-light;
+      transform: translateX(100%);
+    }
+  }
+
+  &.light {
+    .title {
+      color: $on-color-light;
+    }
+
+    .subtitle {
+      &::before {
+        background: $on-color-light;
+      }
+      &::after {
+        background: $on-color-light;
+      }
+    }
+  }
+
+  &.dark {
+    .title {
+      color: $on-color-dark;
+    }
+
+    .subtitle {
+      color: $color-primary-light;
+      &::before {
+        background: $on-color-dark;
+      }
+      &::after {
+        background: $on-color-dark;
+      }
+    }
+  }
+}

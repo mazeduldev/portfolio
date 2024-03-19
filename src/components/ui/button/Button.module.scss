@@ -1,0 +1,44 @@
+@import "@/styles/variables";
+
+.button {
+  font-family: $font-secondary;
+  border: 2px solid $color-primary;
+  background: $color-primary;
+  color: $on-color-primary;
+  outline: none;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+
+  &:hover {
+    background: $on-color-primary;
+    color: $color-primary;
+  }
+
+  &:disabled,
+  &:active {
+    background: lighten($color: $color-primary, $amount: 40%);
+    color: $color-primary;
+  }
+
+  .spinner {
+    margin-right: 5px;
+    animation: spin infinite 5s linear;
+
+    & + span.buttonText {
+      padding-left: 5px;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

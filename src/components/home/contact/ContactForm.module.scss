@@ -1,0 +1,21 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.formContainer {
+  width: 100%;
+  margin: auto;
+
+  @include respond-to("lg") {
+    width: 50%;
+  }
+
+  .areaLabel {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-lg;
+    margin-bottom: 20px;
+  }
+
+  .submitBtn {
+    margin-top: 10px;
+  }
+}

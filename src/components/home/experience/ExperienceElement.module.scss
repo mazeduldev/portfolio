@@ -1,0 +1,54 @@
+@import "@/styles/variables";
+
+.iconStyle {
+  background: $color-primary;
+  color: #fff;
+}
+
+.date {
+  color: $on-color-light;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+
+  .headerContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .logoContainer {
+      width: 60px;
+      margin: auto 1em auto 0;
+    }
+
+    .titleContainer {
+      .elementTitle {
+        font-size: $h5-font-size;
+      }
+      .elementSubtitle {
+        font-size: $h6-font-size;
+        display: block;
+        color: $on-color-light-secondary;
+      }
+    }
+  }
+
+  .elementBody {
+    font-size: $font-size-base;
+    p {
+      font-size: inherit;
+    }
+    ul {
+      font-size: inherit;
+      margin-left: 20px;
+    }
+  }
+
+  .tagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+}

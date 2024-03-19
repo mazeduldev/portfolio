@@ -1,0 +1,86 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.cover {
+  background: url("/images/bg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  font-family: $font-secondary;
+
+  .coverContent {
+    // as cover will have dark image background
+    color: $on-color-dark;
+    text-align: center;
+    margin-top: 14vh;
+    padding: 0 2vw;
+
+    @include respond-to("sm") {
+      margin-top: 25vh;
+    }
+
+    .text1 {
+      font-size: $h4-font-size;
+
+      @include respond-to("xxl") {
+        font-size: $h3-font-size;
+      }
+    }
+
+    .text2 {
+      font-size: $font-size-xl;
+      font-weight: $font-weight-bolder;
+      margin: 10px 0;
+
+      @include respond-to("xxl") {
+        font-size: $font-size-xxl;
+      }
+    }
+
+    .text3 {
+      font-size: $h4-font-size;
+
+      @include respond-to("xxl") {
+        font-size: $h3-font-size;
+      }
+    }
+  }
+}
+
+.arrow {
+  display: inline-block;
+  font-size: $h3-font-size;
+  margin-top: 2.5em;
+  transition: color 0.3s ease;
+  animation: bounce 2s ease infinite;
+
+  @include respond-to("sm") {
+    margin-top: 4em;
+  }
+
+  &:hover {
+    color: $color-highlight;
+    cursor: pointer;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  25%,
+  55%,
+  75%,
+  100% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(-20px);
+  }
+  65% {
+    transform: translateY(-10px);
+  }
+  85% {
+    transform: translateY(-5px);
+  }
+}

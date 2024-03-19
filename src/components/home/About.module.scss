@@ -1,0 +1,90 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.content {
+  width: 90%;
+  margin: auto;
+
+  @include respond-to("sm") {
+    width: 100%;
+  }
+
+  @include respond-to("lg") {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .proPic {
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond-to("lg") {
+      margin: auto;
+    }
+
+    .rounded {
+      border-radius: 6px;
+    }
+  }
+
+  .description {
+    @include respond-to("lg") {
+      width: 50%;
+      margin: auto;
+    }
+    .descriptionTitle {
+      font-weight: $font-weight-bold;
+      font-size: $h4-font-size;
+      margin-bottom: 10px;
+
+      .br {
+        display: none;
+        // below this size we need new line
+        @media (max-width: 493px) {
+          display: block;
+        }
+      }
+    }
+
+    p {
+      font-weight: $font-weight-light;
+      text-align: justify;
+      margin-bottom: 10px;
+      a {
+        color: $color-primary-light;
+        transition: color 0.3s ease;
+        &:hover {
+          color: $color-highlight;
+        }
+      }
+    }
+
+    > a {
+      font-family: $font-secondary;
+      background: $color-primary;
+      color: $on-color-primary;
+      border: 2px solid $color-primary;
+      margin-top: 10px;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-weight: $font-weight-normal;
+      font-size: $font-size-base;
+      display: inline-block;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: $on-color-primary;
+        color: $color-primary;
+        border-color: $color-primary;
+      }
+
+      &:active {
+        background: lighten($color: $color-primary, $amount: 40%);
+        color: $color-primary;
+      }
+    }
+  }
+}

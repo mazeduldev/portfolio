@@ -1,0 +1,177 @@
+@use "sass:math";
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.starDark {
+  background: $color-dark;
+  color: $on-color-dark;
+  position: relative;
+  overflow-y: hidden;
+
+  .techLogo {
+    font-size: $font-size-xl;
+    position: absolute;
+    display: none;
+
+    @include respond-to("sm") {
+      display: block;
+    }
+
+    @for $i from 1 through 13 {
+      &:nth-child(#{$i}) {
+        $multiplier: $i - 1;
+        $left-pos: math.div(percentage($multiplier * 7.9), 100);
+        left: $left-pos + 1;
+      }
+    }
+    &:nth-child(1) {
+      animation: LOGO-MOVE 15s linear infinite;
+    }
+    &:nth-child(2) {
+      animation: LOGO-MOVE 36s linear infinite;
+    }
+    &:nth-child(3) {
+      animation: LOGO-MOVE 12s linear infinite;
+    }
+    &:nth-child(4) {
+      animation: LOGO-MOVE 32s linear infinite;
+    }
+    &:nth-child(5) {
+      animation: LOGO-MOVE 21s linear infinite;
+    }
+    &:nth-child(6) {
+      animation: LOGO-MOVE 42s linear infinite;
+    }
+    &:nth-child(7) {
+      animation: LOGO-MOVE 19s linear infinite;
+    }
+    &:nth-child(8) {
+      animation: LOGO-MOVE 37s linear infinite;
+    }
+    &:nth-child(9) {
+      animation: LOGO-MOVE 23s linear infinite;
+    }
+    &:nth-child(10) {
+      animation: LOGO-MOVE 43s linear infinite;
+    }
+    &:nth-child(11) {
+      animation: LOGO-MOVE 18s linear infinite;
+    }
+    &:nth-child(12) {
+      animation: LOGO-MOVE 39s linear infinite;
+    }
+    &:nth-child(13) {
+      animation: LOGO-MOVE 29s linear infinite;
+    }
+  }
+
+  .portfolioContainer {
+    max-width: calc(100% - 40px);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+
+    @include respond-to("md") {
+      max-width: map-get($container-max-widths, "md");
+    }
+    @include respond-to("lg") {
+      max-width: map-get($container-max-widths, "lg");
+    }
+    @include respond-to("xl") {
+      max-width: map-get($container-max-widths, "xl");
+    }
+    @include respond-to("xxl") {
+      max-width: map-get($container-max-widths, "xxl");
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      width: 100%;
+
+      @include respond-to("md") {
+        justify-content: space-between;
+      }
+
+      .cardImage {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        opacity: 80%;
+      }
+
+      .cardBody {
+        padding: 10px;
+
+        > .cardTitle {
+          color: $color-primary-light;
+          font-size: $h5-font-size;
+        }
+
+        > .cardDescription {
+          color: $on-color-dark;
+          font-size: $font-size-base;
+          text-align: justify;
+        }
+
+        > .cardTagContainer {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 20px 0;
+        }
+
+        > .cardButtonContainer {
+          display: flex;
+          margin-bottom: 5px;
+
+          > .cardButton {
+            font-size: $font-size-sm;
+            padding: 5px;
+            margin-right: 10px;
+
+            font-family: $font-secondary;
+            border: 2px solid $color-primary;
+            background: $color-primary;
+            color: $on-color-primary;
+            outline: none;
+            font-size: $font-size-base;
+            font-weight: $font-weight-normal;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background: $on-color-primary;
+              color: $color-primary;
+            }
+
+            &:active {
+              background: lighten($color: $color-primary, $amount: 40%);
+              color: $color-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes LOGO-MOVE {
+  0% {
+    top: 105%;
+    opacity: 100%;
+  }
+  70% {
+    opacity: 100%;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    top: -5%;
+    opacity: 0;
+  }
+}
