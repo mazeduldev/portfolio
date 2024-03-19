@@ -25,7 +25,11 @@ const Experience: React.FC<ExperienceProps> = ({ id }: ExperienceProps) => {
         </div>
 
         <div className={classes.content}>
-          <VerticalTimeline className={classes.verticalTimeline} lineColor="">
+          <VerticalTimeline
+            className={classes.verticalTimeline}
+            layout="1-column"
+            lineColor=""
+          >
             {experiences.map((exp: WorkExperience, idx: number) => (
               <ExperienceElement exp={exp} key={idx} />
             ))}
