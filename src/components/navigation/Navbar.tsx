@@ -84,12 +84,16 @@ const Navbar = () => {
     );
   });
   drawerNavLinks.push(
-    <li className={classes.menuItem} key="blog">
-      <a href="https://blog.mazedulislam.com" target="_blank">
-        <span>Blog</span>
-        <FiArrowUpRight style={{ marginLeft: "2px" }} />
-      </a>
-    </li>
+    <a
+      href="https://blog.mazedulislam.com"
+      target="_blank"
+      key="blog"
+      onClick={toggleDrawer}
+      className={classes.menuItem}
+    >
+      <span>Blog</span>
+      <FiArrowUpRight style={{ marginLeft: "2px" }} />
+    </a>
   );
 
   return (
