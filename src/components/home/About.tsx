@@ -58,7 +58,10 @@ const About: React.FC<AboutProps> = ({ id }: AboutProps) => {
             <p>
               Holds a Bachelor of Science in Computer Science and Engineering
               from the{" "}
-              <a href="https://www.cse.du.ac.bd/">University of Dhaka</a>.
+              <a href="https://www.du.ac.bd/body/CSE" target="_blank">
+                University of Dhaka
+              </a>
+              .
             </p>
             <p>
               Passionate about innovation and delivering high-quality software
