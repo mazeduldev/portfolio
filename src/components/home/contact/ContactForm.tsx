@@ -1,54 +1,29 @@
 "use client";
-import React, { ChangeEventHandler, SyntheticEvent, useState } from "react";
+import React, {
+  ChangeEventHandler,
+  SyntheticEvent,
+  useRef,
+  useState,
+} from "react";
 import classes from "./ContactForm.module.scss";
 import { toast } from "react-hot-toast";
 import { Button, Input, Textarea } from "@/components/ui";
+import { sendEmail } from "@/actions/sendEmail";
+import SubmitButton from "./SubmitButton";
 
 function ContactForm() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false);
+  const ref = useRef<HTMLFormElement>(null);
 
-  const changeHandler: ChangeEventHandler<
-    HTMLInputElement | HTMLTextAreaElement
-  > = (event) => {
-    event.preventDefault();
-    const { name, value } = event.target;
-
-    switch (name) {
-      case "name":
-        setName(value);
-        break;
-      case "email":
-        setEmail(value);
-        break;
-      case "message":
-        setMessage(value);
-        break;
-    }
-  };
-
-  const submitHandler = async (event: SyntheticEvent) => {
-    event.preventDefault();
-
-    setLoading(true);
-
+  const submitHandler = async (formData: FormData) => {
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
     const data = { name, email, message };
 
     try {
-      const res: Response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const jsonData = await sendEmail(data);
 
-      const jsonData = await res.json();
-
-      if (res.status == 200) {
+      if (jsonData.message) {
         toast.success(jsonData.message);
         clearForm();
       } else {
@@ -57,40 +32,20 @@ function ContactForm() {
     } catch (err) {
       toast.error("Something went wrong!");
       console.error("Error occurred during sending email.", err);
-    } finally {
-      setLoading(false);
     }
   };
 
   const clearForm = () => {
-    setName("");
-    setEmail("");
-    setMessage("");
+    ref.current?.reset();
   };
 
   return (
     <div className={classes.formContainer}>
       <h4 className={classes.areaLabel}>Drop a mail</h4>
-      <form onSubmit={submitHandler}>
-        <Input
-          value={name}
-          onChange={changeHandler}
-          type="text"
-          name="name"
-          placeholder="Name"
-          required
-        />
-        <Input
-          value={email}
-          onChange={changeHandler}
-          type="email"
-          name="email"
-          placeholder="Email"
-          required
-        />
+      <form action={submitHandler} ref={ref}>
+        <Input type="text" name="name" placeholder="Name" required />
+        <Input type="email" name="email" placeholder="Email" required />
         <Textarea
-          value={message}
-          onChange={changeHandler}
           name="message"
           placeholder="Message..."
           rows={4}
@@ -98,10 +53,7 @@ function ContactForm() {
           required
         />
         <div className={classes.submitBtn}>
-          <Button type="submit" loading={loading} disabled={loading}>
-            {!loading && "Send Message"}
-            {loading && "Sending Message"}
-          </Button>
+          <SubmitButton title="Send Message" />
         </div>
       </form>
     </div>
