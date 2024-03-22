@@ -20,7 +20,7 @@
     @for $i from 1 through 13 {
       &:nth-child(#{$i}) {
         $multiplier: $i - 1;
-        $left-pos: math.div(percentage($multiplier * 7.9), 100);
+        $left-pos: math.div(percentage($multiplier * 7.7), 100);
         left: $left-pos + 1;
       }
     }
