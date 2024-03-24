@@ -9,7 +9,7 @@ type CardProps = PropsWithChildren<{
 
 const defaultTiltOptions: TiltOptions = {
   glare: true,
-  "max-glare": 0.2,
+  "max-glare": 0.05,
   gyroscope: false,
 };
 

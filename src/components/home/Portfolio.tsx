@@ -1,4 +1,5 @@
 import React from "react";
+import cn from "classnames";
 import classes from "./Portfolio.module.scss";
 import Card from "../ui/card/Card";
 import Tag from "../ui/tag/Tag";
@@ -29,7 +30,7 @@ interface PortfolioProps {
 
 const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
   return (
-    <section id={id} className={`bg ${classes.starDark}`}>
+    <section id={id} className={cn("bg", classes.starDark, "py-24")}>
       {techLogos}
 
       <div className={classes.portfolioContainer}>
@@ -45,7 +46,6 @@ const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
                 alt={project.imageAlt}
                 placeholder={project.imagePlaceholder ?? "blur"}
                 width={300}
-                height={200}
                 className={classes.cardImage}
               />
               <div className={classes.cardBody}>
