@@ -17,7 +17,7 @@ interface ExperienceProps {
 
 const Experience: React.FC<ExperienceProps> = ({ id }: ExperienceProps) => {
   return (
-    <section id={id} className="bg semi-light">
+    <section id={id} className="bg semi-light py-24">
       <div className="container">
         <div className="title-container light">
           <h2 className="title">Experience</h2>

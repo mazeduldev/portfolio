@@ -10,7 +10,7 @@ interface AboutProps {
 
 const About: React.FC<AboutProps> = ({ id }: AboutProps) => {
   return (
-    <section id={id} className="bg dark">
+    <section id={id} className="bg dark py-24">
       <div className="container">
         <div className="title-container dark">
           <h2 className="title">About me</h2>
