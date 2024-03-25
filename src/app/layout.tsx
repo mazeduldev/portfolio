@@ -25,6 +25,25 @@ export const metadata: Metadata = {
   },
   description:
     "Fullstack software engineer experienced in JavaScript, Typescript, ReactJS, Next.js, Angular, NodeJS, Express, Java, Spring-boot, Python, FastAPI, CI/CD pipeline, Docker, Kubernetes, Microservice, MySQL, MongoDB, Postgres, DynamoDB, AWS, Azure, GCP etc. for Web Development.",
+  keywords: [
+    "Mazedul Islam",
+    "Software Engineer",
+    "Fullstack Developer",
+    "Fullstack Software Engineer",
+    "Web Developer",
+    "Freelancer",
+    "Freelance Web Developer",
+    "Individual Contractor",
+    "ReactJS Developer",
+    "Next.js Developer",
+    "NodeJS Developer",
+    "Express Developer",
+    "Angular Developer",
+    "Spring-boot Developer",
+    "Java Developer",
+    "MERN Stack Developer",
+    "MEAN Stack Developer",
+  ],
 };
 
 export default function RootLayout({
