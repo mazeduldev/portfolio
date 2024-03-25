@@ -12,6 +12,9 @@
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 10px 15px;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
 
   &:hover {
     background: $on-color-primary;
