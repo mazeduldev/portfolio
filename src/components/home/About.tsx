@@ -91,7 +91,7 @@ const About: React.FC<AboutProps> = async ({ id }: AboutProps) => {
             <h3 className="subtitle">What others are saying</h3>
           </div>
 
-          <div className="mx-auto grid grid-cols-1 gap-6 px-10 md:grid-cols-2">
+          <div className="mx-auto grid grid-cols-1 gap-6 md:px-10 md:grid-cols-2">
             {recommendations.map((recommendation, idx) => (
               <Card
                 key={`recommendation_${idx}`}
