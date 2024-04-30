@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import classes from "./ExperienceElement.module.scss";
 import { Tag } from "@/components/ui";
-import TimeUtil from "@/utils/timeUtil";
+import TimeUtil from "@/lib/timeUtil";
 import { WorkExperience } from "@/model/work-experience";
 
 type ExperienceElementProps = {
