@@ -135,7 +135,7 @@ const About: React.FC<AboutProps> = ({ id }: AboutProps) => {
         </div>
       </section>
 
-      <section className="bg py-24">
+      <section id="recommendations" className="bg semi-light py-24">
         <div className="container">
           <div className="title-container">
             <h2 className="title">Recommendations</h2>
@@ -147,7 +147,7 @@ const About: React.FC<AboutProps> = ({ id }: AboutProps) => {
               <Card key={`recommendation_${idx}`}>
                 <CardHeader>
                   <div className="flex flex-row items-center space-x-2">
-                    <Avatar>
+                    <Avatar className="h-12 w-12">
                       <AvatarImage
                         src={recommendation.imageUrl}
                         alt={recommendation.name}
@@ -176,7 +176,7 @@ const About: React.FC<AboutProps> = ({ id }: AboutProps) => {
                   </div>
                   {/* <p>{recommendation.date}</p> */}
                   <a
-                    className="text-[#595959] font-light text-xs ml-12"
+                    className="text-[#595959] font-light text-xs ml-14"
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.linkedin.com/in/mazedul-islam/details/recommendations/?detailScreenTabIndex=0"
