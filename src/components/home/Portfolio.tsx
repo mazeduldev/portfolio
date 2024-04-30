@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import classes from "./Portfolio.module.scss";
-import Card from "../ui/card/Card";
+import GlassyCard from "../ui/glassy-card/GlassyCard";
 import Tag from "../ui/tag/Tag";
 import Image from "next/image";
 import { Project } from "../../model/project";
@@ -40,7 +40,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
         </div>
         <div className={classes.content}>
           {projects.map((project: Project, idx: number) => (
-            <Card key={`card_${idx}`}>
+            <GlassyCard key={`card_${idx}`}>
               <Image
                 src={project.imageUrl}
                 alt={project.imageAlt}
@@ -104,7 +104,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ id }: PortfolioProps) => {
                   </div>
                 )}
               </div>
-            </Card>
+            </GlassyCard>
           ))}
         </div>
       </div>
