@@ -1,3 +1,5 @@
+"use server";
+
 export async function getRecommendations() {
   const recommendationPageUrl =
     "https://www.linkedin.com/in/mazedul-islam/details/recommendations/?detailScreenTabIndex=0";
