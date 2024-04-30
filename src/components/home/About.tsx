@@ -93,7 +93,10 @@ const About: React.FC<AboutProps> = async ({ id }: AboutProps) => {
 
           <div className="mx-auto grid grid-cols-1 gap-6 px-10 md:grid-cols-2">
             {recommendations.map((recommendation, idx) => (
-              <Card key={`recommendation_${idx}`}>
+              <Card
+                key={`recommendation_${idx}`}
+                className="bg-gradient-to-br from-sky-100 to-slate-100"
+              >
                 <CardHeader>
                   <div className="flex flex-row items-center space-x-2">
                     <Avatar className="h-12 w-12">

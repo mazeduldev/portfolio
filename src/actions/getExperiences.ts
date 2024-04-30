@@ -22,9 +22,9 @@ export async function getExperiences() {
       description: {
         title: "Working as a fullstack Javascript/Typescript developer.",
         points: [
-          "Engineered and implemented a highly scalable Event-Driven architecture for a VoIP calling system, integrating Twilio, Firebase Cloud Messaging (FCM), Apple Push Notification (APN), and leveraging technologies such as Azure Event Hubs, Azure Storage Account, Azure Functions, Azure Queue Storage and the Azure JavaScript SDK.",
-          "Strengthened SlimWiki's security measures by implementing a JWT token invalidation system, enabling users to invalidate tokens as needed, thereby enhancing user control over account security. Addressed security vulnerabilities by implementing solutions such as ensuring that password reset links sent to older email addresses become invalid upon users updating their email addresses, thereby bolstering the platform's overall security posture.",
-          "Enhanced the developer experience of the SlimWiki project by modernizing all packages to their latest versions and implementing a strongly typed coding approach.",
+          "● Engineered and implemented a highly scalable Event-Driven architecture for a VoIP calling system, integrating Twilio, Firebase Cloud Messaging (FCM), Apple Push Notification (APN), and leveraging technologies such as Azure Event Hubs, Azure Storage Account, Azure Functions, Azure Queue Storage and the Azure JavaScript SDK.",
+          "● Strengthened SlimWiki's security measures by implementing a JWT token invalidation system, enabling users to invalidate tokens as needed, thereby enhancing user control over account security. Addressed security vulnerabilities by implementing solutions such as ensuring that password reset links sent to older email addresses become invalid upon users updating their email addresses, thereby bolstering the platform's overall security posture.",
+          "● Enhanced the developer experience of the SlimWiki project by modernizing all packages to their latest versions and implementing a strongly typed coding approach.",
         ],
       },
       tags: [
@@ -54,9 +54,9 @@ export async function getExperiences() {
         title:
           "Helped Brikl to implement it's e-commerce platform for setting up a shop under 15 minutes.",
         points: [
-          "Implemented many features in the Brikl dashboard to improve merchants' productivity including but not limited to bulk product upload from csv files, override suppliers' product SKU in microstore.",
-          "Practiced many agile ceremonies like scrum, sprint planning, sprint poker, sprint review, retrospective etc. to improve overall team performance.",
-          "Actively participated in code review process and provided suggestions for improving code quality. Also learned from others codes and suggestions.",
+          "● Implemented many features in the Brikl dashboard to improve merchants' productivity including but not limited to bulk product upload from csv files, override suppliers' product SKU in microstore.",
+          "● Practiced many agile ceremonies like scrum, sprint planning, sprint poker, sprint review, retrospective etc. to improve overall team performance.",
+          "● Actively participated in code review process and provided suggestions for improving code quality. Also learned from others codes and suggestions.",
         ],
       },
       tags: ["reactjs", "nextjs", "gatsby", "graphql", "typescript", "netlify"],
@@ -77,8 +77,8 @@ export async function getExperiences() {
         title:
           "Remotely working as a full-stack engineer with a multicultural international team",
         points: [
-          "Implementing admin dashboard for e-commerce websites using ReactJS, Redux, Material UI, Spring-boot, Jhipster, Keycloak, Postgres, etc.",
-          "Working with an Agile team, following Scrum practices, and maintaining Kanban board in Jira.",
+          "● Implementing admin dashboard for e-commerce websites using ReactJS, Redux, Material UI, Spring-boot, Jhipster, Keycloak, Postgres, etc.",
+          "● Working with an Agile team, following Scrum practices, and maintaining Kanban board in Jira.",
         ],
       },
       tags: [
@@ -106,9 +106,9 @@ export async function getExperiences() {
         title:
           "Remotely worked as a full-stack software engineer for Atmetis.nl",
         points: [
-          "Developed Risk Management & Valuation, Enterprise Application for our client using Java, Spring-boot, JPA, Hibernate, MySQL and Angular",
-          "Implemented web service using Flask framework of Python for parsing csv or xlsx files submitted by our end users",
-          "Proactively introduced CI/CD pipeline to team members and implemented automated deployment system for our Maven application using GitLab CI/CD Pipeline",
+          "● Developed Risk Management & Valuation, Enterprise Application for our client using Java, Spring-boot, JPA, Hibernate, MySQL and Angular",
+          "● Implemented web service using Flask framework of Python for parsing csv or xlsx files submitted by our end users",
+          "● Proactively introduced CI/CD pipeline to team members and implemented automated deployment system for our Maven application using GitLab CI/CD Pipeline",
         ],
       },
       tags: [
@@ -135,10 +135,10 @@ export async function getExperiences() {
       description: {
         title: "Worked as a full-stack software developer",
         points: [
-          "Developed Web application in Salesforce platform using APEX, Visualforce and SOQL",
-          "Refactored and modernized existing Javascript code base of AngularJS application",
-          "Participated in code reviews as a reviewer",
-          "Mentored junior co-workers",
+          "● Developed Web application in Salesforce platform using APEX, Visualforce and SOQL",
+          "● Refactored and modernized existing Javascript code base of AngularJS application",
+          "● Participated in code reviews as a reviewer",
+          "● Mentored junior co-workers",
         ],
       },
       tags: ["salesforce", "angularjs", "javascript", "html", "css"],
@@ -158,10 +158,10 @@ export async function getExperiences() {
       description: {
         title: "Worked as a full-stack software developer",
         points: [
-          "Developed robust and highly functional UI for SPA using Angular 6, NgRx and Typescript",
-          "Contributed to development and bug fixing of .NET Core application in microservice based architecture",
-          "Experienced in using GraphQL and REST APIs and JSON",
-          "Accustomed to JIRA based project management, issue tracking and product releases",
+          "● Developed robust and highly functional UI for SPA using Angular 6, NgRx and Typescript",
+          "● Contributed to development and bug fixing of .NET Core application in microservice based architecture",
+          "● Experienced in using GraphQL and REST APIs and JSON",
+          "● Accustomed to JIRA based project management, issue tracking and product releases",
         ],
       },
       tags: ["angular", ".net-core", "graphql", "rest-api", "ngrx", "jira"],
@@ -181,8 +181,8 @@ export async function getExperiences() {
       description: {
         title: "Worked as an Android application developer",
         points: [
-          "Developed multiple image editing applications using Android SDK and open source libraries",
-          "Implemented automatic similar color removal feature using Flood Fill algorithm",
+          "● Developed multiple image editing applications using Android SDK and open source libraries",
+          "● Implemented automatic similar color removal feature using Flood Fill algorithm",
         ],
       },
       tags: ["android", "java"],
