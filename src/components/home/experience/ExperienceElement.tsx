@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import classes from "./ExperienceElement.module.scss";
 import { Tag } from "@/components/ui";
-import TimeUtil from "@/utils/timeUtil";
+import TimeUtil from "@/lib/timeUtil";
 import { WorkExperience } from "@/model/work-experience";
 
 type ExperienceElementProps = {
@@ -22,8 +22,9 @@ function ExperienceElement(props: ExperienceElementProps) {
       contentStyle={{
         color: "#222",
         borderTop: "3px solid #1763A6",
+        background: "linear-gradient(135deg, #F7FAFC, #DFF1FE)",
       }}
-      contentArrowStyle={{ borderRight: "7px solid #fff" }}
+      contentArrowStyle={{ borderRight: "7px solid #F7FAFC" }}
       date={TimeUtil.formatDuration(exp.duration)}
       dateClassName={classes.date}
       iconClassName={classes.iconStyle}
