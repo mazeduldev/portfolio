@@ -22,9 +22,9 @@ export async function getExperiences() {
       description: {
         title: "Working as a fullstack Javascript/Typescript developer.",
         points: [
-          "● Engineered and implemented a highly scalable Event-Driven architecture for a VoIP calling system, integrating Twilio, Firebase Cloud Messaging (FCM), Apple Push Notification (APN), and leveraging technologies such as Azure Event Hubs, Azure Storage Account, Azure Functions, Azure Queue Storage and the Azure JavaScript SDK.",
-          "● Strengthened SlimWiki's security measures by implementing a JWT token invalidation system, enabling users to invalidate tokens as needed, thereby enhancing user control over account security. Addressed security vulnerabilities by implementing solutions such as ensuring that password reset links sent to older email addresses become invalid upon users updating their email addresses, thereby bolstering the platform's overall security posture.",
-          "● Enhanced the developer experience of the SlimWiki project by modernizing all packages to their latest versions and implementing a strongly typed coding approach.",
+          "● Implemented a highly scalable Event-Driven architecture for a VoIP calling system, integrating Twilio, Firebase Cloud Messaging (FCM), Apple Push Notification (APN), and leveraging technologies such as MongoDB, Azure Event Hubs, Azure Storage Account, Azure Functions, Azure Queue Storage, Azure JavaScript SDK, Node.js and Typescript.",
+          "● Revamped SlimWiki’s security with a JWT token invalidation system and expiring password reset links upon email updates using AWS DynamoDB and Postgres database.",
+          "● Enhaced SlimWiki's customer onboarding experience by implementing visually appealing UI including SVG animations using React, Next.js and TailwindCSS.",
         ],
       },
       tags: [
