@@ -128,6 +128,7 @@
           margin-bottom: 5px;
 
           > .cardButton {
+            text-wrap: nowrap;
             font-size: $font-size-sm;
             padding: 5px;
             margin-right: 10px;

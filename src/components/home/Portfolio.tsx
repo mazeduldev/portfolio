@@ -65,7 +65,7 @@ const Portfolio: React.FC<PortfolioProps> = async ({ id }: PortfolioProps) => {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        Source Code
+                        Source
                       </a>
                     )}
                     {project.liveUrl && (
