@@ -6,6 +6,7 @@ import bsSpacingImage from "@/public/images/bs_spacing.webp";
 import portfolioImage from "@/public/images/portfolio_cover.webp";
 import slimwikiImage from "@/public/images/slimwiki.svg";
 import briklStorefrontImage from "@/public/images/brikl_storefront.webp";
+import photographImage from "@/public/images/photograph.webp";
 
 export async function getProjects() {
   const projects: Project[] = [
@@ -20,6 +21,25 @@ export async function getProjects() {
     //   tags: ["nextjs", "graphql", "prisma"],
     //   type: "project",
     // },
+    {
+      title: "Photograph",
+      description: "Dynamic image gallery using Pexels API and Next.js",
+      liveUrl: "https://photograph-mzd.netlify.app",
+      articleUrl:
+        "https://dev.to/mazid1/netlify-dynamic-site-challenge-make-your-favorite-image-collection-k9m",
+      sourceUrl: "https://github.com/mazid1/photograph",
+      imageUrl: photographImage,
+      imagePlaceholder: "empty",
+      imageAlt: "Photograph",
+      tags: [
+        "reactjs",
+        "nextjs",
+        "nodejs",
+        "pexelsapi",
+        "netlify",
+        "netlify-blobs",
+      ],
+    },
     {
       title: "OOZOU | SlimWiki",
       description: "Easy-to-use Wikis for Teams & Individuals",
