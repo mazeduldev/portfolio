@@ -23,7 +23,8 @@ export async function getProjects() {
     // },
     {
       title: "Photograph",
-      description: "Dynamic image gallery using Pexels API and Next.js",
+      description:
+        "Dynamic image gallery using Pexels API and Next.js and Netlify Blobs. You can create your collection of favorite images.",
       liveUrl: "https://photograph-mzd.netlify.app",
       articleUrl:
         "https://dev.to/mazid1/netlify-dynamic-site-challenge-make-your-favorite-image-collection-k9m",
@@ -42,7 +43,8 @@ export async function getProjects() {
     },
     {
       title: "OOZOU | SlimWiki",
-      description: "Easy-to-use Wikis for Teams & Individuals",
+      description:
+        "Easy to use realtime collaborative Wikis for Teams & Individuals.",
       liveUrl: "https://beta.slimwiki.com",
       imageUrl: slimwikiImage,
       imagePlaceholder: "empty",
@@ -51,7 +53,8 @@ export async function getProjects() {
     },
     {
       title: "Brikl | Storefront",
-      description: "Create your own storefront under 15 minutes.",
+      description:
+        "Generated and deployed storefront using Brikl Platform dashboard.",
       liveUrl: "https://brikl.com",
       imageUrl: briklStorefrontImage,
       imageAlt: "Brikl-Storefront",
