@@ -1,11 +1,8 @@
 import React from "react";
 import {
-  FaFacebookF,
   FaGithub,
-  FaInstagram,
   FaLinkedinIn,
   FaMapMarkerAlt,
-  FaMobileAlt,
   FaRegEnvelope,
   FaTwitter,
   FaDev,
@@ -44,12 +41,6 @@ const Contact: React.FC<ContactProps> = ({ id }: ContactProps) => {
               </a>
             </address>
             <div className={classes.infoContainer}>
-              <FaMobileAlt className={classes.icon} />{" "}
-              <a className={classes.infoText} href="tel:+8801521252696">
-                +880 1521-252696
-              </a>
-            </div>
-            <div className={classes.infoContainer}>
               <FaMapMarkerAlt className={classes.icon} />{" "}
               <span className={classes.infoText}>Dhaka, Bangladesh</span>
             </div>
@@ -77,20 +68,6 @@ const Contact: React.FC<ContactProps> = ({ id }: ContactProps) => {
                 rel="noreferrer"
               >
                 <FaTwitter />
-              </a>
-              <a
-                href="https://www.facebook.com/m.mazedul.islam.m"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaFacebookF />
-              </a>
-              <a
-                href="https://www.instagram.com/mazedul__islam/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaInstagram />
               </a>
             </div>
           </div>
