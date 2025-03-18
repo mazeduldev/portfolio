@@ -4,9 +4,9 @@ import {
   FaLinkedinIn,
   FaMapMarkerAlt,
   FaRegEnvelope,
-  FaTwitter,
   FaDev,
 } from "react-icons/fa";
+import { FaXTwitter} from "react-icons/fa6";
 import classes from "./Contact.module.scss";
 import ContactForm from "./ContactForm";
 
@@ -67,7 +67,7 @@ const Contact: React.FC<ContactProps> = ({ id }: ContactProps) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaTwitter />
+                <FaXTwitter />
               </a>
             </div>
           </div>
