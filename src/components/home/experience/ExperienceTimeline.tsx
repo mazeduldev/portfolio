@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { VerticalTimeline } from "react-vertical-timeline-component";
-import { WorkExperience } from "@/model/work-experience";
+import type { WorkExperience } from "@/model/work-experience";
 import ExperienceElement from "./ExperienceElement";
 import classes from "./ExperienceTimeline.module.scss";
 

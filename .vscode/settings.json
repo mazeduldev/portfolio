@@ -4,5 +4,21 @@
   },
   "editor.formatOnSave": true,
   "eslint.alwaysShowStatus": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "cSpell.words": [
+    "angularjs",
+    "Atmetis",
+    "brikl",
+    "Jhipster",
+    "liilab",
+    "microstore",
+    "oozou",
+    "orbitax",
+    "reactjs",
+    "relisource",
+    "SOQL",
+    "Tamagui",
+    "unstaking",
+    "Visualforce"
+  ]
 }

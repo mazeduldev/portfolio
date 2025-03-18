@@ -1,6 +1,7 @@
 "use server";
 
-import { WorkExperience } from "@/model/work-experience";
+import type { WorkExperience } from "@/model/work-experience";
+import meteorWalletLogo from "@/public/images/meteor_wallet.webp";
 import oozouLogo from "@/public/images/oozou.webp";
 import briklLogo from "@/public/images/brikl.webp";
 import impelLogo from "@/public/images/impel.webp";
@@ -13,6 +14,36 @@ export async function getExperiences() {
   const experiences: WorkExperience[] = [
     {
       company: {
+        name: "Meteor Wallet",
+        logoPath: meteorWalletLogo,
+        logoAlt: "Meteor Wallet",
+        website: "https://meteorwallet.app/",
+      },
+      title: "Senior Full-stack Developer (TS)",
+      description: {
+        title: "Building the best crypto wallet for NEAR blockchain.",
+        points: [
+          "● Implemented UI design system components based on Figma design using Tamagui, Expo and React-native.",
+          "● Developed a secure authentication system for non-custodial wallet App supporting biometric authentication.",
+          "● Integrated the NEAR blockchain API to enable wallet functionalities, including token and NFT transactions, staking, and unstaking NEAR.",
+        ],
+      },
+      tags: [
+        "react-native",
+        "expo",
+        "tamagui",
+        "typescript",
+        "blockchain",
+        "near-blockchain",
+        "web3",
+      ],
+      duration: {
+        start: new Date("7/1/2024"),
+        end: null,
+      },
+    },
+    {
+      company: {
         name: "OOZOU",
         logoPath: oozouLogo,
         logoAlt: "OOZOU",
@@ -23,8 +54,8 @@ export async function getExperiences() {
         title: "Working as a fullstack Javascript/Typescript developer.",
         points: [
           "● Implemented a highly scalable Event-Driven architecture for a VoIP calling system, integrating Twilio, Firebase Cloud Messaging (FCM), Apple Push Notification (APN), and leveraging technologies such as MongoDB, Azure Event Hubs, Azure Storage Account, Azure Functions, Azure Queue Storage, Azure JavaScript SDK, Node.js and Typescript.",
-          "● Revamped SlimWiki’s security with a JWT token invalidation system and expiring password reset links upon email updates using AWS DynamoDB and Postgres database.",
-          "● Enhaced SlimWiki's customer onboarding experience by implementing visually appealing UI including SVG animations using React, Next.js and TailwindCSS.",
+          "● Revamped SlimWiki's security with a JWT token invalidation system and expiring password reset links upon email updates using AWS DynamoDB and Postgres database.",
+          "● Enhanced SlimWiki's customer onboarding experience by implementing visually appealing UI including SVG animations using React, Next.js and TailwindCSS.",
         ],
       },
       tags: [
@@ -39,7 +70,7 @@ export async function getExperiences() {
       ],
       duration: {
         start: new Date("9/4/2023"),
-        end: null,
+        end: new Date("4/30/2024"),
       },
     },
     {
