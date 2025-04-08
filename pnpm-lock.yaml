@@ -36,8 +36,8 @@ importers:
         specifier: ^6.9.11
         version: 6.9.13
       palestine-banner:
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: ^1.0.3
+        version: 1.0.3
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -1457,8 +1457,8 @@ packages:
     resolution: {integrity: sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==}
     engines: {node: '>=10'}
 
-  palestine-banner@1.0.2:
-    resolution: {integrity: sha512-xSQQfWQZzV3VeKegOvIPmTv0ylNtmY1lVwPi17lBYmUk+1X8hHsd/EQC5lUeMGpZlaljQWX86LJfhJulyB5viw==}
+  palestine-banner@1.0.3:
+    resolution: {integrity: sha512-23Nv5oSrs3Wk/EWisTWs+diKm16TIqS5DhpyURNHkVZ2j9CGzm3G4QucM/NVff2ky4s7MYgDOYcrxTZokCBnkA==}
 
   parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
@@ -3396,7 +3396,7 @@ snapshots:
     dependencies:
       p-limit: 3.1.0
 
-  palestine-banner@1.0.2: {}
+  palestine-banner@1.0.3: {}
 
   parent-module@1.0.1:
     dependencies:
