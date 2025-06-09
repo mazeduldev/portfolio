@@ -5,7 +5,6 @@ import cn from "classnames";
 import Navbar from "@/components/navigation/Navbar";
 import "@/styles/globals.scss";
 import { PalestineBanner } from "./PalestineBanner";
-import { env } from "@/config/env";
 
 const poppins = Poppins({
 	weight: ["400", "500", "600", "700"],
