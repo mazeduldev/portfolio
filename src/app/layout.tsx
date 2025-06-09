@@ -5,7 +5,7 @@ import cn from "classnames";
 import Navbar from "@/components/navigation/Navbar";
 import "@/styles/globals.scss";
 import { PalestineBanner } from "./PalestineBanner";
-
+import { env } from "@/config/env";
 
 const poppins = Poppins({
 	weight: ["400", "500", "600", "700"],
@@ -21,7 +21,7 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://mazedulislam.com"),
+	metadataBase: new URL("https://mazedul.dev"),
 	title: {
 		template: "%s | Mazedul Islam",
 		default: "Mazedul Islam",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		locale: "en_US",
-		url: "https://mazedulislam.com",
+		url: "https://mazedul.dev",
 		siteName: "Mazedul Islam",
 	},
 	keywords: [
@@ -68,7 +68,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" className={cn(poppins.variable, ubuntu.variable)}>
 			<body>
-        <PalestineBanner />
+				<PalestineBanner />
 				<Navbar />
 				{children}
 				<Toaster position="top-right" reverseOrder={false} />
