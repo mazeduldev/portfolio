@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "./About.module.scss";
 import Image from "next/image";
 import myImage from "@/public/images/me.webp";
@@ -38,7 +37,7 @@ const About: React.FC<AboutProps> = async ({ id }: AboutProps) => {
             </div>
             <div className={classes.description}>
               <div className={classes.descriptionTitle}>
-                I&apos;m Mazedul, <br className={classes.br}></br>{" "}
+                I&apos;m Mazedul, <br className={classes.br} />{" "}
                 <TypeMyTitle />
               </div>
               <p>
@@ -64,7 +63,7 @@ const About: React.FC<AboutProps> = async ({ id }: AboutProps) => {
               <p>
                 Holds a Bachelor of Science in Computer Science and Engineering
                 from the{" "}
-                <a href="https://www.du.ac.bd/body/CSE" target="_blank">
+                <a href="https://www.du.ac.bd/body/CSE" target="_blank" rel="noreferrer">
                   University of Dhaka
                 </a>
                 .
@@ -74,8 +73,8 @@ const About: React.FC<AboutProps> = async ({ id }: AboutProps) => {
                 solutions that drive business value.
               </p>
               <a
-                href="/files/Mohammad_Mazedul_Islam.pdf"
-                download="Resume__Mohammad_Mazedul_Islam.pdf"
+                href="/files/Mazedul_Islam.pdf"
+                download="Resume__Mazedul_Islam.pdf"
               >
                 Download CV
               </a>
@@ -92,9 +91,9 @@ const About: React.FC<AboutProps> = async ({ id }: AboutProps) => {
           </div>
 
           <div className="mx-auto grid grid-cols-1 gap-6 md:px-10 md:grid-cols-2">
-            {recommendations.map((recommendation, idx) => (
+            {recommendations.map((recommendation) => (
               <Card
-                key={`recommendation_${idx}`}
+                key={`recommendation_${recommendation.name.split(" ").join("_")}`}
                 className="bg-gradient-to-br from-sky-100 to-slate-100"
               >
                 <CardHeader>
