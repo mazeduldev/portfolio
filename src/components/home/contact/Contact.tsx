@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaGithub,
   FaLinkedinIn,
@@ -46,24 +45,24 @@ const Contact: React.FC<ContactProps> = ({ id }: ContactProps) => {
             </div>
             <div className={classes.socialContainer}>
               <a
-                href="https://www.linkedin.com/in/mazedul-islam/"
+                href="https://www.linkedin.com/in/mazeduldev/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FaLinkedinIn />
               </a>
               <a
-                href="https://github.com/mazid1"
+                href="https://github.com/mazeduldev"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FaGithub />
               </a>
-              <a href="https://dev.to/mazid1" target="_blank" rel="noreferrer">
+              <a href="https://dev.to/mazeduldev" target="_blank" rel="noreferrer">
                 <FaDev />
               </a>
               <a
-                href="https://twitter.com/mazedul__islam"
+                href="https://twitter.com/mazeduldev"
                 target="_blank"
                 rel="noreferrer"
               >
