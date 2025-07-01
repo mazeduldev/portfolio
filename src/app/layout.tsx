@@ -19,45 +19,45 @@ const ubuntu = Ubuntu({
 	variable: "--font-secondary",
 });
 
-export const metadata: Metadata = {
-	metadataBase: new URL("https://mazedul.dev"),
-	title: {
-		template: "%s | Mazedul Islam",
-		default: "Mazedul Islam",
-	},
-	description:
-		"Fullstack software engineer experienced in JavaScript, Typescript, ReactJS, Next.js, Angular, NodeJS, Express, Java, Spring-boot, Python, FastAPI, CI/CD pipeline, Docker, Kubernetes, Microservice, MySQL, MongoDB, Postgres, DynamoDB, AWS, Azure, GCP etc. for Web Development.",
-	openGraph: {
-		type: "website",
-		locale: "en_US",
-		url: "https://mazedul.dev",
-		siteName: "Mazedul Islam",
-	},
-	keywords: [
-		"Mazedul Islam",
-		"Software Engineer",
-		"Fullstack Developer",
-		"Fullstack Software Engineer",
-		"Web Developer",
-		"Freelancer",
-		"Freelance Web Developer",
-		"Individual Contractor",
-		"ReactJS Developer",
-		"Next.js Developer",
-		"NodeJS Developer",
-		"Express Developer",
-		"Angular Developer",
-		"Spring-boot Developer",
-		"Java Developer",
-		"MERN Stack Developer",
-		"MEAN Stack Developer",
-	],
-	twitter: {
-		creator: "@mazedul__islam",
-		site: "@mazedul__islam",
-		card: "summary_large_image",
-	},
-};
+// export const metadata: Metadata = {
+// metadataBase: new URL("https://mazedul.dev"),
+// title: {
+// 	template: "%s | Mazedul Islam",
+// 	default: "Mazedul Islam",
+// },
+// description:
+// 	"Fullstack software engineer experienced in JavaScript, Typescript, ReactJS, Next.js, Angular, NodeJS, Express, Java, Spring-boot, Python, FastAPI, CI/CD pipeline, Docker, Kubernetes, Microservice, MySQL, MongoDB, Postgres, DynamoDB, AWS, Azure, GCP etc. for Web Development.",
+// openGraph: {
+// 	type: "website",
+// 	locale: "en_US",
+// 	url: "https://mazedul.dev",
+// 	siteName: "Mazedul Islam",
+// },
+// keywords: [
+// 	"Mazedul Islam",
+// 	"Software Engineer",
+// 	"Fullstack Developer",
+// 	"Fullstack Software Engineer",
+// 	"Web Developer",
+// 	"Freelancer",
+// 	"Freelance Web Developer",
+// 	"Individual Contractor",
+// 	"ReactJS Developer",
+// 	"Next.js Developer",
+// 	"NodeJS Developer",
+// 	"Express Developer",
+// 	"Angular Developer",
+// 	"Spring-boot Developer",
+// 	"Java Developer",
+// 	"MERN Stack Developer",
+// 	"MEAN Stack Developer",
+// ],
+// twitter: {
+// 	creator: "@mazedul__islam",
+// 	site: "@mazedul__islam",
+// 	card: "summary_large_image",
+// },
+// };
 
 export default function RootLayout({
 	children,
